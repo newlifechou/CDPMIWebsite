@@ -253,6 +253,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\cdpmi\logo.psd" />
+    <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\cdpmi\logo.jpg" />
     <Content Include="Images\cdpmi\slider1.jpg" />
