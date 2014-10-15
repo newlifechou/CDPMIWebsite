@@ -1,0 +1,42 @@
+﻿#ad {
+    width: 960px;
+    height: 410px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+}
+
+    #ad ul, #ad li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #ad .slider li img {
+        display: block;
+        width: 960px;
+        height: 410px;
+    }
+
+    #ad .slider, #ad .num {
+        position: absolute;
+    }
+
+    #ad .num {
+        right: 5px;
+        bottom: 5px;
+    }
+
+        #ad .num li {
+            border: 1px solid #000;
+            float: left;
+            margin-right: 5px;
+            padding: 3px 8px 3px 8px;
+            background-color: white;
+        }
+
+        #ad .num .selected {
+            background-color: orange;
+            color: white;
+        }

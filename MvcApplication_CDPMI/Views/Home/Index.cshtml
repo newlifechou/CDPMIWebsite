@@ -1,9 +1,32 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@* 添加主页的特有的CSS *@
+@section AddToHead{
+<link href="~/Content/HomeIndex.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/js/MainSlider.js"></script>
+}
 @section featured {
     <section class="featured">
-        <div class="content-wrapper">
+        <div id="ad">
+            @* 这是幻灯广告的图片部分 *@
+            <ul class="slider">
+                <li><img src="~/Images/cdpmi/slider1.jpg" /></li>
+                <li><img src="~/Images/cdpmi/slider2.jpg" /></li>
+                <li><img src="~/Images/cdpmi/slider3.jpg" /></li>
+                <li><img src="~/Images/cdpmi/slider4.jpg" /></li>
+            </ul>
+            @* 这是幻灯广告的数字组 *@
+            <ul class="num">
+                <li class="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        @* 以下是注释掉的原内容,在这里添加slider切换广告 *@
+        @*<div class="content-wrapper">
             <hgroup class="title">
                 <h1>@ViewBag.Title.</h1>
                 <h2>@ViewBag.Message</h2>
@@ -15,7 +38,7 @@
                 If you have any questions about ASP.NET MVC visit
                 <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
             </p>
-        </div>
+        </div>*@
     </section>
 }
 <h3>We suggest the following:</h3>

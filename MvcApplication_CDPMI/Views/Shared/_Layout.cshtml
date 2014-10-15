@@ -8,6 +8,12 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+
+        @* 这里设置一个Section，用来给后面的 *@
+        @if (IsSectionDefined("AddToHead"))
+        {
+            @RenderSection("AddToHead", required: false)
+        }
     </head>
     <body>
         <header>
