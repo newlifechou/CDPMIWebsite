@@ -1,0 +1,16 @@
+﻿@model  IEnumerable<MvcApplication_CDPMI.Models.productCategory>
+@{
+    ViewBag.Title = "GetAllProductCategory";
+}
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @* 路径要使用/,而不是\，后者会带来火狐浏览器和IE相对路径的差异而造成寻找不到文件的问题 *@
+            <a href="/Home/Product/@Html.DisplayFor(o=>item.categoryID)">
+                @Html.DisplayFor(o => item.categoryName)
+            </a>
+        </li>
+    }
+</ul>

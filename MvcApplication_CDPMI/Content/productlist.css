@@ -1,0 +1,20 @@
+﻿    .right-content ul li {
+        float: left;
+    }
+
+        .right-content ul li a {
+            display: block;
+            margin: 5px 5px 5px 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+            .right-content ul li a img {
+                height: 150px;
+                width: 220px;
+            }
+
+            .right-content ul li a:hover {
+                background-color: #333;
+                color: #fff;
+            }

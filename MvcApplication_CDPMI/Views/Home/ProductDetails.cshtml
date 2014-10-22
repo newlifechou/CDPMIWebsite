@@ -1,0 +1,31 @@
+﻿@model MvcApplication_CDPMI.Models.product
+
+@{
+    ViewBag.Title = "产品详细信息";
+}
+
+<div class="float-left">
+    <div class="left-menu">
+        <h5>产品种类</h5>
+        @* 调用部分视图，显示产品种类 *@
+        @Html.Action("GetAllProductCategory")
+    </div>
+    <div class="left-menu">
+        <h5>联系我们</h5>
+        <ul>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>@Html.DisplayFor(o => o.productName)</h2>
+    <p>发布日期：@Html.DisplayFor(o=>o.publicTime) 阅读次数： @Html.DisplayFor(o=>o.readCount) 次</p>
+    <hr />
+    <div>
+        @Html.Raw(Model.contentText)
+    </div>
+</div>

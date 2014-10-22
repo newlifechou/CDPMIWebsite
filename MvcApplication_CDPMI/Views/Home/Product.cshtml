@@ -1,0 +1,48 @@
+﻿@model  IEnumerable<MvcApplication_CDPMI.Models.product>
+@{
+    ViewBag.Title = "产品列表";
+}
+@section AddToHead{
+    <link href="~/Content/productlist.css" type="text/css" rel="stylesheet" />
+}
+<div class="float-left">
+    <div class="left-menu">
+        <h5>产品种类</h5>
+        @* 调用部分视图，显示产品种类 *@
+        @Html.Action("GetAllProductCategory")
+    </div>
+    <div class="left-menu">
+        <h5>联系我们</h5>
+        <ul>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+            <li><a href="#">测试信息</a></li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>@ViewBag.h2title</h2>
+    @* 对产品列表数目进行判断，选择显示内容 *@
+    @if (Model.Count() > 0)
+    {
+        <ul>
+            @foreach (var item in Model)
+            {
+            <li>
+                @* 路径要使用/,而不是\，后者会带来火狐浏览器和IE相对路径的差异而造成寻找不到文件的问题 *@
+                <a href="/Home/ProductDetails/@Html.DisplayFor(o=>item.productID)">
+                    <img src="/Images/products/@Html.DisplayFor(o=>item.mainPhoto)" alt="product" /><br />
+                    <p>@Html.DisplayFor(o => item.productName)</p>
+                </a>
+            </li>
+            }
+        </ul>
+
+    }
+    else
+    {
+        <p>抱歉，该分类下暂时没有对应的产品，请查看其它分类~</p>
+    }
+</div>

@@ -1,0 +1,61 @@
+﻿@model MvcApplication_CDPMI.Models.product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productCategory.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productCategory.categoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.publicTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publicTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.readCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.readCount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contentText)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contentText)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mainPhoto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mainPhoto)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
