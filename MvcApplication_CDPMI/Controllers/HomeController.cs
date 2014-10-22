@@ -98,7 +98,7 @@ namespace MvcApplication_CDPMI.Controllers
             {
 
 
-                return View("FeedBackSuccess");
+                return View("FeedBackSuccess",fb);
             }
             return View(fb);
         }

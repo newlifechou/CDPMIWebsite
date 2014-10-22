@@ -1,4 +1,5 @@
-﻿@{
+﻿@model  MvcApplication_CDPMI.Models.feedback
+@{
     ViewBag.Title = "FeedBackSuccess";
 }
 
@@ -17,4 +18,5 @@
     <p>您的咨询内容已经提交到我公司，我们会在最短的时间内和您联系！</p>
     @Html.ActionLink("返回主页", "Index", "Home");
     @Html.ActionLink("返回产品列表", "Product", "Home");
+    @Html.DisplayFor(o=>o.title)
 </div>
