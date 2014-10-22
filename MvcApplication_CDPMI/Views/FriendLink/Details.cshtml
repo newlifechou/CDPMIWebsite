@@ -1,0 +1,29 @@
+﻿@model MvcApplication_CDPMI.Models.friendLink
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>friendLink</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.friendLinkTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.friendLinkTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.friendLink1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.friendLink1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

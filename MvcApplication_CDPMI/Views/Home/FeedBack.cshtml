@@ -19,11 +19,11 @@
     @using (Html.BeginForm())
     {
         <table>
-            <tr><td>标题:</td><td>@Html.EditorFor(o=>o.title)</td></tr>
-            <tr><td>姓名:</td><td>@Html.EditorFor(o=>o.cname)</td></tr>
-            <tr><td>邮件:</td><td>@Html.EditorFor(o=>o.email)</td></tr>
-            <tr><td>电话:</td><td>@Html.EditorFor(o=>o.phone)</td></tr>
-            <tr><td>内容:</td><td>@Html.TextAreaFor(o=>o.mainContent)</td></tr>
+            <tr><td>标题:</td><td>@Html.EditorFor(o=>o.title)@Html.ValidationMessageFor(o => o.title)</td></tr>
+            <tr><td>姓名:</td><td>@Html.EditorFor(o=>o.cname)@Html.ValidationMessageFor(o => o.cname)</td></tr>
+            <tr><td>邮件:</td><td>@Html.EditorFor(o=>o.email)@Html.ValidationMessageFor(o => o.email)</td></tr>
+            <tr><td>电话:</td><td>@Html.EditorFor(o=>o.phone)@Html.ValidationMessageFor(o => o.phone)</td></tr>
+            <tr><td>内容:</td><td>@Html.TextAreaFor(o=>o.mainContent)@Html.ValidationMessageFor(o => o.mainContent)</td></tr>
         </table>
         <p>
             <input type="submit" value="提交留言" />

@@ -16,7 +16,7 @@ namespace MvcApplication_CDPMI.Models
     {
         public int id { get; set; }
         public string title { get; set; }
-        public Nullable<System.DateTime> createTime { get; set; }
+        public System.DateTime createTime { get; set; }
         public string mainContent { get; set; }
         public string phone { get; set; }
         public string email { get; set; }

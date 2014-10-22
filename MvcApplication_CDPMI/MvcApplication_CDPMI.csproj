@@ -188,6 +188,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FriendLinkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -402,6 +403,11 @@
     <Content Include="Views\Home\GetContactsView.cshtml" />
     <Content Include="Views\Home\FeedBack.cshtml" />
     <Content Include="Views\Home\FeedBackSuccess.cshtml" />
+    <Content Include="Views\FriendLink\Index.cshtml" />
+    <Content Include="Views\FriendLink\Details.cshtml" />
+    <Content Include="Views\FriendLink\Create.cshtml" />
+    <Content Include="Views\FriendLink\Edit.cshtml" />
+    <Content Include="Views\FriendLink\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
