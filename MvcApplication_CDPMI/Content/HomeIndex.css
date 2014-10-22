@@ -40,3 +40,8 @@
             background-color: orange;
             color: white;
         }
+
+.three ul li {
+    margin: 5px 0;
+    padding: 0;
+}

@@ -14,8 +14,6 @@ namespace MvcApplication_CDPMI.Controllers
         WebEntities db = new WebEntities();
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 
@@ -75,6 +73,15 @@ namespace MvcApplication_CDPMI.Controllers
             return PartialView(pc);
         }
 
+        /// <summary>
+        /// 返回一个包含公司练习信息的部分视图
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetContactsView()
+        {
+            List<basicSetting> bs = db.basicSetting.ToList();
+            return PartialView(bs);
+        }
 
 
         public ActionResult About()

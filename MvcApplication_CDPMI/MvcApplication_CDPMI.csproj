@@ -246,7 +246,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\HomeIndex.css" />
+    <Content Include="Content\homeIndex.css" />
     <Content Include="Content\productlist.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -397,6 +397,7 @@
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Home\ProductDetails.cshtml" />
     <Content Include="Views\Home\GetAllProductCategory.cshtml" />
+    <Content Include="Views\Home\GetContactsView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

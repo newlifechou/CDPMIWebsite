@@ -3,7 +3,7 @@
 }
 @* 添加主页的特有的CSS *@
 @section AddToHead{
-<link href="~/Content/HomeIndex.css" rel="stylesheet" />
+<link href="~/Content/homeIndex.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-1.8.2.min.js"></script>
 <script src="~/Scripts/js/MainSlider.js"></script>
 }
@@ -63,12 +63,15 @@
 
     <li class="three">
         <h5>联系我们</h5>
-        公司地址：四川省成都市郫县高新西区百草街88号 <br />
+        @*公司地址：四川省成都市郫县高新西区百草街88号 <br />
         联  系 人：胡小姐<br />
         联系电话：028-66515926 转607<br />
         传真号码：028-66515923<br />
         Skype名：pmi_hu<br />
-        Email:cdpmi@pioneer-materials.com<br />
+        Email:cdpmi@pioneer-materials.com<br />*@
+
+        @* 这里的联系方式用部分视图显示 *@
+        @Html.Action("GetContactsView")
         @Html.ActionLink("在线留言", "About")
     </li>
 </ol>
