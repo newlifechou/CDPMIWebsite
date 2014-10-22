@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "FeedBackSuccess";
+}
+
+<div class="float-left">
+    <div class="left-menu">
+        <h5>相关信息</h5>
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品列表</a></li>
+            <li><a href="#">服务信息</a></li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>反馈成功~</h2>
+    <p>您的咨询内容已经提交到我公司，我们会在最短的时间内和您联系！</p>
+    @Html.ActionLink("返回主页", "Index", "Home");
+    @Html.ActionLink("返回产品列表", "Product", "Home");
+</div>

@@ -94,7 +94,13 @@ namespace MvcApplication_CDPMI.Controllers
         [HttpPost]
         public ActionResult FeedBack(feedback fb)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+
+
+                return RedirectToAction("FeedBackSuccess");
+            }
+            return View(fb);
         }
         public ActionResult About()
         {
