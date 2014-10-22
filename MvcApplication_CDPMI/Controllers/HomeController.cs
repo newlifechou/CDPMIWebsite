@@ -93,8 +93,6 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
