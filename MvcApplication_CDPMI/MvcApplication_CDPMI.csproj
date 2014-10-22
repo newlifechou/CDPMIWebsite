@@ -400,6 +400,7 @@
     <Content Include="Views\Home\ProductDetails.cshtml" />
     <Content Include="Views\Home\GetAllProductCategory.cshtml" />
     <Content Include="Views\Home\GetContactsView.cshtml" />
+    <Content Include="Views\Home\FeedBack.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

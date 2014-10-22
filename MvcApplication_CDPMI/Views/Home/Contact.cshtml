@@ -9,7 +9,7 @@
         <h5>联系我们</h5>
         <ul>
             <li><a href="#">关于我们</a></li>
-            <li><a href="#">在线留言</a></li>
+            <li>@Html.ActionLink("在线留言", "FeedBack","Home")</li>
         </ul>
     </div>
 </div>
@@ -17,7 +17,7 @@
     <h2>联系我们</h2>
     <p><b>我公司的联系方式如下：</b></p>
     @Html.Action("GetContactsView")
-    <a href="#">在线留言</a>
+    @Html.ActionLink("在线留言", "FeedBack", "Home")
     <p><b>我公司具体位置：</b></p>
     <p>
         <img src="~/Images/cdpmi/googlemap.png" alt="map" id="googlemap" />
