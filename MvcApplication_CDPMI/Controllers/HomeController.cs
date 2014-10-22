@@ -29,7 +29,7 @@ namespace MvcApplication_CDPMI.Controllers
             //这里使用视图特定模型来传递数据
             List<product> p;
             string h2;
-            //如果categoryid
+            //如果categoryid不存在，说明查询的是所有产品
             if (id == 0)
             {
                 p = db.product.Include(o => o.productCategory).ToList();
@@ -49,12 +49,12 @@ namespace MvcApplication_CDPMI.Controllers
         /// </summary>
         /// <param name="id">productId</param>
         /// <returns></returns>
-        public ActionResult ProductDetails(int id=0)
+        public ActionResult ProductDetails(int? id)
         {
             product p;
-            if (id == 0)
+            if (id == null)
             {
-                return null;
+                return HttpNotFound();
             }
             else
             {
@@ -98,7 +98,7 @@ namespace MvcApplication_CDPMI.Controllers
             {
 
 
-                return RedirectToAction("FeedBackSuccess");
+                return View("FeedBackSuccess");
             }
             return View(fb);
         }
