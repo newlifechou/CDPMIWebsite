@@ -5,10 +5,7 @@
 
 @foreach (var item in Model)
 {
-    if (item.title != "公司简介"  && item.title != "公司简介banner")
-    {
-        <p>
-            @Html.DisplayFor(o => item.title) :  @Html.DisplayFor(o => item.contentText)
-        </p>
-    }
+    <p>
+        @Html.DisplayFor(o => item.title) :  @Html.DisplayFor(o => item.contentText)
+    </p>
 }

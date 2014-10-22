@@ -79,11 +79,15 @@ namespace MvcApplication_CDPMI.Controllers
         /// <returns></returns>
         public ActionResult GetContactsView()
         {
-            List<basicSetting> bs = db.basicSetting.OrderBy(o => o.titleIndex).ToList();
+            //返回除了简介之外的其他内容
+            List<basicSetting> bs = db.basicSetting.Where(o=>o.titleIndex<=7).OrderBy(o => o.titleIndex).ToList();
             return PartialView(bs);
         }
 
-
+        public ActionResult FeedBack()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";

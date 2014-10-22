@@ -309,6 +309,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Web.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\cdpmi\googlemap.png" />
     <Content Include="Images\products\1.jpg" />
     <Content Include="Images\products\2.jpg" />
     <Content Include="Images\products\3.jpg" />
@@ -358,7 +359,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
