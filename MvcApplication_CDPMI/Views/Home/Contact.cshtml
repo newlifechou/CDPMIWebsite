@@ -1,6 +1,9 @@
 ﻿@{
     ViewBag.Title = "联系我们";
 }
+@section AddToHead{
+<link href="~/Content/contact.css" rel="stylesheet" type="text/css"/>
+}
 <div class="float-left">
     <div class="left-menu">
         <h5>联系我们</h5>
@@ -12,6 +15,10 @@
 </div>
 <div class="float-left right-content">
     <h2>联系我们</h2>
+    <p>我公司具体位置：</p>
+    <p>
+        <img src="" alt="map" />
+    </p>
     <p>我公司的联系方式如下：</p>
     @Html.Action("GetContactsView")
 </div>

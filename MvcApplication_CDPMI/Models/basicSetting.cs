@@ -17,5 +17,6 @@ namespace MvcApplication_CDPMI.Models
         public int id { get; set; }
         public string title { get; set; }
         public string contentText { get; set; }
+        public Nullable<int> titleIndex { get; set; }
     }
 }

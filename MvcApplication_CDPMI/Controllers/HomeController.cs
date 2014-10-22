@@ -79,7 +79,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// <returns></returns>
         public ActionResult GetContactsView()
         {
-            List<basicSetting> bs = db.basicSetting.ToList();
+            List<basicSetting> bs = db.basicSetting.OrderBy(o => o.titleIndex).ToList();
             return PartialView(bs);
         }
 
