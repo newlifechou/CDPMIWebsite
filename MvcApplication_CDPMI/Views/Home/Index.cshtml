@@ -27,20 +27,6 @@
                 <li>4</li>
             </ul>
         </div>
-        @* 以下是注释掉的原内容,在这里添加slider切换广告 *@
-        @*<div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
-        </div>*@
     </section>
 }
 <h3>先锋材料(Pioneer Materials)</h3>
@@ -63,13 +49,6 @@
 
     <li class="three">
         <h5>联系我们</h5>
-        @*公司地址：四川省成都市郫县高新西区百草街88号 <br />
-        联  系 人：胡小姐<br />
-        联系电话：028-66515926 转607<br />
-        传真号码：028-66515923<br />
-        Skype名：pmi_hu<br />
-        Email:cdpmi@pioneer-materials.com<br />*@
-
         @* 这里的联系方式用部分视图显示 *@
         @Html.Action("GetContactsView")
         @Html.ActionLink("在线留言", "About")
