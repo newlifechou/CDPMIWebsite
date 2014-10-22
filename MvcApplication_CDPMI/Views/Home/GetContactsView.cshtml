@@ -3,14 +3,12 @@
     ViewBag.Title = "GetContactsView";
 }
 
-<ul>
-    @foreach (var item in Model)
+@foreach (var item in Model)
+{
+    if (item.title != "公司简介"  && item.title != "公司简介banner")
     {
-        if (item.title != "公司简介" && item.title != "公司名称" && item.title != "公司简介banner ")
-        {
-            <li>
-                @Html.DisplayFor(o => item.title) : @Html.DisplayFor(o => item.contentText)
-            </li>
-        }
+        <p>
+            @Html.DisplayFor(o => item.title) :  @Html.DisplayFor(o => item.contentText)
+        </p>
     }
-</ul>
+}
