@@ -1,5 +1,32 @@
-﻿@{
+﻿@model MvcApplication_CDPMI.Models.feedback
+@{
     ViewBag.Title = "FeedBack";
 }
 
-<h2>FeedBack</h2>
+<div class="float-left">
+    <div class="left-menu">
+        <h5>相关信息</h5>
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品列表</a></li>
+            <li><a href="#">服务信息</a></li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>联系我们</h2>
+    <p>请在下面表单中填写您要咨询的问题：</p>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr><td>标题:</td><td>@Html.EditorFor(o=>o.title)</td></tr>
+            <tr><td>姓名:</td><td>@Html.EditorFor(o=>o.cname)</td></tr>
+            <tr><td>邮件:</td><td>@Html.EditorFor(o=>o.email)</td></tr>
+            <tr><td>电话:</td><td>@Html.EditorFor(o=>o.phone)</td></tr>
+            <tr><td>内容:</td><td>@Html.TextAreaFor(o=>o.mainContent)</td></tr>
+        </table>
+        <p>
+            <input type="submit" value="提交留言" />
+        </p>
+    }
+</div>

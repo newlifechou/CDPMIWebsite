@@ -83,12 +83,16 @@ namespace MvcApplication_CDPMI.Controllers
             List<basicSetting> bs = db.basicSetting.Where(o=>o.titleIndex<=7).OrderBy(o => o.titleIndex).ToList();
             return PartialView(bs);
         }
+        public ActionResult FeedBack()
+        {
+            return View();
+        }
         /// <summary>
         /// 这个动作用来收集客户反馈
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult FeedBack()
+        public ActionResult FeedBack(feedback fb)
         {
             return View();
         }
