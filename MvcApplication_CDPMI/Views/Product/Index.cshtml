@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MvcApplication_CDPMI.Models.product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productCategory.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publicTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.readCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contentText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mainPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.productName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productCategory.categoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publicTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.readCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contentText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mainPhoto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.productID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.productID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.productID })
+        </td>
+    </tr>
+}
+
+</table>

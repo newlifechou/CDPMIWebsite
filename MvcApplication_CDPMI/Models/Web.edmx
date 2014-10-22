@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="passWord" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="basicSetting">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="contentText" Type="text" Nullable="false" />
+          <Property Name="titleIndex" Type="int" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="createTime" Type="datetime" />
+          <Property Name="mainContent" Type="nvarchar" MaxLength="500" />
+          <Property Name="phone" Type="nvarchar" MaxLength="100" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="cname" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="flash">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="picture" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="friendLink">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="friendLinkTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="friendLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="logRecord">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="information" Type="text" />
+          <Property Name="logtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="news">
+          <Key>
+            <PropertyRef Name="newsID" />
+          </Key>
+          <Property Name="newsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="newsTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="publishTime" Type="datetime" Nullable="false" />
+          <Property Name="readCount" Type="int" Nullable="false" />
+          <Property Name="contentText" Type="text" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="categoryID" Type="int" />
+          <Property Name="publicTime" Type="datetime" />
+          <Property Name="readCount" Type="int" />
+          <Property Name="contentText" Type="text" />
+          <Property Name="mainPhoto" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="productCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="memo" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="service">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="serviceName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="serviceContent" Type="text" />
+          <Property Name="servicePicture" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Age" Type="int" />
+        </EntityType>
+        <Association Name="FK__product__categor__0AD2A005">
+          <End Role="productCategory" Type="Self.productCategory" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="productCategory">
+              <PropertyRef Name="categoryID" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebModelStoreContainer">
+          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basicSetting" EntityType="Self.basicSetting" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="flash" EntityType="Self.flash" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="friendLink" EntityType="Self.friendLink" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="logRecord" EntityType="Self.logRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="news" EntityType="Self.news" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="productCategory" EntityType="Self.productCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="service" EntityType="Self.service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__product__categor__0AD2A005" Association="Self.FK__product__categor__0AD2A005">
+            <End Role="productCategory" EntitySet="productCategory" />
+            <End Role="product" EntitySet="product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="passWord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="basicSetting">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="contentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="titleIndex" Type="Int32" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="createTime" Type="DateTime" Precision="3" />
+          <Property Name="mainContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="flash">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="picture" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="friendLink">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="friendLinkTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="friendLink1" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="logRecord">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="information" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="logtime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="news">
+          <Key>
+            <PropertyRef Name="newsID" />
+          </Key>
+          <Property Name="newsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="newsTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="publishTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="readCount" Type="Int32" Nullable="false" />
+          <Property Name="contentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="categoryID" Type="Int32" />
+          <Property Name="publicTime" Type="DateTime" Precision="3" />
+          <Property Name="readCount" Type="Int32" />
+          <Property Name="contentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="mainPhoto" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="productCategory" Relationship="Self.FK__product__categor__0AD2A005" FromRole="product" ToRole="productCategory" />
+        </EntityType>
+        <EntityType Name="productCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="memo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="product" Relationship="Self.FK__product__categor__0AD2A005" FromRole="productCategory" ToRole="product" />
+        </EntityType>
+        <EntityType Name="service">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="serviceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="serviceContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="servicePicture" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__product__categor__0AD2A005">
+          <End Role="productCategory" Type="Self.productCategory" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="productCategory">
+              <PropertyRef Name="categoryID" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admin" EntityType="Self.admin" />
+          <EntitySet Name="basicSetting" EntityType="Self.basicSetting" />
+          <EntitySet Name="feedback" EntityType="Self.feedback" />
+          <EntitySet Name="flash" EntityType="Self.flash" />
+          <EntitySet Name="friendLink" EntityType="Self.friendLink" />
+          <EntitySet Name="logRecord" EntityType="Self.logRecord" />
+          <EntitySet Name="news" EntityType="Self.news" />
+          <EntitySet Name="product" EntityType="Self.product" />
+          <EntitySet Name="productCategory" EntityType="Self.productCategory" />
+          <EntitySet Name="service" EntityType="Self.service" />
+          <EntitySet Name="test" EntityType="Self.test" />
+          <AssociationSet Name="FK__product__categor__0AD2A005" Association="Self.FK__product__categor__0AD2A005">
+            <End Role="productCategory" EntitySet="productCategory" />
+            <End Role="product" EntitySet="product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebModelStoreContainer" CdmEntityContainer="WebEntities">
+          <EntitySetMapping Name="admin">
+            <EntityTypeMapping TypeName="WebModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="adminID" ColumnName="adminID" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="passWord" ColumnName="passWord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicSetting">
+            <EntityTypeMapping TypeName="WebModel.basicSetting">
+              <MappingFragment StoreEntitySet="basicSetting">
+                <ScalarProperty Name="titleIndex" ColumnName="titleIndex" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="contentText" ColumnName="contentText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="feedback">
+            <EntityTypeMapping TypeName="WebModel.feedback">
+              <MappingFragment StoreEntitySet="feedback">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="createTime" ColumnName="createTime" />
+                <ScalarProperty Name="mainContent" ColumnName="mainContent" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="flash">
+            <EntityTypeMapping TypeName="WebModel.flash">
+              <MappingFragment StoreEntitySet="flash">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="friendLink">
+            <EntityTypeMapping TypeName="WebModel.friendLink">
+              <MappingFragment StoreEntitySet="friendLink">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="friendLinkTitle" ColumnName="friendLinkTitle" />
+                <ScalarProperty Name="friendLink1" ColumnName="friendLink" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logRecord">
+            <EntityTypeMapping TypeName="WebModel.logRecord">
+              <MappingFragment StoreEntitySet="logRecord">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="information" ColumnName="information" />
+                <ScalarProperty Name="logtime" ColumnName="logtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="news">
+            <EntityTypeMapping TypeName="WebModel.news">
+              <MappingFragment StoreEntitySet="news">
+                <ScalarProperty Name="newsID" ColumnName="newsID" />
+                <ScalarProperty Name="newsTitle" ColumnName="newsTitle" />
+                <ScalarProperty Name="publishTime" ColumnName="publishTime" />
+                <ScalarProperty Name="readCount" ColumnName="readCount" />
+                <ScalarProperty Name="contentText" ColumnName="contentText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="product">
+            <EntityTypeMapping TypeName="WebModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="publicTime" ColumnName="publicTime" />
+                <ScalarProperty Name="readCount" ColumnName="readCount" />
+                <ScalarProperty Name="contentText" ColumnName="contentText" />
+                <ScalarProperty Name="mainPhoto" ColumnName="mainPhoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="productCategory">
+            <EntityTypeMapping TypeName="WebModel.productCategory">
+              <MappingFragment StoreEntitySet="productCategory">
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="service">
+            <EntityTypeMapping TypeName="WebModel.service">
+              <MappingFragment StoreEntitySet="service">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="serviceName" ColumnName="serviceName" />
+                <ScalarProperty Name="serviceContent" ColumnName="serviceContent" />
+                <ScalarProperty Name="servicePicture" ColumnName="servicePicture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="test">
+            <EntityTypeMapping TypeName="WebModel.test">
+              <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

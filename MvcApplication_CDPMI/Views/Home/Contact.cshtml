@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "联系我们";
+}
+@section AddToHead{
+    <link href="~/Content/contact.css" rel="stylesheet" type="text/css" />
+}
+<div class="float-left">
+    <div class="left-menu">
+        <h5>联系我们</h5>
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">在线留言</a></li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>联系我们</h2>
+    <p><b>我公司的联系方式如下：</b></p>
+    @Html.Action("GetContactsView")
+    <a href="#">在线留言</a>
+    <p><b>我公司具体位置：</b></p>
+    <p>
+        <img src="~/Images/cdpmi/googlemap.png" alt="map" id="googlemap" />
+    </p>
+</div>
