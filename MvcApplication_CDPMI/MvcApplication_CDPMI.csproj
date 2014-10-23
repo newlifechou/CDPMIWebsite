@@ -311,7 +311,7 @@
       <LastGenOutput>Web.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Images\cdpmi\contactus.jpg" />
-    <Content Include="Images\cdpmi\feedbackSuccess.gif" />
+    <Content Include="Images\cdpmi\feedbackSuccess.png" />
     <Content Include="Images\cdpmi\googlemap.png" />
     <Content Include="Images\products\1.jpg" />
     <Content Include="Images\products\2.jpg" />

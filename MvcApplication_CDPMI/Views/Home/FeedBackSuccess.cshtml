@@ -15,9 +15,11 @@
 <div class="float-left right-content">
     <h2>反馈成功~</h2>
     <p>
-        <img src="~/Images/cdpmi/feedbackSuccess.gif" alt="feedbacksuccess" id="imgfeedbacksuccess"/>
+        <img src="~/Images/cdpmi/feedbackSuccess.png" alt="feedbacksuccess" id="imgfeedbacksuccess" />
     </p>
     <p>您的咨询内容已经提交到我公司，我们会在最短的时间内和您联系！</p>
-    @Html.ActionLink("返回主页", "Index", "Home");
-    @Html.ActionLink("返回产品列表", "Product", "Home");
+    <p id="feedbacklink">
+        @Html.ActionLink("返回主页", "Index", "Home") @Html.ActionLink("返回产品列表", "Product", "Home")
+    </p>
+
 </div>

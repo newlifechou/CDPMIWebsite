@@ -91,6 +91,10 @@ mark {
         }
 
 /*此部分用来显示每页出现的在线留言的链接样式*/
+#feedbacklink{
+    margin:5px 0;
+    padding:5px 0;
+}
 #feedbacklink a {
     border: 1px solid #999;
     background-color: #99ccff;
@@ -115,7 +119,9 @@ mark {
         border-bottom: 1px dotted #000;
         padding-bottom: 5px;
     }
-
+    .right-content p{
+        line-height:1.5;
+    }
 /*右边内容里的横幅图片宽度设定*/
 #imgfeedbacksuccess,#imggooglemap,#imgcontactus{
     width:750px;
