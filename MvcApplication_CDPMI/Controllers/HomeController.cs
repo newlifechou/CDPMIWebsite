@@ -119,12 +119,20 @@ namespace MvcApplication_CDPMI.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// 服务项目显示
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Service()
         {
             ViewBag.Title = "服务项目";
-            return View();
+            List<service> services = db.service.ToList();
+            return View(services);
         }
-
+        /// <summary>
+        /// 行业动态信息显示
+        /// </summary>
+        /// <returns></returns>
         public ActionResult News()
         {
             ViewBag.Title = "行业动态";
@@ -132,9 +140,14 @@ namespace MvcApplication_CDPMI.Controllers
             List<news> news = db.news.ToList();
             return View(news);
         }
-        public ActionResult NewsDetails(int id=0)
+        /// <summary>
+        /// 新闻详细内容显示
+        /// </summary>
+        /// <param name="id">NewsId</param>
+        /// <returns></returns>
+        public ActionResult NewsDetails(int id = 0)
         {
-            if (id==0)
+            if (id == 0)
             {
                 return HttpNotFound();
             }

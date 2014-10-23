@@ -322,6 +322,9 @@
     <Content Include="Images\products\5.jpg" />
     <Content Include="Images\products\6.jpg" />
     <Content Include="Images\products\7.jpg" />
+    <Content Include="Images\services\service1.png.jpg" />
+    <Content Include="Images\services\service2.png.jpg" />
+    <Content Include="Images\services\service3.png.jpg" />
     <Content Include="Models\Web.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Web.edmx</DependentUpon>
