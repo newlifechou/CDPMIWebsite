@@ -1,0 +1,25 @@
+﻿@model MvcApplication_CDPMI.Models.news
+@{
+    //ViewBag.Title = "NewsDetails";
+}
+
+<div class="float-left">
+    <div class="left-menu">
+        <h5>相关信息</h5>
+        <ul>
+            <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
+            <li>@Html.ActionLink("在线留言", "FeedBack", "Home")</li>
+        </ul>
+    </div>
+</div>
+<div class="float-left right-content">
+    <h2>@ViewBag.Title</h2>
+    <p style="font-size:16px;font-weight:bold;margin:15px 0;">@Html.DisplayFor(o => Model.newsTitle)</p>
+    <p style="border-bottom:1px  dashed #333">发布时间：@Html.DisplayFor(o => o.publishTime)   阅读次数：@Html.DisplayFor(o => o.readCount) 次</p>
+    <p style="padding:15px 0;border-bottom:1px dashed #333">
+        @Html.Raw(Html.DisplayFor(o => Model.contentText))
+    </p>
+    <p id="feedbacklink">
+        @Html.ActionLink("返回行业动态列表", "News", "Home")
+    </p>
+</div>

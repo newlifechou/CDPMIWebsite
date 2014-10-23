@@ -128,7 +128,19 @@ namespace MvcApplication_CDPMI.Controllers
         public ActionResult News()
         {
             ViewBag.Title = "行业动态";
-            return View();
+
+            List<news> news = db.news.ToList();
+            return View(news);
+        }
+        public ActionResult NewsDetails(int id=0)
+        {
+            if (id==0)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.Title = "新闻内容";
+            news news = db.news.Find(id);
+            return View(news);
         }
     }
 }

@@ -1,7 +1,10 @@
-﻿@{
+﻿@model  IEnumerable<MvcApplication_CDPMI.Models.news>
+@{
     //ViewBag.Title = "News";
 }
-
+@section AddToHead{
+    <link href="~/Content/news.css" rel="stylesheet" type="text/css" />
+}
 <div class="float-left">
     <div class="left-menu">
         <h5>相关信息</h5>
@@ -13,7 +16,14 @@
 </div>
 <div class="float-left right-content">
     <h2>@ViewBag.Title</h2>
-    <p>
-        这里是News内容区域
-    </p>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a class="newitemlink" href="/Home/NewsDetails/@Html.DisplayFor(o=>item.newsID)">
+                    @Html.DisplayFor(o => item.newsTitle)<span>@Html.DisplayFor(o => item.publishTime)</span>
+                </a>
+            </li>
+        }
+    </ul>
 </div>

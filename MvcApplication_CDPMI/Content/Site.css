@@ -113,6 +113,8 @@ mark {
     width: 746px;
     padding-left: 10px;
     /*background-color: green;*/
+    /*如果有超出部分，隐藏起来，以免弄乱布局*/
+    overflow:hidden;
 }
 
     .right-content h2 {
