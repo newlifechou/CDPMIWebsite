@@ -1,14 +1,17 @@
 ﻿/*设置超链接的格式*/
-.newitemlink{
-    padding:8px;
-    display:block;
-    width:100%;
+.newitemlink {
+    padding: 8px 0 8px 30px;
+    display: block;
+    background: url('../Images/cdpmi/lst.gif') no-repeat 4px 6px;
+    width: 100%;
 }
-.newitemlink span{
-  display:block;
-  float:right;
-  padding-right:10px;
-}
-.newitemlink:hover{
-    /*border-bottom:1px dotted #333;*/
-}
+
+    .newitemlink span {
+        display: block;
+        float: right;
+        padding-right: 40px;
+    }
+
+    .newitemlink:hover {
+        /*border-bottom:1px dotted #333;*/
+    }
