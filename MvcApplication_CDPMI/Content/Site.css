@@ -115,6 +115,12 @@ mark {
         border-bottom: 1px dotted #000;
         padding-bottom: 5px;
     }
+
+/*右边内容里的横幅图片宽度设定*/
+#imgfeedbacksuccess,#imggooglemap,#imgcontactus{
+    width:750px;
+    border:1px solid #999;
+}
 /*右边内容部分样式在其他样式表里定义*/
 
 .clear-fix:after {
