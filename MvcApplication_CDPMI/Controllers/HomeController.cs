@@ -96,11 +96,12 @@ namespace MvcApplication_CDPMI.Controllers
         {
             //UpdateModel(fb);
             //存储已经没有问题，但是验证问题还很严重，必须重新学习这一部分的内容?????
+            //2014.10.23日已经基本解决
             if (ModelState.IsValid)
             {
                 fb.createTime = DateTime.Now;
-                //db.feedback.Add(fb);
-                //db.SaveChanges();
+                db.feedback.Add(fb);
+                db.SaveChanges();
                 return View("FeedBackSuccess");
             }
             return View(fb);
