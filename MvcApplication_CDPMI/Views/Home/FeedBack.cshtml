@@ -7,9 +7,9 @@
     <div class="left-menu">
         <h5>相关信息</h5>
         <ul>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">产品列表</a></li>
-            <li><a href="#">服务信息</a></li>
+            <li>@Html.ActionLink("关于我们", "About", "Home")</li>
+            <li>@Html.ActionLink("产品列表", "Product", "Home", new { id=0})</li>
+            <li>@Html.ActionLink("服务信息", "Service", "Home")</li>
         </ul>
     </div>
 </div>
