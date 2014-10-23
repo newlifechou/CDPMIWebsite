@@ -67,7 +67,7 @@ mark {
     width: 200px;
     background-color: #999;
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
     .left-menu h5 {
@@ -75,29 +75,45 @@ mark {
         border-bottom: 1px dashed #000;
         font-size: 16px;
         color: #fff;
-        padding:10px 0 10px 0;
-        background-color:#666;
+        padding: 10px 0 10px 0;
+        background-color: #666;
     }
-    .left-menu a{
-        display:block;
-        padding:5px 0 5px 0;
-        color:#fff;
-        font-size:14px;
+
+    .left-menu a {
+        display: block;
+        padding: 8px 0 8px 0;
+        color: #fff;
+        font-size: 14px;
     }
-    .left-menu a:hover{
-        color:#000;
+
+        .left-menu a:hover {
+            color: #000;
+        }
+
+/*此部分用来显示每页出现的在线留言的链接样式*/
+#feedbacklink a {
+    border: 1px solid #999;
+    background-color: #99ccff;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+    #feedbacklink a:hover {
+        color: white;
+        background-color: #333;
     }
+
 
 /*右边内容部分样式在其他样式表里定义*/
 .right-content {
     width: 746px;
-    padding-left:10px;
+    padding-left: 10px;
     /*background-color: green;*/
 }
 
     .right-content h2 {
-        border-bottom:1px dotted #000;
-        padding-bottom:5px;
+        border-bottom: 1px dotted #000;
+        padding-bottom: 5px;
     }
 /*右边内容部分样式在其他样式表里定义*/
 

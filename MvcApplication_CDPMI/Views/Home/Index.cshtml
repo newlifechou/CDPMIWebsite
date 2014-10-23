@@ -51,6 +51,6 @@
         <h5>联系我们</h5>
         @* 这里的联系方式用部分视图显示 *@
         @Html.Action("GetContactsView")
-        @Html.ActionLink("在线留言", "FeedBack", "Home")
-    </li>
+        <p id="feedbacklink">@Html.ActionLink("在线留言", "FeedBack", "Home")</p>
+</li>
 </ol>
