@@ -126,7 +126,7 @@ mark {
     }
 /*右边内容里的横幅图片宽度设定*/
 #imgfeedbacksuccess,#imggooglemap,#imgcontactus{
-    width:750px;
+    width:740px;
     border:1px solid #999;
 }
 /*右边内容部分样式在其他样式表里定义*/
