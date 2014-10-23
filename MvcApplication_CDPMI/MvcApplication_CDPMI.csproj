@@ -410,6 +410,8 @@
     <Content Include="Views\FriendLink\Create.cshtml" />
     <Content Include="Views\FriendLink\Edit.cshtml" />
     <Content Include="Views\FriendLink\Delete.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

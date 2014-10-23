@@ -23,7 +23,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// </summary>
         /// <param name="id">CategoryId</param>
         /// <returns></returns>
-        public ActionResult Product(int id=0)
+        public ActionResult Product(int id = 0)
         {
             //要使用include，必须包含using System.Data.Entity;
             //这里使用视图特定模型来传递数据
@@ -37,8 +37,8 @@ namespace MvcApplication_CDPMI.Controllers
             }
             else
             {
-               p = db.product.Where(o => o.categoryID == id).Include(o => o.productCategory).ToList();
-               h2 = db.productCategory.Where(c => c.categoryID == id).Single().categoryName;
+                p = db.product.Where(o => o.categoryID == id).Include(o => o.productCategory).ToList();
+                h2 = db.productCategory.Where(c => c.categoryID == id).Single().categoryName;
             }
             ViewBag.h2title = h2;
             return View(p);
@@ -80,11 +80,12 @@ namespace MvcApplication_CDPMI.Controllers
         public ActionResult GetContactsView()
         {
             //返回除了简介之外的其他内容
-            List<basicSetting> bs = db.basicSetting.Where(o=>o.titleIndex<=7).OrderBy(o => o.titleIndex).ToList();
+            List<basicSetting> bs = db.basicSetting.Where(o => o.titleIndex <= 7).OrderBy(o => o.titleIndex).ToList();
             return PartialView(bs);
         }
         public ActionResult FeedBack()
         {
+            ViewBag.Title = "在线留言";
             return View();
         }
         /// <summary>
@@ -94,7 +95,6 @@ namespace MvcApplication_CDPMI.Controllers
         [HttpPost]
         public ActionResult FeedBack(feedback fb)
         {
-            //UpdateModel(fb);
             //存储已经没有问题，但是验证问题还很严重，必须重新学习这一部分的内容?????
             //2014.10.23日已经基本解决
             if (ModelState.IsValid)
@@ -104,17 +104,30 @@ namespace MvcApplication_CDPMI.Controllers
                 db.SaveChanges();
                 return View("FeedBackSuccess");
             }
+            ViewBag.Title = "在线留言";
             return View(fb);
         }
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
-
+            ViewBag.Title = "关于我们";
+            //读取公司简介信息，用于About页面
+            ViewBag.About = db.basicSetting.Where(o => o.title == "公司简介").Single().contentText;
             return View();
         }
 
         public ActionResult Contact()
         {
+            return View();
+        }
+        public ActionResult Service()
+        {
+            ViewBag.Title = "服务项目";
+            return View();
+        }
+
+        public ActionResult News()
+        {
+            ViewBag.Title = "行业动态";
             return View();
         }
     }
