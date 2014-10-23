@@ -15,19 +15,22 @@ namespace MvcApplication_CDPMI.Models
 
     public partial class feedback
     {
-        [Required]
         public int id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "此项是必填项")]
+        [StringLength(50,ErrorMessage="此项长度不能大于50个字符")]
         public string title { get; set; }
-        [Required]
         public System.DateTime createTime { get; set; }
-        [Required]
+        [Required(ErrorMessage = "此项是必填项")]
         public string mainContent { get; set; }
-        [Required]
+        [Required(ErrorMessage = "此项是必填项")]
+        [StringLength(100, ErrorMessage = "此项长度不能大于100个字符")]
         public string phone { get; set; }
-        [Required]
+        [Required(ErrorMessage = "此项是必填项")]
+        [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",ErrorMessage="Email地址不符合要求")]
+        [StringLength(100, ErrorMessage = "此项长度不能大于100个字符")]
         public string email { get; set; }
-        [Required]
+        [Required(ErrorMessage = "此项是必填项")]
+        [StringLength(50, ErrorMessage = "此项长度不能大于50个字符")]
         public string cname { get; set; }
     }
 }

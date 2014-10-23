@@ -15,15 +15,15 @@
 </div>
 <div class="float-left right-content">
     <h2>联系我们</h2>
-    <p>请在下面表单中填写您要咨询的问题：</p>
+    <p>请在下面表单中填写您要咨询的问题：（注意用*标记出来的内容是必须要填写的，否则无法提交）</p>
     @using (Html.BeginForm())
     {
         <table>
-            <tr><td>标题:</td><td>@Html.EditorFor(o=>o.title)@Html.ValidationMessageFor(o => o.title)</td></tr>
-            <tr><td>姓名:</td><td>@Html.EditorFor(o=>o.cname)@Html.ValidationMessageFor(o => o.cname)</td></tr>
-            <tr><td>邮件:</td><td>@Html.EditorFor(o=>o.email)@Html.ValidationMessageFor(o => o.email)</td></tr>
-            <tr><td>电话:</td><td>@Html.EditorFor(o=>o.phone)@Html.ValidationMessageFor(o => o.phone)</td></tr>
-            <tr><td>内容:</td><td>@Html.TextAreaFor(o=>o.mainContent)@Html.ValidationMessageFor(o => o.mainContent)</td></tr>
+            <tr><td>标题:</td><td>@Html.EditorFor(o=>o.title) * @Html.ValidationMessageFor(o => o.title)</td></tr>
+            <tr><td>姓名:</td><td>@Html.EditorFor(o => o.cname) * @Html.ValidationMessageFor(o => o.cname)</td></tr>
+            <tr><td>邮件:</td><td>@Html.EditorFor(o => o.email) * @Html.ValidationMessageFor(o => o.email)</td></tr>
+            <tr><td>电话:</td><td>@Html.EditorFor(o => o.phone) * @Html.ValidationMessageFor(o => o.phone)</td></tr>
+            <tr><td>内容:</td><td>@Html.TextAreaFor(o => o.mainContent) * @Html.ValidationMessageFor(o => o.mainContent)</td></tr>
         </table>
         <p>
             <input type="submit" value="提交留言" />
