@@ -6,20 +6,28 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
+//在这个类里面添加了必须字段特性，用于数据验证
 namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class feedback
     {
+        [Required]
         public int id { get; set; }
+        [Required]
         public string title { get; set; }
+        [Required]
         public System.DateTime createTime { get; set; }
+        [Required]
         public string mainContent { get; set; }
+        [Required]
         public string phone { get; set; }
+        [Required]
         public string email { get; set; }
+        [Required]
         public string cname { get; set; }
     }
 }
