@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcApplication_CDPMI.Models;
+using System.Data;
 
 namespace MvcApplication_CDPMI.Controllers
 {
@@ -27,6 +28,10 @@ namespace MvcApplication_CDPMI.Controllers
         {
             return View();
         }
+        public ActionResult Success()
+        {
+            return View();
+        }
 
         /// <summary>
         /// 基本信息编辑
@@ -34,14 +39,28 @@ namespace MvcApplication_CDPMI.Controllers
         /// <returns></returns>
         public ActionResult Basic()
         {
-            return View();
+            basicSetting bs = db.basicSetting.First();
+            return View(bs);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bs"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Basic(basicSetting bs)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                db.Entry(bs).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Success", "Admin");
+            }
+            return View(bs);
         }
 
 

@@ -5,21 +5,44 @@
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
 
-<h2>基本信息编辑</h2>
-
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>basicSetting</legend>
-            
+        <legend>公司基本信息编辑</legend>
+        <ol>
+            @Html.HiddenFor(o => o.id)
+            <li>
+                公司名称:@Html.EditorFor(o => o.CompanyName)
+            </li>
+            <li>
+                电子邮件:@Html.EditorFor(o => o.Email)
+            </li>
+            <li>
+                电话号码:@Html.EditorFor(o => o.Phone)
+            </li>
+            <li>
+                联系地址:@Html.EditorFor(o => o.Address)
+            </li>
+            <li>
+                邮政编码:@Html.EditorFor(o => o.PostCode)
+            </li>
+            <li>
+                联系人员:@Html.EditorFor(o => o.Contact)
+            </li>
+            <li>
+                传真号码:@Html.EditorFor(o => o.Fax)
+            </li>
+            <li>
+                公司简介:<br />
+                @Html.TextAreaFor(o => o.BriefIntrodction)
+            </li>
+        </ol>
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="保存" />
         </p>
     </fieldset>
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
