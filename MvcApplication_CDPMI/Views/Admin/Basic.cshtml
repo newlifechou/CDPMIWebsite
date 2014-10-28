@@ -4,6 +4,11 @@
     ViewBag.Title = "Basic";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
+@section AddJs{
+    <script src="~/ueditor/ueditor.config.js"></script>
+    <script src="~/ueditor/ueditor.all.min.js"></script>
+    <script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>
+}
 
 @using (Html.BeginForm())
 {
@@ -37,6 +42,9 @@
             </li>
             <li>
                 公司简介:<br />
+                <script>
+                    var ue = UE.getEditor('BriefIntrodction');
+                </script>
                 @Html.TextAreaFor(o => o.BriefIntrodction)
             </li>
         </ol>

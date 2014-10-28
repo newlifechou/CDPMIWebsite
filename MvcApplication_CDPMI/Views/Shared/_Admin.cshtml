@@ -2,8 +2,9 @@
     ViewBag.Title = "管理界面";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section AddToHead{
 
+@section AddToHead{
+    @RenderSection("AddJs",required:false)
 }
 <div class="float-left">
     <div class="left-menu">
