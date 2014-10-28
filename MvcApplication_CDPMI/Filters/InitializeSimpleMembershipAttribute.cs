@@ -25,19 +25,21 @@ namespace MvcApplication_CDPMI.Filters
         {
             public SimpleMembershipInitializer()
             {
+                //初始化数据库联机
                 Database.SetInitializer<UsersContext>(null);
 
                 try
                 {
                     using (var context = new UsersContext())
                     {
+                        //检查数据库是否正处于可联机状态
                         if (!context.Database.Exists())
                         {
                             // 创建不包含 Entity Framework 迁移架构的 SimpleMembership 数据库
                             ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
                         }
                     }
-
+                    //如果数据表不存在的时候，自动建立
                     WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
                 }
                 catch (Exception ex)

@@ -158,8 +158,10 @@ namespace MvcApplication_CDPMI.Controllers
 
         /// <summary>
         /// 显示管理编辑界面的欢迎界面
+        /// 添加有身份验证要求的Attribute
         /// </summary>
         /// <returns></returns>
+        [Authorize]
         public ActionResult Admin()
         {
             return View();
