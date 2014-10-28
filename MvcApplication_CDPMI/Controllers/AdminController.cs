@@ -52,10 +52,11 @@ namespace MvcApplication_CDPMI.Controllers
         [ValidateAntiForgeryToken]
         ///取消页面输入验证
         [ValidateInput(false)]
-        public ActionResult Basic(basicSetting bs)
+        public ActionResult Basic(basicSetting bs,FormCollection fc)
         {
             if (ModelState.IsValid)
             {
+                bs.BriefIntrodction = fc["BriefIntrodction"].ToString();
                 db.Entry(bs).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Success", "Admin");
