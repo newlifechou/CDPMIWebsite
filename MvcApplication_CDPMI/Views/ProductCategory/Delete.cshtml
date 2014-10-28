@@ -1,0 +1,41 @@
+﻿@model MvcApplication_CDPMI.Models.productCategory
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>productCategory</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.categoryID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.categoryID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.categoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.memo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="删除" /> |
+        @Html.ActionLink("返回到类别列表", "Index")
+    </p>
+}

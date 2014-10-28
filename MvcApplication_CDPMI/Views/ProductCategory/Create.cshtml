@@ -1,0 +1,50 @@
+﻿@model MvcApplication_CDPMI.Models.productCategory
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>productCategory</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categoryID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categoryID)
+            @Html.ValidationMessageFor(model => model.categoryID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categoryName)
+            @Html.ValidationMessageFor(model => model.categoryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.memo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.memo)
+            @Html.ValidationMessageFor(model => model.memo)
+        </div>
+
+        <p>
+            <input type="submit" value="新建" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回到类别列表", "Index")
+</div>
+
