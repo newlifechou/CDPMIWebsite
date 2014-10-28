@@ -35,6 +35,5 @@ namespace MvcApplication_CDPMI.Models
         public DbSet<product> product { get; set; }
         public DbSet<productCategory> productCategory { get; set; }
         public DbSet<service> service { get; set; }
-        public DbSet<test> test { get; set; }
     }
 }

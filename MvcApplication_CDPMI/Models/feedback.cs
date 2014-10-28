@@ -6,31 +6,20 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System.ComponentModel.DataAnnotations;
-//在这个类里面添加了必须字段特性，用于数据验证
+
 namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class feedback
     {
         public int id { get; set; }
-        [Required(ErrorMessage = "此项是必填项")]
-        [StringLength(50,ErrorMessage="此项长度不能大于50个字符")]
         public string title { get; set; }
         public System.DateTime createTime { get; set; }
-        [Required(ErrorMessage = "此项是必填项")]
         public string mainContent { get; set; }
-        [Required(ErrorMessage = "此项是必填项")]
-        [StringLength(100, ErrorMessage = "此项长度不能大于100个字符")]
         public string phone { get; set; }
-        [Required(ErrorMessage = "此项是必填项")]
-        [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",ErrorMessage="Email地址不符合要求")]
-        [StringLength(100, ErrorMessage = "此项长度不能大于100个字符")]
         public string email { get; set; }
-        [Required(ErrorMessage = "此项是必填项")]
-        [StringLength(50, ErrorMessage = "此项长度不能大于50个字符")]
         public string cname { get; set; }
     }
 }

@@ -80,7 +80,7 @@ namespace MvcApplication_CDPMI.Controllers
         public ActionResult GetContactsView()
         {
             //返回除了简介之外的其他内容
-            List<basicSetting> bs = db.basicSetting.Where(o => o.titleIndex <= 7).OrderBy(o => o.titleIndex).ToList();
+            basicSetting bs = db.basicSetting.First();
             return PartialView(bs);
         }
         public ActionResult FeedBack()
@@ -111,7 +111,7 @@ namespace MvcApplication_CDPMI.Controllers
         {
             ViewBag.Title = "关于我们";
             //读取公司简介信息，用于About页面
-            ViewBag.About = db.basicSetting.Where(o => o.title == "公司简介").Single().contentText;
+            ViewBag.About = db.basicSetting.First().BriefIntrodction;
             return View();
         }
 

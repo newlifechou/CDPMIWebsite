@@ -15,8 +15,13 @@ namespace MvcApplication_CDPMI.Models
     public partial class basicSetting
     {
         public int id { get; set; }
-        public string title { get; set; }
-        public string contentText { get; set; }
-        public Nullable<int> titleIndex { get; set; }
+        public string CompanyName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Fax { get; set; }
+        public string Address { get; set; }
+        public string PostCode { get; set; }
+        public string Contact { get; set; }
+        public string BriefIntrodction { get; set; }
     }
 }

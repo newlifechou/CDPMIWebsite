@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="WebModel.product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="WebModel.productCategory" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="WebModel.service" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WebModel.test" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
         <AssociationConnector Association="WebModel.FK__product__categor__0AD2A005" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

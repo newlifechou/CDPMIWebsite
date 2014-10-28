@@ -227,9 +227,6 @@
     <Compile Include="Models\service.cs">
       <DependentUpon>Web.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\test.cs">
-      <DependentUpon>Web.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Web.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -423,6 +420,7 @@
     <Content Include="Views\Home\NewsDetails.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Basic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

@@ -1,0 +1,25 @@
+﻿@model MvcApplication_CDPMI.Models.basicSetting
+
+@{
+    ViewBag.Title = "Basic";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>基本信息编辑</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>basicSetting</legend>
+            
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
