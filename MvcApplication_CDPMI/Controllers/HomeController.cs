@@ -155,16 +155,5 @@ namespace MvcApplication_CDPMI.Controllers
             news news = db.news.Find(id);
             return View(news);
         }
-
-        /// <summary>
-        /// 显示管理编辑界面的欢迎界面
-        /// 添加有身份验证要求的Attribute
-        /// </summary>
-        /// <returns></returns>
-        [Authorize]
-        public ActionResult Admin()
-        {
-            return View();
-        }
     }
 }

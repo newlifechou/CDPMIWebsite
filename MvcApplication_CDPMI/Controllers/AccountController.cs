@@ -44,7 +44,17 @@ namespace MvcApplication_CDPMI.Controllers
             ModelState.AddModelError("", "提供的用户名或密码不正确。");
             return View(model);
         }
+        /// <summary>
+        /// 用Get方法也可以进行注销
+        /// Get:/Account/LogOff
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult LogOffGet()
+        {
+            WebSecurity.Logout();
 
+            return RedirectToAction("Index", "Home");
+        }
         //
         // POST: /Account/LogOff
 
