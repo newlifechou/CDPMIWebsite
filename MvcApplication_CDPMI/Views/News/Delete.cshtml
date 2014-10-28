@@ -1,0 +1,48 @@
+﻿@model MvcApplication_CDPMI.Models.news
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>news</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.newsTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.newsTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.publishTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publishTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.readCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.readCount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contentText)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contentText)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

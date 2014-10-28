@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcApplication_CDPMI.Models.news>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.newsTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publishTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.readCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.newsTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publishTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.readCount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.newsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.newsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.newsID })
+        </td>
+    </tr>
+}
+
+</table>
