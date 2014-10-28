@@ -1,0 +1,57 @@
+﻿@model MvcApplication_CDPMI.Models.feedback
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>feedback</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.createTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mainContent)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mainContent)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cname)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("返回列表", "Index")
+</p>
