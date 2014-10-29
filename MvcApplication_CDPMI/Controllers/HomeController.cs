@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using MvcApplication_CDPMI.Models;
-
+using System.Data;
 
 namespace MvcApplication_CDPMI.Controllers
 {
@@ -153,6 +153,10 @@ namespace MvcApplication_CDPMI.Controllers
             }
             ViewBag.Title = "新闻内容";
             news news = db.news.Find(id);
+            //给该条新闻的阅读次数添加1,并保存到数据库
+            news.readCount += 1;
+            db.Entry(news).State = EntityState.Modified;
+            db.SaveChanges();
             return View(news);
         }
     }

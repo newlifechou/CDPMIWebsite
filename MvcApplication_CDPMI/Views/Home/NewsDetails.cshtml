@@ -16,7 +16,7 @@
     <h2>@ViewBag.Title</h2>
     <p style="font-size:16px;font-weight:bold;margin:15px 0;">@Html.DisplayFor(o => Model.newsTitle)</p>
     <p style="border-top:1px  dashed #333">
-        发布时间：@Html.DisplayFor(o => o.publishTime)   阅读次数：@Html.DisplayFor(o => o.readCount) 次
+        发布时间:@Html.DisplayFor(o => o.publishTime)   阅读次数:@Html.DisplayFor(o => o.readCount) 次
     </p>
     <div style="padding:15px 0;border-top:1px dashed #333;border-bottom:1px dashed #333">
         @Html.Raw(Model.contentText)
