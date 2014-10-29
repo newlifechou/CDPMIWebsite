@@ -333,6 +333,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\cdpmi\icon.ico" />
+    <Content Include="Models\注意！！！.txt" />
     <Content Include="ueditorTest.html" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />
     <Content Include="ueditor\dialogs\attachment\attachment.css" />
@@ -738,7 +739,6 @@
     <Content Include="Views\FeedBack\Details.cshtml" />
     <Content Include="Views\FeedBack\Delete.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\News\Details.cshtml" />
     <Content Include="Views\News\Create.cshtml" />
     <Content Include="Views\News\Edit.cshtml" />
     <Content Include="Views\News\Delete.cshtml" />

@@ -136,8 +136,8 @@ namespace MvcApplication_CDPMI.Controllers
         public ActionResult News()
         {
             ViewBag.Title = "行业动态";
-
-            List<news> news = db.news.ToList();
+            //新闻按照发布日期排序
+            List<news> news = db.news.OrderByDescending(o => o.publishTime).ToList();
             return View(news);
         }
         /// <summary>
