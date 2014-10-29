@@ -333,6 +333,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\cdpmi\icon.ico" />
+    <Content Include="Images\products\CIGS-1.JPG" />
+    <Content Include="Images\products\In2Se3-1.JPG" />
+    <Content Include="Images\upload\image\20141029\6355018410200952825399988.jpg" />
+    <Content Include="Images\upload\image\20141029\6355018434266329286161241.gif" />
+    <Content Include="Images\upload\image\20141029\6355018497346937286365922.jpg" />
     <Content Include="Models\注意！！！.txt" />
     <Content Include="ueditorTest.html" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />
@@ -745,10 +750,12 @@
     <Content Include="WebConfigBackup\Web-local.config" />
     <Content Include="WebConfigBackup\Web-remote.config" />
     <Content Include="WebConfigBackup\Web-remote-l.config" />
+    <Content Include="ueditor\net\config - bk.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Images\products\old\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
