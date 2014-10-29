@@ -334,6 +334,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\cdpmi\icon.ico" />
+    <Content Include="Images\products\BiSbTe.jpg" />
     <Content Include="Images\products\CIGS-1.JPG" />
     <Content Include="Images\products\In2Se3-1.JPG" />
     <Content Include="Images\upload\image\20141029\6355018410200952825399988.jpg" />

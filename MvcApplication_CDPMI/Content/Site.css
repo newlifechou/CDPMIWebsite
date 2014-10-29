@@ -118,13 +118,19 @@ mark {
 }
 
     .right-content h2 {
-        border-bottom: 1px dotted #000;
+        border-bottom: 1px solid #000;
         padding-bottom: 5px;
+        font-size:18px;
     }
-
-    .right-content p {
+    .right-content .time{
+        color:orange;
+    }
+    .right-content .readcount{
+        color:orange;
+    }
+    /*.right-content p {
         line-height: 1.5;
-    }
+    }*/
 /*右边内容里的横幅图片宽度设定*/
 #imgfeedbacksuccess, #imggooglemap, #imgcontactus {
     width: 740px;

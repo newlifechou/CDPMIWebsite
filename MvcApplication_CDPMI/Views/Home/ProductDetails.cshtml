@@ -20,9 +20,15 @@
 </div>
 <div class="float-left right-content">
     <h2>@Html.DisplayFor(o => o.productName)</h2>
-    <p>发布日期：@Html.DisplayFor(o=>o.publicTime) 阅读次数： @Html.DisplayFor(o=>o.readCount) 次</p>
+    <p>
+        发布日期：<span class="time">@Html.DisplayFor(o => o.publicTime)</span>
+        阅读次数： <span class="readcount">@Html.DisplayFor(o => o.readCount)</span> 次
+    </p>
     <hr />
     <div>
         @Html.Raw(Model.contentText)
     </div>
+    <p id="feedbacklink">
+        @Html.ActionLink("返回产品列表", "Product", "Home", new { id = 0 }, null)
+    </p>
 </div>

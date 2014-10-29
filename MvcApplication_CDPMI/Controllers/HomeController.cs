@@ -51,15 +51,19 @@ namespace MvcApplication_CDPMI.Controllers
         /// <returns></returns>
         public ActionResult ProductDetails(int? id)
         {
-            product p;
             if (id == null)
             {
                 return HttpNotFound();
             }
-            else
+            product p = db.product.Find(id);
+            if (p == null)
             {
-                p = db.product.Where(o => o.productID == id).Single();
+                return HttpNotFound();
             }
+            //给阅读次数添加1
+            p.readCount += 1;
+            db.Entry(p).State = EntityState.Modified;
+            db.SaveChanges();
             return View(p);
         }
 
