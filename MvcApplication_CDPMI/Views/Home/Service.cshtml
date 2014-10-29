@@ -23,7 +23,7 @@
                     </td>
                     <td style="vertical-align:top">
                         <b style="font-size:14px">@Html.DisplayFor(o=>item.serviceName)</b><br/>
-                        @Html.DisplayFor(o=>item.serviceContent)
+                        @Html.Raw(item.serviceContent)
                     </td>
                 </tr>
             }

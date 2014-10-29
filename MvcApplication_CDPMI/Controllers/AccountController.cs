@@ -69,8 +69,9 @@ namespace MvcApplication_CDPMI.Controllers
 
         //
         // GET: /Account/Register
-
-        [AllowAnonymous]
+        //网站成型后，要禁止注册功能
+        //[AllowAnonymous]
+        [Authorize]
         public ActionResult Register()
         {
             return View();
