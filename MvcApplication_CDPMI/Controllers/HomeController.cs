@@ -107,11 +107,28 @@ namespace MvcApplication_CDPMI.Controllers
             ViewBag.Title = "在线留言";
             return View(fb);
         }
-        public ActionResult About()
+        public ActionResult About(int id = 0)
         {
-            ViewBag.Title = "关于我们";
+            switch (id)
+            {
+                case 1:
+                    ViewBag.Title = "关于我们";
+                    break;
+                case 2:
+                    ViewBag.Title = "技术专家";
+                    break;
+                case 3:
+                    ViewBag.Title = "荣誉资质";
+                    break;
+                case 4:
+                    ViewBag.Title = "发展历程";
+                    break;
+                default:
+                    return HttpNotFound();
+            }
+
             //读取公司简介信息，用于About页面
-            ViewBag.About = db.basicSetting.First().BriefIntrodction;
+            ViewBag.About = db.basicSetting.Find(id).BriefIntrodction;
             return View();
         }
 

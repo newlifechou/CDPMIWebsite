@@ -757,6 +757,7 @@
     <Content Include="Views\Service\Create.cshtml" />
     <Content Include="Views\Service\Edit.cshtml" />
     <Content Include="Views\Service\Delete.cshtml" />
+    <Content Include="Views\Admin\OtherBasics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

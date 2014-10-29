@@ -1,0 +1,30 @@
+﻿@model MvcApplication_CDPMI.Models.basicSetting
+
+@{
+    ViewBag.Title = "OtherBasics";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>OtherBasics</h2>
+<p>请在下面的编辑框当中更改，然后点击保存即可</p>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>basicSetting</legend>
+        @Html.HiddenFor(model => model.id)
+        <div class="editor-field">
+            <script>
+                var ue = UE.getEditor('BriefIntrodction');
+            </script>
+            @Html.TextAreaFor(model => model.BriefIntrodction)
+            @Html.ValidationMessageFor(model => model.BriefIntrodction)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+

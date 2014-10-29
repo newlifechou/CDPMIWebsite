@@ -4,12 +4,17 @@
 
 <div class="float-left">
     <div class="left-menu">
-        <h5>@ViewBag.Title</h5>
+        <h5>关于我们</h5>
         <ul>
-            <li>@Html.ActionLink("公司简介", "About", "Home")</li>
-            <li>@Html.ActionLink("荣誉资质", "About", "Home")</li>
-            <li>@Html.ActionLink("技术专家", "About", "Home")</li>
-            <li>@Html.ActionLink("发展历程", "About", "Home")</li>
+            <li>@Html.ActionLink("公司简介", "About", "Home", new { id = 1 }, null)</li>
+            <li>@Html.ActionLink("荣誉资质", "About", "Home", new { id = 3 }, null)</li>
+            <li>@Html.ActionLink("技术专家", "About", "Home", new { id = 2 }, null)</li>
+            <li>@Html.ActionLink("发展历程", "About", "Home", new { id = 4 }, null)</li>
+        </ul>
+    </div>
+    <div class="left-menu">
+        <h5>联系我们</h5>
+        <ul>
             <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
             <li>@Html.ActionLink("在线留言", "FeedBack", "Home")</li>
         </ul>

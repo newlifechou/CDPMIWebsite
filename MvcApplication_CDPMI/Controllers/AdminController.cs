@@ -39,10 +39,9 @@ namespace MvcApplication_CDPMI.Controllers
         /// <returns></returns>
         public ActionResult Basic()
         {
-            basicSetting bs = db.basicSetting.First();
+            basicSetting bs = db.basicSetting.Find(1);
             return View(bs);
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +62,27 @@ namespace MvcApplication_CDPMI.Controllers
             return View(bs);
         }
 
+        public ActionResult OtherBasics(int id=0)
+        {
+            if (id==0)
+            {
+                return HttpNotFound();
+            }
+            basicSetting bs = db.basicSetting.Find(id);
+            return View(bs);
+        }
 
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult OtherBasics(basicSetting bs)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(bs).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Success", "Admin");
+            }
+            return View(bs);
+        }
     }
 }
