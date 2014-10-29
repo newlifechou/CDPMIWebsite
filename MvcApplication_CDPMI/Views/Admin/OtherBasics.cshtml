@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
 
-<h2>OtherBasics</h2>
+<h2>@ViewBag.Title</h2>
 <p>请在下面的编辑框当中更改，然后点击保存即可</p>
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()

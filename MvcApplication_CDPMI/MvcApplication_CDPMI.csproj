@@ -340,6 +340,12 @@
     <Content Include="Images\upload\image\20141029\6355018434266329286161241.gif" />
     <Content Include="Images\upload\image\20141029\6355018497346937286365922.jpg" />
     <Content Include="Images\upload\image\20141029\6355018567870170987212164.png" />
+    <Content Include="Images\upload\image\20141029\6355019029648883215227510.jpg" />
+    <Content Include="Images\upload\image\20141029\6355019032477945036253206.jpg" />
+    <Content Include="Images\upload\image\20141029\6355019033671313282866502.jpg" />
+    <Content Include="Images\upload\image\20141029\6355019125099242666503674.png" />
+    <Content Include="Images\upload\image\20141029\6355019161336215305362738.png" />
+    <Content Include="Images\upload\image\20141029\6355019221625063628025331.png" />
     <Content Include="Models\注意！！！.txt" />
     <Content Include="ueditorTest.html" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />

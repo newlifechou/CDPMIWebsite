@@ -123,6 +123,9 @@ namespace MvcApplication_CDPMI.Controllers
                 case 4:
                     ViewBag.Title = "发展历程";
                     break;
+                case 5:
+                    ViewBag.Title = "主要产品";
+                    break;
                 default:
                     return HttpNotFound();
             }
