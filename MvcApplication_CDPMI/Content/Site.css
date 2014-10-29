@@ -63,20 +63,20 @@ mark {
 }
 /*body部分的左右分栏*/
 .left-menu {
-    border: 1px dotted #666;
+    border: 1px solid #333;
     width: 200px;
-    background-color: #999;
+    background-color: #666;
     text-align: center;
     margin-bottom: 20px;
 }
 
     .left-menu h5 {
         font-weight: bold;
-        border-bottom: 1px dashed #000;
+        /*border-bottom: 1px dashed #000;*/
         font-size: 16px;
         color: #fff;
         padding: 10px 0 10px 0;
-        background-color: #666;
+        background-color: #333;
     }
 
     .left-menu a {
@@ -274,7 +274,7 @@ div#nav {
     /*导航条颜色*/
     background-color: #333;
     overflow: hidden;
-    margin-bottom: 1px;
+    margin: 1px 0;
 }
 
     div#nav div {
