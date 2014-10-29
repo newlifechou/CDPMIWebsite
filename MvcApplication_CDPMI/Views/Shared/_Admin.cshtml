@@ -3,7 +3,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section AddToHead{
-    @RenderSection("AddJs", required: false)
+    @* 这里添加的是后台界面要用到的ueditor编辑器的js引用 *@
+    @* 所有的后台页面都通用 *@
+    <script src="~/ueditor/ueditor.config.js"></script>
+    <script src="~/ueditor/ueditor.all.min.js"></script>
+    <script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="~/ueditor/ueditor.parse.min.js"></script>
 }
 <div class="float-left">
     <div class="left-menu">
