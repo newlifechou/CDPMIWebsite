@@ -11,11 +11,13 @@ namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class news
     {
         public int newsID { get; set; }
         public string newsTitle { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public System.DateTime publishTime { get; set; }
         public int readCount { get; set; }
         public string contentText { get; set; }

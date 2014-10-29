@@ -10,11 +10,8 @@
 <p>
     @Html.ActionLink("新建", "Create")
 </p>
-<table style="border:1px solid #333;">
+<table style="width:300px">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.categoryID)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.categoryName)
         </th>
@@ -23,10 +20,8 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.categoryID)
-            </td>
+        <tr style="border-bottom:1px dotted #333;">
+                @Html.HiddenFor(modelItem => item.categoryID)
             <td>
                 @Html.DisplayFor(modelItem => item.categoryName)
             </td>

@@ -18,7 +18,8 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult Index()
         {
-            return View(db.news.ToList());
+            List<news> news = db.news.OrderByDescending(o => o.publishTime).ToList();
+            return View(news);
         }
 
         //
@@ -51,6 +52,8 @@ namespace MvcApplication_CDPMI.Controllers
         [ValidateInput(false)]
         public ActionResult Create(news news)
         {
+            //添加该条新闻的创建时间
+            news.publishTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.news.Add(news);
