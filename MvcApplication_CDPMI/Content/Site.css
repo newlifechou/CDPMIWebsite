@@ -44,7 +44,7 @@ a {
     }
 
 header, footer, hgroup,
-nav, section {
+section {
     display: block;
 }
 
@@ -91,20 +91,21 @@ mark {
         }
 
 /*此部分用来显示每页出现的在线留言的链接样式*/
-#feedbacklink{
-    margin:5px 0;
-    padding:5px 0;
-}
-#feedbacklink a {
-    border: 1px solid #999;
-    background-color: #99ccff;
-    padding: 5px;
+#feedbacklink {
+    margin: 5px 0;
+    padding: 5px 0;
 }
 
-    #feedbacklink a:hover {
-        color: white;
-        background-color: #333;
+    #feedbacklink a {
+        border: 1px solid #999;
+        background-color: #99ccff;
+        padding: 5px;
     }
+
+        #feedbacklink a:hover {
+            color: white;
+            background-color: #333;
+        }
 
 
 /*右边内容部分样式在其他样式表里定义*/
@@ -113,20 +114,21 @@ mark {
     padding-left: 10px;
     /*background-color: green;*/
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
-    overflow:hidden;
+    overflow: hidden;
 }
 
     .right-content h2 {
         border-bottom: 1px dotted #000;
         padding-bottom: 5px;
     }
-    .right-content p{
-        line-height:1.5;
+
+    .right-content p {
+        line-height: 1.5;
     }
 /*右边内容里的横幅图片宽度设定*/
-#imgfeedbacksuccess,#imggooglemap,#imgcontactus{
-    width:740px;
-    border:1px solid #999;
+#imgfeedbacksuccess, #imggooglemap, #imgcontactus {
+    width: 740px;
+    border: 1px solid #999;
 }
 /*右边内容部分样式在其他样式表里定义*/
 
@@ -195,7 +197,9 @@ h5, h6 {
 }
 
 header .content-wrapper {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
+    /*如果content-wrapper里的内容左右浮动了，那么该div自动调整高度*/
+    overflow: hidden;
 }
 
 footer {
@@ -232,8 +236,9 @@ footer {
 #login {
     display: block;
     font-size: .85em;
-    margin: 0 0 10px;
+    margin: 25px 0 10px;
     text-align: right;
+    overflow:hidden;
 }
 
     #login a {
@@ -263,24 +268,37 @@ footer {
 
 /* menu
 ----------------------------------------------------------*/
+/* menu */
+div#nav {
+    width: 100%;
+    /*导航条颜色*/
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 1px;
+}
+
+    div#nav div {
+        width: 960px;
+        margin: 0 auto;
+    }
+
 ul#menu {
     font-size: 1.3em;
     font-weight: 600;
-    margin: 0 0 5px;
-    padding: 0;
-    text-align: right;
+    text-align: left;
 }
 
     ul#menu li {
-        display: inline;
         list-style: none;
-        padding-left: 15px;
+        padding: 10px 25px 10px 0;
+        float: left;
     }
 
         ul#menu li a {
             background: none;
             color: #000;
             text-decoration: none;
+            color: white;
         }
 
             ul#menu li a:hover {
@@ -725,23 +743,6 @@ tr.pager td {
             #login a:hover {
                 color: #333;
             }
-
-    /* menu */
-    nav {
-        margin-bottom: 5px;
-    }
-
-    ul#menu {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-        ul#menu li {
-            margin: 0;
-            padding: 0;
-        }
-
 
     /* main layout
     ----------------------------------------------------------*/

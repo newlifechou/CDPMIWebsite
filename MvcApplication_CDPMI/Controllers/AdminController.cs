@@ -64,9 +64,25 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult OtherBasics(int id=0)
         {
-            if (id==0)
+            switch (id)
             {
-                return HttpNotFound();
+                case 1:
+                    ViewBag.Title = "关于我们";
+                    break;
+                case 2:
+                    ViewBag.Title = "技术专家";
+                    break;
+                case 3:
+                    ViewBag.Title = "荣誉资质";
+                    break;
+                case 4:
+                    ViewBag.Title = "发展历程";
+                    break;
+                case 5:
+                    ViewBag.Title = "主要产品";
+                    break;
+                default:
+                    return HttpNotFound();
             }
             basicSetting bs = db.basicSetting.Find(id);
             return View(bs);

@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
     @* 这里设置一个Section，用来给后面的 *@
     @if (IsSectionDefined("AddToHead"))
     {
@@ -29,16 +28,18 @@
                     @* 这里暂时将登陆部分隐藏掉，以后再启用 *@
                     @Html.Partial("_LoginPartial")
                 </section>
-                <nav>
-                    <ul id="menu">
-                        <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                        <li>@Html.ActionLink("产品信息", "Product", "Home", new { id = 0 }, null)</li>
-                        <li>@Html.ActionLink("服务信息", "Service", "Home")</li>
-                        <li>@Html.ActionLink("行业动态", "News", "Home")</li>
-                        <li>@Html.ActionLink("关于我们", "About", "Home", new { id = 1 }, null)</li>
-                        <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                    </ul>
-                </nav>
+            </div>
+        </div>
+        <div id="nav">
+            <div>
+                <ul id="menu">
+                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                    <li>@Html.ActionLink("产品信息", "Product", "Home", new { id = 0 }, null)</li>
+                    <li>@Html.ActionLink("服务信息", "Service", "Home")</li>
+                    <li>@Html.ActionLink("行业动态", "News", "Home")</li>
+                    <li>@Html.ActionLink("关于我们", "About", "Home", new { id = 1 }, null)</li>
+                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                </ul>
             </div>
         </div>
     </header>
@@ -55,7 +56,6 @@
             </div>
         </div>
     </footer>
-
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
