@@ -52,7 +52,10 @@
             @Html.LabelFor(model => model.contentText)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.contentText)
+            <script>
+                var ue = UE.getEditor('contentText');
+            </script>
+            @Html.TextAreaFor(model => model.contentText)
             @Html.ValidationMessageFor(model => model.contentText)
         </div>
 

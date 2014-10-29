@@ -49,6 +49,8 @@ namespace MvcApplication_CDPMI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Create(product product)
         {
             if (ModelState.IsValid)
@@ -81,6 +83,8 @@ namespace MvcApplication_CDPMI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Edit(product product)
         {
             if (ModelState.IsValid)

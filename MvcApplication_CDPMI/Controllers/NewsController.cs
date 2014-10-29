@@ -47,6 +47,8 @@ namespace MvcApplication_CDPMI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Create(news news)
         {
             if (ModelState.IsValid)
@@ -77,6 +79,8 @@ namespace MvcApplication_CDPMI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Edit(news news)
         {
             if (ModelState.IsValid)
