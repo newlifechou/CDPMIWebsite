@@ -110,7 +110,9 @@ mark {
 
 /*右边内容部分样式在其他样式表里定义*/
 .right-content {
-    width: 746px;
+    /*width: 746px;*/
+    /*实现右边自适应结果*/
+    margin-left: 200px;
     padding-left: 10px;
     /*background-color: green;*/
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
