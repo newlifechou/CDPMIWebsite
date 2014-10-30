@@ -9,6 +9,7 @@ using MvcApplication_CDPMI.Models;
 
 namespace MvcApplication_CDPMI.Controllers
 {
+    [Authorize]
     public class NewsController : Controller
     {
         private WebEntities db = new WebEntities();

@@ -7,6 +7,7 @@ using MvcApplication_CDPMI.Models;
 
 namespace MvcApplication_CDPMI.Controllers
 {
+    [Authorize]
     public class FeedBackController : Controller
     {
         WebEntities db = new WebEntities();
@@ -15,19 +16,19 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult Index()
         {
-            List<feedback> fbs = db.feedback.OrderByDescending(o=>o.createTime).ToList();
+            List<feedback> fbs = db.feedback.OrderByDescending(o => o.createTime).ToList();
             return View(fbs);
         }
-        public ActionResult Details(int id=0)
+        public ActionResult Details(int id = 0)
         {
             feedback fb = db.feedback.Find(id);
-            if (fb==null)
+            if (fb == null)
             {
                 return HttpNotFound();
             }
             return View(fb);
         }
-        public ActionResult Delete(int id=0)
+        public ActionResult Delete(int id = 0)
         {
             feedback fb = db.feedback.Find(id);
             if (fb == null)
@@ -37,7 +38,7 @@ namespace MvcApplication_CDPMI.Controllers
             return View(fb);
         }
 
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
             feedback fb = db.feedback.Find(id);
