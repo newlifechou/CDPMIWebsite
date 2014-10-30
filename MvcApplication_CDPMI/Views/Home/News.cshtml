@@ -22,7 +22,7 @@
             <li>
                 <a class="newitemlink" href="/Home/NewsDetails/@Html.DisplayFor(o=>item.newsID)">
                     @Html.DisplayFor(o => item.newsTitle) [阅读次数:@Html.DisplayFor(o => item.readCount)]
-                    <span>@Html.DisplayFor(o => item.publishTime)</span>
+                    <span class="time">@Html.DisplayFor(o => item.publishTime)</span>
                 </a>
             </li>
         }
