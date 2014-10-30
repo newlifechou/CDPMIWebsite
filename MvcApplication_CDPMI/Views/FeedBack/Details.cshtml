@@ -1,57 +1,38 @@
 ﻿@model MvcApplication_CDPMI.Models.feedback
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "反馈信息查看";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
-<fieldset>
-    <legend>feedback</legend>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.title)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.title)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.createTime)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.createTime)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.mainContent)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.mainContent)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.phone)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.phone)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.email)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.email)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.cname)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.cname)
-    </div>
-</fieldset>
-<p>
+<table class="tableallborder">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.title)</td>
+        <td>@Html.DisplayFor(model => model.title)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.createTime)</td>
+        <td>@Html.DisplayFor(model => model.createTime)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.cname)</td>
+        <td>@Html.DisplayFor(model => model.cname)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.phone)</td>
+        <td>@Html.DisplayFor(model => model.phone)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.email)</td>
+        <td>@Html.DisplayFor(model => model.email)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.mainContent)</td>
+        <td>@Html.DisplayFor(model => model.mainContent)</td>
+    </tr>
+</table>
+<p id="feedbacklink">
     @Html.ActionLink("返回列表", "Index")
 </p>
