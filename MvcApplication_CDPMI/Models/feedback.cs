@@ -6,6 +6,7 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcApplication_CDPMI.Models
 {
@@ -15,11 +16,21 @@ namespace MvcApplication_CDPMI.Models
     public partial class feedback
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "此项不能为空")]
+        [StringLength(50,ErrorMessage="此项长度不能超过50")]
         public string title { get; set; }
         public System.DateTime createTime { get; set; }
+        [Required(ErrorMessage = "此项不能为空")]
         public string mainContent { get; set; }
+        [Required(ErrorMessage = "此项不能为空")]
+        [StringLength(50, ErrorMessage = "此项长度不能超过50")]
         public string phone { get; set; }
+        [Required(ErrorMessage="此项不能为空")]
+        [StringLength(50, ErrorMessage = "此项长度不能超过50")]
+        [RegularExpression(@"/^\w+(\.\w+)*@\w+(\.\w+)+$/",ErrorMessage="电子邮件格式不对")]
         public string email { get; set; }
+        [Required(ErrorMessage = "此项不能为空")]
+        [StringLength(50, ErrorMessage = "此项长度不能超过50")]
         public string cname { get; set; }
     }
 }
