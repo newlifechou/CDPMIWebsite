@@ -31,7 +31,7 @@
                 @* 路径要使用/,而不是\，后者会带来火狐浏览器和IE相对路径的差异而造成寻找不到文件的问题 *@
                 <a href="/Home/ProductDetails/@Html.DisplayFor(o=>item.productID)">
                     <img src="/Images/products/@Html.DisplayFor(o=>item.mainPhoto)" alt="product" /><br />
-                    <p>@Html.DisplayFor(o => item.productName)</p>
+                    <p class="ptitle">@Html.DisplayFor(o => item.productName)</p>
                 </a>
             </li>
             }
