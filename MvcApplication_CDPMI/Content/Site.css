@@ -216,7 +216,7 @@ header .content-wrapper {
 
 footer {
     clear: both;
-    background-color: #e2e2e2;
+    background-color: #666;
     font-size: .8em;
     height: 100px;
 }
@@ -323,7 +323,7 @@ ul#menu {
 ----------------------------------------------------------*/
 /* featured */
 .featured {
-    background-color: #fff;
+    background-color: #efeeef;
 }
 
     .featured .content-wrapper {
