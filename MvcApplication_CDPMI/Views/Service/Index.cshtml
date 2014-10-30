@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
+<table class="table100">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.serviceName)
@@ -19,7 +19,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="trunderline">
         <td>
             @Html.DisplayFor(modelItem => item.serviceName)
         </td>

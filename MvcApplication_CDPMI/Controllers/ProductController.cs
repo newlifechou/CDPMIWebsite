@@ -18,7 +18,7 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult Index()
         {
-            var product = db.product.Include(p => p.productCategory);
+            var product = db.product.Include(p => p.productCategory).OrderByDescending(o=>o.publicTime);
             return View(product.ToList());
         }
 
@@ -53,6 +53,8 @@ namespace MvcApplication_CDPMI.Controllers
         [ValidateInput(false)]
         public ActionResult Create(product product)
         {
+            //添加产品发布时间
+            product.publicTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.product.Add(product);

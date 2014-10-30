@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("新建", "Create")
 </p>
-<table style="width:100%;">
+<table class="table100">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.productName)
@@ -29,7 +29,7 @@
 
     @foreach (var item in Model)
     {
-        <tr style="border-bottom:1px dotted #333;">
+        <tr class="trunderline">
             <td>
                 @Html.DisplayFor(modelItem => item.productName)
             </td>
@@ -39,7 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.publicTime)
             </td>
-            <td style="text-align:center;">
+            <td class="tdcenter">
                 @Html.DisplayFor(modelItem => item.readCount)
             </td>
             <td>

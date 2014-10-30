@@ -120,15 +120,21 @@ mark {
     .right-content h2 {
         border-bottom: 1px solid #000;
         padding-bottom: 5px;
-        font-size:18px;
+        font-size: 18px;
     }
-    .right-content .time{
-        color:orange;
+
+    .right-content .time {
+        color: orange;
     }
-    .right-content .readcount{
-        color:orange;
+
+    .right-content .readcount {
+        color: orange;
     }
-    /*.right-content p {
+
+    .right-content .content {
+        padding-top: 10px;
+    }
+/*.right-content p {
         line-height: 1.5;
     }*/
 /*右边内容里的横幅图片宽度设定*/
@@ -244,7 +250,7 @@ footer {
     font-size: .85em;
     margin: 25px 0 10px;
     text-align: right;
-    overflow:hidden;
+    overflow: hidden;
 }
 
     #login a {
