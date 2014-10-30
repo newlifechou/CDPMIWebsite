@@ -27,7 +27,7 @@ namespace MvcApplication_CDPMI.Models
         public string phone { get; set; }
         [Required(ErrorMessage="此项不能为空")]
         [StringLength(50, ErrorMessage = "此项长度不能超过50")]
-        [RegularExpression(@"/^\w+(\.\w+)*@\w+(\.\w+)+$/",ErrorMessage="电子邮件格式不对")]
+        [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "电子邮件格式不对")]
         public string email { get; set; }
         [Required(ErrorMessage = "此项不能为空")]
         [StringLength(50, ErrorMessage = "此项长度不能超过50")]
