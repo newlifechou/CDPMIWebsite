@@ -15,7 +15,7 @@ namespace MvcApplication_CDPMI.Controllers
 
         public ActionResult Index()
         {
-            List<feedback> fbs = db.feedback.ToList();
+            List<feedback> fbs = db.feedback.OrderByDescending(o=>o.createTime).ToList();
             return View(fbs);
         }
         public ActionResult Details(int id=0)
