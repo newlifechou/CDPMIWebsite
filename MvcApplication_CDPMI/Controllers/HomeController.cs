@@ -183,5 +183,13 @@ namespace MvcApplication_CDPMI.Controllers
             db.SaveChanges();
             return View(news);
         }
+        /// <summary>
+        /// 核心技术栏目
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CoreTech()
+        {
+            return View();
+        }
     }
 }
