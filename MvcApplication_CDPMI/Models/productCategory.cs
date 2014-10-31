@@ -11,7 +11,7 @@ namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class productCategory
     {
         public productCategory()
@@ -20,7 +20,9 @@ namespace MvcApplication_CDPMI.Models
         }
     
         public int categoryID { get; set; }
+        [Display(Name = "类别名称")]
         public string categoryName { get; set; }
+        [Display(Name = "备注信息")]
         public string memo { get; set; }
     
         public virtual ICollection<product> product { get; set; }

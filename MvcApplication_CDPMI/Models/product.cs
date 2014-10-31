@@ -11,17 +11,22 @@ namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class product
     {
         public int productID { get; set; }
+        [Display(Name = "产品名称")]
         public string productName { get; set; }
         public Nullable<int> categoryID { get; set; }
+        [Display(Name = "发布时间")]
         public Nullable<System.DateTime> publicTime { get; set; }
+        [Display(Name = "阅读次数")]
         public Nullable<int> readCount { get; set; }
+        [Display(Name = "产品内容")]
         public string contentText { get; set; }
+        [Display(Name = "产品图片")]
         public string mainPhoto { get; set; }
-    
+
         public virtual productCategory productCategory { get; set; }
     }
 }

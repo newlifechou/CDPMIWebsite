@@ -304,7 +304,7 @@ ul#menu {
 
     ul#menu li {
         list-style: none;
-        padding: 12px 25px 12px 0;
+        padding: 12px 15px 12px 0;
         float: left;
     }
 
@@ -329,12 +329,12 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
+        /*background-color: #7ac0da;
         background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
         background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);*/
         color: #3e5667;
         padding: 20px 40px 30px 40px;
     }

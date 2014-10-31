@@ -11,12 +11,15 @@ namespace MvcApplication_CDPMI.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class service
     {
         public int id { get; set; }
+        [Display(Name = "服务名称")]
         public string serviceName { get; set; }
+        [Display(Name = "服务内容")]
         public string serviceContent { get; set; }
+        [Display(Name = "服务照片")]
         public string servicePicture { get; set; }
     }
 }

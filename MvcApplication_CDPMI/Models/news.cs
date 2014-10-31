@@ -16,10 +16,14 @@ namespace MvcApplication_CDPMI.Models
     public partial class news
     {
         public int newsID { get; set; }
+        [Display(Name = "新闻标题")]
         public string newsTitle { get; set; }
+        [Display(Name = "发布日期")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public System.DateTime publishTime { get; set; }
+        [Display(Name = "阅读次数")]
         public int readCount { get; set; }
+        [Display(Name = "新闻内容")]
         public string contentText { get; set; }
     }
 }

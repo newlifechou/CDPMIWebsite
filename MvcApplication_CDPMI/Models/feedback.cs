@@ -16,19 +16,25 @@ namespace MvcApplication_CDPMI.Models
     public partial class feedback
     {
         public int id { get; set; }
+        [Display(Name = "咨询标题")]
         [Required(ErrorMessage = "此项不能为空")]
         [StringLength(50,ErrorMessage="此项长度不能超过50")]
         public string title { get; set; }
+        [Display(Name = "咨询时间")]
         public System.DateTime createTime { get; set; }
+        [Display(Name = "咨询内容")]
         [Required(ErrorMessage = "此项不能为空")]
         public string mainContent { get; set; }
+        [Display(Name = "联系电话")]
         [Required(ErrorMessage = "此项不能为空")]
         [StringLength(50, ErrorMessage = "此项长度不能超过50")]
         public string phone { get; set; }
+        [Display(Name = "电子邮件")]
         [Required(ErrorMessage="此项不能为空")]
         [StringLength(50, ErrorMessage = "此项长度不能超过50")]
         [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "电子邮件格式不对")]
         public string email { get; set; }
+        [Display(Name = "联系名称")]
         [Required(ErrorMessage = "此项不能为空")]
         [StringLength(50, ErrorMessage = "此项长度不能超过50")]
         public string cname { get; set; }
