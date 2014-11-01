@@ -118,6 +118,7 @@ mark {
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
     overflow: hidden;
     position:relative;
+    min-height:400px;
 }
 
     .right-content h2 {
