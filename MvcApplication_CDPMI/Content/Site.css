@@ -115,7 +115,7 @@ mark {
     margin-left: 200px;
     padding-left: 10px;
     padding-right:10px;
-    /*background-color: green;*/
+    background-color: #fff;
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
     overflow: hidden;
     position:relative;
