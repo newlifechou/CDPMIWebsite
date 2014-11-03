@@ -12,10 +12,9 @@
 }
 else
 {
-    <ul>
-        @*<li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
-        @* 这里是设置 登陆  邮箱 等快捷链接的地方 *@
+    @*<ul>
         <li>@Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+    </ul>*@
+    @Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
 }
-<a href="http://www.pioneer-materials.com" target="_blank" style="background-color:white">英文网站</a>
+<a href="http://www.pioneer-materials.com" target="_blank" style="background-color:white;color:blue">英文网站</a>
