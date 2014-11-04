@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/*TODO: 改善这个地方*/
 * {
     margin: 0;
     padding: 0;
@@ -64,7 +65,7 @@ mark {
 /*body部分的左右分栏*/
 .left-menu {
     border: 1px solid #333;
-    width: 190px;
+    width: 188px;
     background-color: #666;
     text-align: center;
     margin-bottom: 20px;
@@ -112,15 +113,15 @@ mark {
 .right-content {
     /*width: 746px;*/
     /*实现右边自适应结果*/
-    margin-left: 200px;
+    margin-left: 194px;
     padding-left: 10px;
-    padding-right:10px;
+    padding-right: 10px;
     background-color: #fff;
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
     overflow: hidden;
-    position:relative;
-    min-height:400px;
-    border:2px solid #e4e4e4;
+    position: relative;
+    min-height: 400px;
+    border: 2px solid #e4e4e4;
 }
 
     .right-content h2 {
@@ -145,8 +146,8 @@ mark {
     }*/
 /*右边内容里的横幅图片宽度设定*/
 #imgfeedbacksuccess, #imggooglemap, #imgcontactus {
-    width: 740px;
-    border: 1px solid #999;
+    width: 735px;
+    /*border: 1px solid #999;*/
 }
 /*右边内容部分样式在其他样式表里定义*/
 
@@ -200,7 +201,7 @@ h5, h6 {
 
 #body {
     background-color: #efeeef;
-    background:url("../Images/cdpmi/BodyBackground.png");
+    background: url("../Images/cdpmi/BodyBackground.png");
     clear: both;
     padding-bottom: 35px;
 }
@@ -315,7 +316,6 @@ ul#menu {
 
         ul#menu li a {
             background: none;
-            color: #000;
             text-decoration: none;
             color: white;
         }
