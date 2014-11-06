@@ -1,9 +1,10 @@
 ﻿#ad {
-    width: 960px;
+    width: 958px;
     height: 410px;
     overflow: hidden;
     margin: 0 auto;
-    border: 1px solid #000;
+    border: 1px solid #999;
+    border-radius:5px;
     position: relative;
 }
 
@@ -15,8 +16,9 @@
 
     #ad .slider li img {
         display: block;
-        width: 960px;
+        width: 958px;
         height: 410px;
+        border:none;
     }
 
     #ad .slider, #ad .num {
