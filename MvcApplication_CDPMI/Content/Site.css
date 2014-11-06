@@ -115,7 +115,7 @@ mark {
 
 /*右边内容部分样式在其他样式表里定义*/
 .right-content {
-    /*width: 746px;*/
+    width: 765px;
     /*实现右边自适应结果*/
     margin-left: 194px;
     padding-left: 10px;
