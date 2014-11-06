@@ -7,22 +7,23 @@
         margin: 5px 5px 5px 0;
         padding: 5px;
         text-align: center;
-        /*border: 1px solid #999;*/
+        border: 1px solid rgba(0,0,0,0);
     }
 
         .right-content ul li a img {
             /*使用的照片是880X660大小的，确保体积在100k以下*/
-            height: 165px;
-            width: 220px;
+            height: 163px;
+            width: 218px;
+            border:none;
         }
         .right-content .ptitle{
             color:#333;
         }
         .right-content ul li a:hover {
-            background-color: #333;
-            /*border: 1px solid #000;*/
-            color: #fff;
+            /*background-color: #333;*/
+            border: 1px solid #999;
+            /*color: #fff;*/
         }
         .right-content ul li a:hover .ptitle{
-            color:white;
+            /*color:white;*/
         }

@@ -11,9 +11,9 @@ dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
 pre, /* text formatting elements 文本格式元素 */
 form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
 th, td, /* table elements 表格元素 */
-img/* img elements 图片元素 */{
-  margin: 0;
-  padding: 0;
+img /* img elements 图片元素 */ {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -115,11 +115,10 @@ mark {
 
 /*右边内容部分样式在其他样式表里定义*/
 .right-content {
-    width: 765px;
+    /*width: 745px;*/
     /*实现右边自适应结果*/
     margin-left: 194px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     background-color: #fff;
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
     overflow: hidden;
@@ -205,20 +204,39 @@ h5, h6 {
 
 #body {
     background-color: #efeeef;
-    background: url("../Images/cdpmi/BodyBackground.png");
+    /*这里将小图片转换为Base64编码， 减少请求数目*/
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAIAAADZSiLoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4QUVFRUIzQ0YwNjJFNDExOUY0N0IxMDg5MkREOUIzQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGNUU2REQ5NzYyRkYxMUU0QkVBN0U3MTNGNjk5QkRDRiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGNUU2REQ5NjYyRkYxMUU0QkVBN0U3MTNGNjk5QkRDRiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE1NzU5QkExRjE2MkU0MTE5RjQ3QjEwODkyREQ5QjNBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhBRUVFQjNDRjA2MkU0MTE5RjQ3QjEwODkyREQ5QjNBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+l32XoQAAACdJREFUeNoMx7ENAAAIAjD+f5SBCwhotFthe2ZIoq2kP35JdvcEGACDWhnYGhMSRQAAAABJRU5ErkJggg==') /*../Images/cdpmi/BodyBackground.png*/;
     clear: both;
     padding-bottom: 35px;
+    /*设置body的最小宽度，防止缩放窗口引起显示异常*/
+    min-width: 1024px;
 }
 /*这里控制slider底部内容的显示*/
 .main-content {
     /*background: url("../Images/accent.png") no-repeat;*/
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     padding-top: 10px;
+    /*设置主页文字部分宽度为固定*/
+    width: 960px;
 }
 
 .featured + .main-content {
     /*background: url("../Images/heroAccent.png") no-repeat;*/
 }
+
+/*这里和其他地方结合在一起，控制主页下部文字内容的显示*/
+.bgwhite {
+    background-color:#fff;
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 10px;
+}
+/*调整主页文字内容的标题*/
+    .bgwhite h3.indexcontenttitle {
+        color:#676767;
+        padding:0 0 5px 0;
+        border-bottom:2px solid #e4e4e4;
+    }
 
 header .content-wrapper {
     /*padding-top: 20px;*/
