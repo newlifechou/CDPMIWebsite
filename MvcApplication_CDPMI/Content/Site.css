@@ -342,6 +342,7 @@ ul#menu {
     }
 
         ul#menu li a {
+            font-family:"Segoe UI", Verdana, Helvetica, Sans-Serif,宋体;
             background: none;
             text-decoration: none;
             color: white;

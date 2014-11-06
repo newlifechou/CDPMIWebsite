@@ -7,7 +7,7 @@
         margin: 5px 5px 5px 0;
         padding: 5px;
         text-align: center;
-        border: 1px solid rgba(0,0,0,0);
+        /*border: 1px solid rgba(0,0,0,0);*/
     }
 
         .right-content ul li a img {
@@ -20,8 +20,8 @@
             color:#333;
         }
         .right-content ul li a:hover {
-            /*background-color: #333;*/
-            border: 1px solid #999;
+            background-color: #e4e4e4;
+            /*border: 1px solid #999;*/
             /*color: #fff;*/
         }
         .right-content ul li a:hover .ptitle{
