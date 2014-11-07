@@ -340,6 +340,8 @@
     <Content Include="Images\cdpmi\BodyBackground.png" />
     <Content Include="Images\cdpmi\icon.ico" />
     <Content Include="Images\cdpmi\BCodeContact.JPG" />
+    <Content Include="Images\cdpmi\slider5.jpg" />
+    <Content Include="Images\cdpmi\slider6.jpg" />
     <Content Include="Images\products\Bi2Te3.jpg" />
     <Content Include="Images\products\BiSbTe.jpg" />
     <Content Include="Images\products\BiTeSe.jpg" />
