@@ -71,7 +71,7 @@ mark {
     border: 1px solid #333;
     border-radius:5px;
     width: 188px;
-    background-color: #666;
+    background-color: #e4e4e4;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -81,19 +81,20 @@ mark {
         /*border-bottom: 1px dashed #999;*/
         font-size: 16px;
         color: #fff;
-        padding: 10px 0 10px 0;
-        background-color: #333;
+        padding: 8px 0;
+        /*background-color: #333;*/
+        background-color:#312A57;
     }
 
     .left-menu a {
         display: block;
         padding: 8px 0 8px 0;
-        color: #fff;
+        color: #000;
         font-size: 14px;
     }
 
         .left-menu a:hover {
-            color: #000;
+            color: #00f;
         }
 
 /*此部分用来显示每页出现的在线留言的链接样式*/
@@ -319,7 +320,8 @@ footer {
 div#nav {
     width: 100%;
     /*导航条颜色*/
-    background-color: #333;
+    /*background-color: #333;*/
+    background-color:#312A57;
     overflow: hidden;
     margin: 1px 0;
 }
