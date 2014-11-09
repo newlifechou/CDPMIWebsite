@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "所有产品";
+}
+@section AddToHead{
+    <link href="~/Content/productAll.css" rel="stylesheet" />
+}
+<div class="float-left">
+    <div class="left-menu">
+        <h5>产品种类</h5>
+        @* 调用部分视图，显示产品种类 *@
+        @Html.Action("GetAllProductCategory")
+    </div>
+    <div class="left-menu">
+        <h5>相关信息</h5>
+        <ul>
+            <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
+            <li>@Html.ActionLink("在线留言", "FeedBack", "Home")</li>
+        </ul>
+    </div>
+</div>
+<div class="right-content">
+    <h2>@ViewBag.Title</h2>
+    <table>
+        <tr>
+            <td class="itemtitle">光电材料</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="itemtitle">
+                <img src="~/Images/cdpmi/VP.png" alt="vp" />
+            </td>
+            <td class="itemcontent">
+                <a href="~/Home/ProductDetails/20">Cu(In,Ga)Se2</a> , Cu(In,Ga)S2<br />
+                Cu2Se, <a href="~/Home/ProductDetails/25">Cu2S</a><br />
+                <a href="~/Home/ProductDetails/21"> In2Se3</a>, (In,Ga)2Se3<br />
+                Ga2Se3 , <a href="~/Home/ProductDetails/22">SnS2</a><br />
+                <a href="~/Home/ProductDetails/26">In2S3</a> , Cu2ZnSnS4<br />
+                ZnO , Cu2Se:NaF<br />
+                ZnS , CuIn3Se5<br />
+                ZnO:Al2O3 , CuGa:NaF<br />
+                In2O3:SnO2 , <a href="~/Home/ProductDetails/30">CuGaSe</a><br />
+                CdTe , CuInGaSe<br />
+                CdS , (Zn,Mg)O<br />
+                W-Ti , ZnTe<br />
+                Mo
+            </td>
+        </tr>
+
+        <tr>
+            <td class="itemtitle">热电材料</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="itemtitle"><img src="~/Images/cdpmi/TE.png" alt="te" /></td>
+            <td class="itemcontent">
+                Bi2Se3 ,	<a href="~/Home/ProductDetails/23">BiTeSe</a><br />
+                <a href="~/Home/ProductDetails/31">Bi2Te3</a> ,	SiGe<br />
+                Sb2Te3 , SiO<br />
+                <a href="~/Home/ProductDetails/24">BiSbTe</a> , PbTe<br />
+                (GeTe)x(AgSbTe2)y
+            </td>
+        </tr>
+        <tr>
+            <td class="itemtitle">相变存储材料</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="itemtitle"><img src="~/Images/cdpmi/PCM.png" alt="pcm" /></td>
+            <td class="itemcontent">
+                <a href="~/Home/ProductDetails/27">Ge2Sb2Te5  ,  GexSbyTez</a><br />
+                GeTe , InSbSn<br />
+                GeSb , AgInSbTe<br />
+                Sb2Te3 , GaMn<br />
+                GaSb
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+</div>

@@ -32,8 +32,9 @@ namespace MvcApplication_CDPMI.Controllers
             //如果categoryid不存在，说明查询的是所有产品
             if (id == 0)
             {
-                p = db.product.Include(o => o.productCategory).ToList();
-                h2 = "全部产品信息";
+                //p = db.product.Include(o => o.productCategory).ToList();
+                //h2 = "全部产品信息";
+                return View("ProductAll");
             }
             else
             {

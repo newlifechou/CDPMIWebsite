@@ -280,6 +280,7 @@
     <Content Include="Content\contact.css" />
     <Content Include="Content\homeIndex.css" />
     <Content Include="Content\news.css" />
+    <Content Include="Content\productAll.css" />
     <Content Include="Content\productList.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -340,8 +341,12 @@
     <Content Include="Images\cdpmi\BodyBackground.png" />
     <Content Include="Images\cdpmi\icon.ico" />
     <Content Include="Images\cdpmi\BCodeContact.JPG" />
+    <Content Include="Images\cdpmi\PCM.png" />
+    <Content Include="Images\cdpmi\slider3-1.jpg" />
     <Content Include="Images\cdpmi\slider5.jpg" />
     <Content Include="Images\cdpmi\slider6.jpg" />
+    <Content Include="Images\cdpmi\TE.png" />
+    <Content Include="Images\cdpmi\VP.png" />
     <Content Include="Images\products\Bi2Te3.png" />
     <Content Include="Images\products\BiSbTe.png" />
     <Content Include="Images\products\BiTeSe.png" />
@@ -814,6 +819,7 @@
     <Content Include="Views\Admin\OtherBasics.cshtml" />
     <Content Include="WebConfigBackup\Web.config" />
     <Content Include="Views\Home\CoreTech.cshtml" />
+    <Content Include="Views\Home\ProductAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

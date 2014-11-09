@@ -1,0 +1,30 @@
+﻿.right-content table{
+    width:100%;
+}
+.right-content table a{
+    color:blue;
+    background:none;
+    padding:0;
+}
+.right-content table a:hover{
+    background:orange;
+}
+.right-content table tr{
+    border:1px dotted #999;
+}
+.right-content table td.itemtitle{
+    vertical-align:top;
+    text-align:left;
+    font-size:1.2em;
+    width:260px;
+    padding:0;
+}
+.right-content table td.itemtitle img{
+    height:130px;
+    width:260px;
+}
+.right-content table td.itemcontent{
+    text-align:left;
+    vertical-align:top;
+    padding:5px 10px;
+}
