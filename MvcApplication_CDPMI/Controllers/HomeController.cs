@@ -120,7 +120,7 @@ namespace MvcApplication_CDPMI.Controllers
                     ViewBag.Title = "关于我们";
                     break;
                 case 2:
-                    ViewBag.Title = "管理层&董事会";
+                    ViewBag.Title = "管理层&技术顾问";
                     break;
                 case 3:
                     ViewBag.Title = "荣誉资质";
@@ -130,6 +130,9 @@ namespace MvcApplication_CDPMI.Controllers
                     break;
                 case 5:
                     ViewBag.Title = "主要客户";
+                    break;
+                case 6:
+                    ViewBag.Title = "董事会";
                     break;
                 default:
                     return HttpNotFound();

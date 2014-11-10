@@ -341,6 +341,7 @@
     <Content Include="Images\cdpmi\BodyBackground.png" />
     <Content Include="Images\cdpmi\icon.ico" />
     <Content Include="Images\cdpmi\BCodeContact.JPG" />
+    <Content Include="Images\cdpmi\others.png" />
     <Content Include="Images\cdpmi\PCM.png" />
     <Content Include="Images\cdpmi\slider3-1.jpg" />
     <Content Include="Images\cdpmi\slider5.jpg" />
@@ -407,6 +408,8 @@
     <Content Include="Images\upload\image\20141109\6355115210978217903276825.png" />
     <Content Include="Images\upload\image\20141109\6355115224713303501645411.png" />
     <Content Include="Images\upload\image\20141109\6355115238595797543595419.png" />
+    <Content Include="Images\upload\image\20141110\6355121233907409758165333.jpg" />
+    <Content Include="Images\upload\image\20141110\6355121238711884558290626.jpg" />
     <Content Include="Models\注意！！！.txt" />
     <Content Include="ueditorTest.html" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />

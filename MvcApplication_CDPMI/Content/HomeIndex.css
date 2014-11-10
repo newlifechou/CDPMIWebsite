@@ -26,15 +26,16 @@
     }
 
     #ad .num {
-        right: 5px;
-        bottom: 5px;
+        right: 8px;
+        bottom: 10px;
+        font-size:12px;
     }
 
         #ad .num li {
             border: 1px solid #000;
             float: left;
             margin-right: 5px;
-            padding: 3px 8px 3px 8px;
+            padding: 8px 10px;
             background-color: white;
         }
 
