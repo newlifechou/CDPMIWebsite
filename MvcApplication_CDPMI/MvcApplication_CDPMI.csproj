@@ -339,6 +339,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\cdpmi\BodyBackground.png" />
+    <Content Include="Images\cdpmi\googlemap.jpg" />
     <Content Include="Images\cdpmi\icon.ico" />
     <Content Include="Images\cdpmi\BCodeContact.JPG" />
     <Content Include="Images\cdpmi\others.png" />

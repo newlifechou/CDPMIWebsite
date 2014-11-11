@@ -352,7 +352,7 @@ ul#menu {
 
         ul#menu li a {
             display: block;
-            padding: 15px;
+            padding: 12px;
             background: none;
             text-decoration: none;
             color: white;
@@ -424,7 +424,7 @@ ol.round {
 
         ol.round li h3 {
             /*border-bottom: 1px dotted #666;*/
-            font-size: 18px;
+            font-size: 20px;
             color: #000099;
             padding-top: 5px;
             padding-bottom: 10px;

@@ -36,11 +36,8 @@ namespace MvcApplication_CDPMI.Controllers
                 //h2 = "全部产品信息";
                 return View("ProductAll");
             }
-            else
-            {
-                p = db.product.Where(o => o.categoryID == id).Include(o => o.productCategory).ToList();
-                h2 = db.productCategory.Where(c => c.categoryID == id).Single().categoryName;
-            }
+            p = db.product.Where(o => o.categoryID == id).Include(o => o.productCategory).ToList();
+            h2 = db.productCategory.Where(c => c.categoryID == id).Single().categoryName;
             ViewBag.h2title = h2;
             return View(p);
         }
