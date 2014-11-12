@@ -25,6 +25,7 @@ body {
     font-family: "宋体","Segoe UI", Verdana, Helvetica, Sans-Serif;
     /*始终显示滚动条*/
     overflow: scroll;
+    min-width: 1366px;
 }
 
 ul, li {
@@ -210,8 +211,8 @@ h5, h6 {
 /* main layout
 ----------------------------------------------------------*/
 .content-wrapper {
-    margin: 0 auto;
     width: 960px;
+    margin: 0 auto;
 }
 
 #body {
@@ -262,7 +263,13 @@ footer {
     clear: both;
     background-color: #666;
     font-size: .8em;
+}
+footer .specialfooter{
     height: 100px;
+    line-height: 100px;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
 }
 /*logo img
 -----------------------------------------------------*/
@@ -766,10 +773,10 @@ tr.pager td {
 
     /* header
     ----------------------------------------------------------*/
-    header .float-left,
+    /*header .float-left,
     header .float-right {
         float: none;
-    }
+    }*/
 
     /* logo */
     header .site-title {
@@ -894,14 +901,14 @@ tr.pager td {
 
     /* footer
     ----------------------------------------------------------*/
-    footer .float-left,
+    /*footer .float-left,
     footer .float-right {
         float: none;
-    }
+    }*/
 
     footer {
         text-align: center;
-        height: auto;
+        /*height: auto;*/
         padding: 10px 0;
     }
 

@@ -14,6 +14,13 @@ namespace MvcApplication_CDPMI.Controllers
         WebEntities db = new WebEntities();
         public ActionResult Index()
         {
+            //存储客户端访问home/index的信息
+            string loginfor =Request.UserHostAddress.ToString();
+            DateTime lgtime= DateTime.Now;
+            logRecord lr=new logRecord{information=loginfor,logtime=lgtime};
+            db.logRecord.Add(lr);
+            db.SaveChanges();
+
             return View();
         }
 
