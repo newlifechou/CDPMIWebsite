@@ -14,20 +14,21 @@
 <div class="right-content">
     <h2>@ViewBag.Title</h2>
     <p>
-        <table style="width:100%">
-            @foreach (var item in Model)
-            {
-                <tr style="border-bottom:1px dashed #333">
+
+        @foreach (var item in Model)
+        {
+            <table style="background-color:#f1f1f1;border:1px solid #e4e4e4;width:100%">
+                <tr>
                     <td>
                         <img src="~/Images/services/@Html.DisplayFor(o=>item.servicePicture)" width="230" height="200" />
                     </td>
-                    <td style="vertical-align:top">
-                        <b style="font-size:18px">@Html.DisplayFor(o=>item.serviceName)</b><br/>
+                    <td style="vertical-align:top;">
+                        <b style="font-size:18px">@Html.DisplayFor(o => item.serviceName)</b><br />
                         @Html.Raw(item.serviceContent)
                     </td>
                 </tr>
-            }
-        </table>
+            </table>
+        }
     </p>
     <p style="color:orange">
         ！！敬请注意：和这部分相关的详细内容，如有任何疑问，请联系我们的工作人员。

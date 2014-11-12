@@ -133,8 +133,9 @@ namespace MvcApplication_CDPMI.Controllers
                     ViewBag.Title = "发展历程";
                     break;
                 case 5:
-                    ViewBag.Title = "主要客户";
-                    break;
+                    //ViewBag.Title = "主要客户";
+                    //break;
+                    return HttpNotFound();
                 case 6:
                     ViewBag.Title = "董事会";
                     break;
