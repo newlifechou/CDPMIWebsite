@@ -140,7 +140,7 @@ a#logo:hover img {
     height: 58px;
     line-height: 58px;
     float: right;
-    width: 300px;
+    /*width: 300px;*/
     text-align: right;
     padding-right: 10px;
 }
