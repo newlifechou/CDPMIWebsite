@@ -1,5 +1,26 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+@section AddToHead{
+    <link href="~/Content/homeindex.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/js/slide.js"></script>
+}
+@section Slide{
+    <!--slide part-->
+    <div id="mainslide">
+        <ul id="slide">
+            <li><img src="~/Images/pmi/slider1.jpg" alt="slide1" /></li>
+            <li><img src="~/Images/pmi/slider2.jpg" alt="slide2" /></li>
+            <li><img src="~/Images/pmi/slider3.jpg" alt="slide3" /></li>
+            <li><img src="~/Images/pmi/slider4.jpg" alt="slide4" /></li>
+            <li><img src="~/Images/pmi/slider5.jpg" alt="slide5" /></li>
+        </ul>
+        <ul id="slidenav">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+}

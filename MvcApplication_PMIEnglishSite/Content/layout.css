@@ -27,13 +27,14 @@ a {
     width: 100%;
     /*set the min-width and the max-width*/
     min-width: 1200px;
-    max-width: 1900px;
 }
 
 /*header  css setting*/
 #header {
     position: relative;
     padding-top: 32px;
+    /*set the header always be on top*/
+    z-index:100;
 }
 
     #header a#logo {
