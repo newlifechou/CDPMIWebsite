@@ -11,7 +11,7 @@ body {
     color: #000;
     /*scroll display always*/
     overflow-y: scroll;
-    background:url("../Images/pmi/BodyBackground.png");
+    background-color: darkslategray;
 }
 
 ul, li {
@@ -28,9 +28,9 @@ a {
     width: 100%;
     /*set the min-width and the max-width*/
     min-width: 1200px;
-    max-width:1366px;
-    margin:0 auto;
-    background-color:white;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: url("../Images/pmi/BodyBackground.png");
 }
 
 /*header  css setting*/
@@ -38,7 +38,7 @@ a {
     position: relative;
     padding-top: 16px;
     /*set the header always be on top*/
-    z-index:100;
+    z-index: 100;
 }
 
     #header a#logo {
@@ -81,10 +81,20 @@ a#logo:hover img {
 
         #leftmenu ul li {
             float: left;
-            /*fixed the 1st Li width*/
-            width: 180px;
             height: 58px;
         }
+            /*fixed the 1st Li width*/
+            #leftmenu ul li.one {
+                width: 100px;
+            }
+
+            #leftmenu ul li.two {
+                width: 200px;
+            }
+
+            #leftmenu ul li.three {
+                width: 150px;
+            }
 
             #leftmenu ul li a {
                 display: block;
@@ -145,31 +155,32 @@ a#logo:hover img {
     }
 
     #rightmenu input[type=button] {
-        margin-right:5px;
+        margin-right: 5px;
         padding: 5px 10px;
-        background-color:#e4e4e4;
-        color:#666;
-        border:1px solid #999;
-        border-radius:3px;
+        background-color: #e4e4e4;
+        color: #666;
+        border: 1px solid #999;
+        border-radius: 3px;
     }
 
     #rightmenu a {
-        padding:3px;
+        padding: 3px;
         color: #000;
     }
-    #rightmenu a:hover{
-        color:#fff;
-        background:#999;
-    }
+
+        #rightmenu a:hover {
+            color: #fff;
+            background: #999;
+        }
 
 
 /*maincontent css setting*/
 #maincontent {
     min-height: 700px;
     /*background: orange;*/
-    margin-top:1px;
-    overflow:hidden;
-    padding-bottom:90px;
+    margin-top: 1px;
+    overflow: hidden;
+    padding-bottom: 90px;
 }
 /*footer css setting*/
 #footer {
