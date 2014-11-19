@@ -9,6 +9,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
     color: #000;
+    /*scroll display always*/
+    overflow-y: scroll;
 }
 
 ul, li {
@@ -21,8 +23,11 @@ a {
 
 
 /*layout css setting*/
-#header, #maincontent, #foooter {
+#header, #maincontent, #footer {
     width: 100%;
+    /*set the min-width and the max-width*/
+    min-width: 1200px;
+    max-width: 1900px;
 }
 
 /*header  css setting*/
@@ -31,11 +36,26 @@ a {
     padding-top: 32px;
 }
 
-img#logo {
-    position: absolute;
-    left: 15px;
-    top: 24px;
+    #header a#logo {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: 23px;
+        /*图片是透明的，背景用背景色代替*/
+    }
+
+a#logo img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #999;
 }
+
+a#logo:hover img {
+    background: #e4e4e4;
+}
+
 
 #nav {
     height: 58px;
@@ -46,7 +66,7 @@ img#logo {
     position: relative;
     margin-left: 310px;
     float: left;
-    font-size: 150%;
+    font-size: 130%;
     height: 58px;
 }
 
@@ -57,7 +77,8 @@ img#logo {
         #leftmenu ul li {
             float: left;
             /*fixed the 1st Li width*/
-            width: 240px;
+            width: 180px;
+            height: 58px;
         }
 
             #leftmenu ul li a {
@@ -65,7 +86,8 @@ img#logo {
                 height: 58px;
                 line-height: 58px;
                 color: #fff;
-                padding-left: 10px;
+                text-align: center;
+                font-weight: bold;
             }
 
             #leftmenu ul li:hover a {
@@ -88,8 +110,10 @@ img#logo {
                 }
 
                     #leftmenu ul li ul li a {
+                        display: block;
+                        padding-left: 15px;
                         text-align: left;
-                        font-size: 80%;
+                        font-weight: normal;
                     }
 
                         #leftmenu ul li ul li a:hover {
@@ -97,17 +121,77 @@ img#logo {
                             color: white;
                         }
 
+#rightmenu {
+    height: 58px;
+    line-height: 58px;
+    float: right;
+    width: 300px;
+    text-align: right;
+    padding-right: 10px;
+}
 
+    #rightmenu input[type=text] {
+        height: 25px;
+        border-radius: 5px;
+        margin-right: 10px;
+        border: 1px solid #e4e4e4;
+        width: 160px;
+        background: #ccc;
+    }
 
+    #rightmenu input[type=button] {
+        padding: 5px 10px;
+    }
+
+    #rightmenu a {
+        color: #fff;
+    }
 
 
 /*maincontent css setting*/
 #maincontent {
-    height: 300px;
+    min-height: 500px;
     background: orange;
 }
 /*footer css setting*/
 #footer {
-    height: 100px;
-    background: green;
+    height: 106px;
+    background: #323232;
+    padding: 30px 0;
+}
+
+#centerarea {
+    height: 106px;
+    line-height: 106px;
+    background: #474747;
+    padding: 0 20px;
+    font-size: 120%;
+}
+
+#leftfooter {
+    float: left;
+}
+
+    #leftfooter ul {
+        overflow: hidden;
+    }
+
+        #leftfooter ul li {
+            float: left;
+        }
+
+            #leftfooter ul li a {
+                display: block;
+                margin-right: 20px;
+                color: white;
+            }
+
+                #leftfooter ul li a:hover {
+                    color: blue;
+                    text-decoration: underline;
+                }
+
+#rightfooter {
+    float: right;
+    color: white;
 }

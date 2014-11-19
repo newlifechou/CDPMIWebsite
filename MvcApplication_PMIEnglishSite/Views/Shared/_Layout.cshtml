@@ -10,10 +10,13 @@
 <body>
     <!--header part-->
     <div id="header">
-        <img id="logo" src="~/Images/logo.png" alt="PMI" />
+        <a href="#" id="logo">
+            <img src="~/Images/logo.png" alt="PMI" />
+        </a>
         <div id="nav">
             <div id="leftmenu">
                 <ul>
+                    <li><a href="#">Home</a></li>
                     <li>
                         <a href="#">Product&ampServices</a>
                         <ul>
@@ -24,22 +27,41 @@
                     <li>
                         <a href="#">About PMI</a>
                         <ul>
-                            <li><a href="#">About</a></li>
+                            <li><a href="#">Introduction</a></li>
                             <li><a href="#">Management</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <div id="rightmenu">
+                <input type="text" name="txtsearch" placeholder="Enter the keywords" />
+                <input type="button" name="btnSearch" value="Search" />
+                <a href="http://www.cd-pmi.com" target="_blank">中文</a>
+            </div>
         </div>
     </div>
     <!--maincontent-->
     <div id="maincontent">
+        <!--this is kept for the slide-->
+        @RenderSection("Slide",required:false)
         @RenderBody()
     </div>
     <!--footer-->
     <div id="footer">
-            
+        <div id="centerarea">
+            <div id="leftfooter">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div id="rightfooter">
+                &copy;2012-@DateTime.Now.Year Pioneer Materials, Inc. All Rights Reserved.
+            </div>
+        </div>
     </div>
     <!--这里再加载jquery脚本-->
     @Scripts.Render("~/bundles/jquery")
