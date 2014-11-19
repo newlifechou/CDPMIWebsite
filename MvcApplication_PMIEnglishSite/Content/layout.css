@@ -27,14 +27,79 @@ a {
 
 /*header  css setting*/
 #header {
-    /*height:90px;*/
+    position: relative;
+    padding-top: 32px;
+}
+
+img#logo {
+    position: absolute;
+    left: 15px;
+    top: 24px;
 }
 
 #nav {
-    margin-top: 32px;
     height: 58px;
     background: #065387;
 }
+/*1st grade menu*/
+#leftmenu {
+    position: relative;
+    margin-left: 310px;
+    float: left;
+    font-size: 150%;
+    height: 58px;
+}
+
+    #leftmenu ul {
+        position: relative;
+    }
+
+        #leftmenu ul li {
+            float: left;
+            /*fixed the 1st Li width*/
+            width: 240px;
+        }
+
+            #leftmenu ul li a {
+                display: block;
+                height: 58px;
+                line-height: 58px;
+                color: #fff;
+                padding-left: 10px;
+            }
+
+            #leftmenu ul li:hover a {
+                background-color: #022E4C;
+            }
+
+            #leftmenu ul li:hover ul {
+                visibility: visible;
+            }
+
+            /*2rd grade menu*/
+            #leftmenu ul li ul {
+                visibility: hidden;
+            }
+
+                #leftmenu ul li ul li {
+                    float: none;
+                    /*set the 2rd ul width*/
+                    width: 300px;
+                }
+
+                    #leftmenu ul li ul li a {
+                        text-align: left;
+                        font-size: 80%;
+                    }
+
+                        #leftmenu ul li ul li a:hover {
+                            background-color: #044C7D;
+                            color: white;
+                        }
+
+
+
+
 
 /*maincontent css setting*/
 #maincontent {
@@ -42,7 +107,7 @@ a {
     background: orange;
 }
 /*footer css setting*/
-#footer{
-    height:100px;
-    background:green;
+#footer {
+    height: 100px;
+    background: green;
 }
