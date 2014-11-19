@@ -14,24 +14,25 @@ ul#slide {
             display: block;
             margin: 0;
             padding: 0;
-            height:500px;
+            height: 500px;
             width: 100%;
         }
 
 ul#slidenav {
     position: absolute;
-    bottom:8px;
-    right:8px;
+    bottom: 8px;
+    right: 8px;
 }
 
     ul#slidenav li {
         border: 1px solid #999;
-        float:left;
-        padding:4px 8px;
-        text-align:center;
-        margin-right:10px;
-        background:white;
+        float: left;
+        padding: 4px 8px;
+        text-align: center;
+        margin-right: 10px;
+        background: white;
     }
-    ul#slidenav .selected{
-        background:orange;
+
+    ul#slidenav .selected {
+        background: orange;
     }

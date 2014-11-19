@@ -11,6 +11,7 @@ body {
     color: #000;
     /*scroll display always*/
     overflow-y: scroll;
+    background:url("../Images/pmi/BodyBackground.png");
 }
 
 ul, li {
@@ -27,12 +28,14 @@ a {
     width: 100%;
     /*set the min-width and the max-width*/
     min-width: 1200px;
+    max-width:1366px;
+    margin:0 auto;
 }
 
 /*header  css setting*/
 #header {
     position: relative;
-    padding-top: 32px;
+    padding-top: 16px;
     /*set the header always be on top*/
     z-index:100;
 }
@@ -41,7 +44,7 @@ a {
         display: block;
         position: absolute;
         left: 14px;
-        top: 23px;
+        top: 7px;
         /*图片是透明的，背景用背景色代替*/
     }
 
@@ -142,6 +145,9 @@ a#logo:hover img {
 
     #rightmenu input[type=button] {
         padding: 5px 10px;
+        background-color:#e4e4e4;
+        color:#666;
+        border:1px solid #999;
     }
 
     #rightmenu a {
@@ -151,7 +157,7 @@ a#logo:hover img {
 
 /*maincontent css setting*/
 #maincontent {
-    min-height: 500px;
+    min-height: 700px;
     background: orange;
 }
 /*footer css setting*/

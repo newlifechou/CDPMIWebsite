@@ -197,6 +197,7 @@
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\PMIEnglish.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\pmi\BodyBackground.png" />
     <Content Include="Images\pmi\icon.ico" />
     <Content Include="Images\pmi\logo.png" />
     <Content Include="Images\pmi\lst.gif" />
