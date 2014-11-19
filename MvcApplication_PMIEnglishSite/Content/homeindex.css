@@ -1,10 +1,14 @@
-﻿#mainslide {
+﻿/*slide css setting*/
+#mainslide {
+    position: relative;
     height: 500px;
     overflow: hidden;
-    position: relative;
 }
 
 ul#slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
     ul#slide li {
@@ -29,7 +33,7 @@ ul#slidenav {
         float: left;
         padding: 4px 8px;
         text-align: center;
-        margin-right: 10px;
+        margin-left: 10px;
         background: white;
     }
 

@@ -144,6 +144,7 @@ a#logo:hover img {
     }
 
     #rightmenu input[type=button] {
+        margin-right:5px;
         padding: 5px 10px;
         background-color:#e4e4e4;
         color:#666;
@@ -159,6 +160,7 @@ a#logo:hover img {
 #maincontent {
     min-height: 700px;
     background: orange;
+    margin-top:1px;
 }
 /*footer css setting*/
 #footer {

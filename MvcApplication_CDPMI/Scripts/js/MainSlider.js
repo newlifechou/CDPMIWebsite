@@ -24,8 +24,7 @@
 
     function showImg(index) {
         var adHeight = $("#ad").height();
-        $(".slider").stop(true, false).animate({ top: -adHeight * index }, 1000
-            );
+        $(".slider").stop(true, false).animate({ top: -adHeight * index }, 1000);
         $(".num li").removeClass("selected")
             .eq(index).addClass("selected");
     }
