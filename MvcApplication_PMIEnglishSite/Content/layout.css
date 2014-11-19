@@ -1,0 +1,48 @@
+﻿/*global css setting*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*layout css setting*/
+#header, #maincontent, #foooter {
+    width: 100%;
+}
+
+/*header  css setting*/
+#header {
+    /*height:90px;*/
+}
+
+#nav {
+    margin-top: 32px;
+    height: 58px;
+    background: #065387;
+}
+
+/*maincontent css setting*/
+#maincontent {
+    height: 300px;
+    background: orange;
+}
+/*footer css setting*/
+#footer{
+    height:100px;
+    background:green;
+}

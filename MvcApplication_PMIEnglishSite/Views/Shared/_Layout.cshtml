@@ -8,8 +8,21 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
+    <!--header part-->
+    <div id="header">
+        <div id="nav">
 
+        </div>
+    </div>
+    <!--maincontent-->
+    <div id="maincontent">
+        @RenderBody()
+    </div>
+    <!--footer-->
+    <div id="footer">
+            
+    </div>
+    <!--这里再加载jquery脚本-->
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>

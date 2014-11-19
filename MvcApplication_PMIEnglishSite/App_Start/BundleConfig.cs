@@ -23,8 +23,11 @@ namespace MvcApplication_PMIEnglishSite
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
-
+            //添加每个视图都需要的css文件,在这里添加会将请求合一压缩
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css",
+                "~/Content/layout.css"
+                ));
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",
