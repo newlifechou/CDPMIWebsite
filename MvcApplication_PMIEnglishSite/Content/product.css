@@ -29,22 +29,3 @@
             text-align: center;
         }
 
-.btnreturn {
-    display: block;
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    font-size: 120%;
-    background-color: lightblue;
-    border: 1px solid #999;
-    border-radius:5px;
-    margin-top:15px;
-    padding:5px;
-    color:black;
-}
-
-    .btnreturn:hover {
-        background: #EF9632;
-        color: white;
-    }

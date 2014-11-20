@@ -45,5 +45,20 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             ViewBag.Title = db.productCategory_en.Where(o => o.categoryID == id).Single().categoryName;
             return View(products);
         }
+        /// <summary>
+        /// ProductDetails
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult ProductDetails(int id=0)
+        {
+            product_en p = db.product_en.Where(o => o.productID == id).Single();
+            //if the p is null,that mean there is no product details in db, return not found.
+            if (p==null)
+            {
+                return HttpNotFound();
+            }
+            return View(p);
+        }
     }
 }

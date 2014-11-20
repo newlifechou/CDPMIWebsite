@@ -1,0 +1,17 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.product_en
+@{
+    ViewBag.Title = Model.productName;
+}
+@section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" type="text/css" />
+}
+<div id="maindisplayarea">
+    <h2>@ViewBag.Title - Details</h2>
+    <p class="subtitle">Publish Time:@Model.publicTime  Read Times:@Model.readCount</p>
+    <div class="mainarea">
+        @Html.Raw(Model.contentText)
+    </div>
+    <a href="~/Home/Product/@Model.categoryID" class="btnreturn">Return to [Category List]</a>
+    <a href="~/Home/Product/0" class="btnreturn">Return to [All Products]</a>
+    <a href="~/Home/Index" class="btnreturn">Return to [Home Page]</a>
+</div>

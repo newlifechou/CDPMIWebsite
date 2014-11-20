@@ -7,7 +7,6 @@ body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div
 body {
     font-size: small;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
     color: #000;
     /*scroll display always*/
     overflow-y: scroll;
@@ -228,3 +227,23 @@ a#logo:hover img {
     float: right;
     color: white;
 }
+
+/*详细内容页下部的按钮*/
+.btnreturn {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 120%;
+    background-color: lightblue;
+    border: 1px solid #999;
+    border-radius:5px;
+    margin-top:15px;
+    padding:5px;
+    color:black;
+}
+
+    .btnreturn:hover {
+        background: #EF9632;
+        color: white;
+    }
