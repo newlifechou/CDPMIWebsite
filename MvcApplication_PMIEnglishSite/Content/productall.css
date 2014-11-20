@@ -4,7 +4,7 @@
 
 #categorylist ul li {
     background: #f0f0f0;
-    border: 3px solid #e4e4e4;
+    border: 2px solid #e4e4e4;
     border-radius: 5px;
     margin-bottom: 15px;
     padding: 5px;
@@ -13,7 +13,7 @@
 }
     /*be mouseoverd*/
     #categorylist ul li.plistitem {
-        border: 3px solid #999;
+        border: 2px solid #999;
     }
 
 #categorylist h3 {
