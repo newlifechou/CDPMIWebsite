@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 @section AddToHead{
-    <link href="~/Content/homeindex.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/js/slide.js"></script>
 }
 @section Slide{
@@ -30,10 +30,7 @@
 <div class="textbox">
     <h1>About PMI</h1>
     <p>
-        Pioneer Materials Inc, (PMI) was incorporated in 1998 to address the burgeoning demand for the opto-electronic materials markets.PMI was founded by veterans from the semiconductor, magnetic recor
-        optical recording and target industries focusing on high performance materials applications.
-        PMI is focusing on advanced semiconductor compounds for energy harvesting applications (thin-film solar & thermo-electrics). Using unique processing technology, PMI can process consistent quantities
-        of difficult to manufacture compounds at high purities.
+           @ViewBag.AboutPMI
     </p>
 </div>
 <!--category section-->

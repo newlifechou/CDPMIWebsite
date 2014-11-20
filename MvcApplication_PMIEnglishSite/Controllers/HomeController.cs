@@ -10,12 +10,15 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 {
     public class HomeController : Controller
     {
-
+        //create datacontext
+        pmienglish db = new pmienglish();
         //
         // GET: /Home/
 
         public ActionResult Index()
         {
+            //AboutPMI Data
+            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 1).Single().BriefIntrodction.ToString();
             return View();
         }
 
