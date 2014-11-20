@@ -5,10 +5,10 @@
 }
 @section AddToHead{
     <link href="~/Content/productall.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/js/ProductAll.js"></script>
+    <script src="~/Scripts/js/productall.js"></script>
 }
-<h2>All Products</h2>
-<div id="productlist">
+<h2>@ViewBag.Title</h2>
+<div id="categorylist">
     <ul>
         @foreach (var item in Model)
         {
@@ -16,7 +16,7 @@
                 <h3>@item.categoryName</h3>
                 <img src="~/Images/pmi/@item.photo" alt="@item.categoryName" />
                 <p>@item.memo</p>
-                <a href="#">Want To Know More</a>
+                <a href="~/Home/Product/@item.categoryID">To Know More About [<span>@item.categoryName</span>]</a>
             </li>
         }
     </ul>

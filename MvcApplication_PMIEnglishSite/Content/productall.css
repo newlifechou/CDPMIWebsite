@@ -2,7 +2,7 @@
     color: blue;
 }
 
-#productlist ul li {
+#categorylist ul li {
     background: #f0f0f0;
     border: 3px solid #e4e4e4;
     border-radius: 5px;
@@ -12,18 +12,18 @@
     clear: both;
 }
     /*be mouseoverd*/
-    #productlist ul li.plistitem {
+    #categorylist ul li.plistitem {
         border: 3px solid #999;
     }
 
-#productlist h3 {
+#categorylist h3 {
     font-size: 150%;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #e4e4e4;
     padding: 5px 0 5px 10px;
     background: #f0f0f0;
 }
 
-#productlist img {
+#categorylist img {
     padding: 0;
     display: block;
     float: left;
@@ -31,7 +31,7 @@
     border: 1px solid #999;
     height: 300px;
 }
-#productlist a{
+#categorylist a{
     display:block;
     height:60px;
     line-height:60px;
@@ -43,12 +43,20 @@
     background-color:lightblue;
     color:blue;
     clear:both;
+    margin:10px 0;
 }
-#productlist a:hover{
-    background:#666;
+#categorylist a span{
+    color:black;
+    font-weight:bold;
+}
+#categorylist a:hover{
+    background:#EF9632;
     color:#fff;
 }
-#productlist p {
+#categorylist a:hover span{
+    color:red;
+}
+#categorylist p {
     font-size: 120%;
     -ms-word-break: break-word;
     word-break: break-word;

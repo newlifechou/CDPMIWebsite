@@ -1,6 +1,28 @@
-﻿@{
-    ViewBag.Title = "Product";
+﻿@model IEnumerable<MvcApplication_PMIEnglishSite.Models.product_en>
+@{
+    //ViewBag.Title = "Product";
 }
-
-<h2>Products</h2>
+@section AddToHead{
+    <link href="~/Content/product.css" rel="stylesheet" type="text/css" />
+}
+<h2>@ViewBag.Title</h2>
+<div id="productlist">
+    <!--if the count <0 ,do something-->
+    @if (Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <a href="~/Home/ProductDetails/@item.productID">
+                <img src="~/Images/products/@item.mainPhoto" alt="@item.productName" />
+                <p>@item.productName</p>
+            </a>
+        }
+    }
+    else
+    {
+        <h1>Sorry, there is no product in this category now. Please wait for the admin to add.</h1>
+    }
+</div>
+<a href="~/Home/Product/0" class="btnreturn">Return to [All Products]</a>
+<a href="~/Home/Index" class="btnreturn">Return to [Home Page]</a>
 

@@ -38,10 +38,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 //TODO:研究投射，改变这里的代码
                 var query = from p in db.productCategory_en
                             select p;
-
                 return View("ProductAll",query.ToList());
             }
+            //如果id不等于0，那么找出对应组号的所有记录
             products = db.product_en.Where(o => o.categoryID == id).ToList();
+            ViewBag.Title = db.productCategory_en.Where(o => o.categoryID == id).Single().categoryName;
             return View(products);
         }
     }

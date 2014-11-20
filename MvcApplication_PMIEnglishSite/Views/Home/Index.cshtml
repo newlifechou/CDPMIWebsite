@@ -37,29 +37,19 @@
 </div>
 <!--category section-->
 <div id="pcategorylist">
-    <div class="pcategory floatleft">
-        <img src="~/Images/pmi/VP.png" alt="VP" />
-        <h3>@Model[0].categoryName</h3>
-        <p>@Model[0].memo</p>
-        <a href="#">More About PV</a>
-    </div>
-    <div class="pcategory floatleft">
-        <img src="~/Images/pmi/TE.png" alt="VP" />
-        <h3>@Model[1].categoryName</h3>
-        <p>@Model[1].memo</p>
-        <a href="#">More About TE</a>
-    </div>
-
-    <div class="pcategory floatleft clearmargin">
-        <img src="~/Images/pmi/PCM.png" alt="VP" />
-        <h3>@Model[2].categoryName</h3>
-        <p>@Model[2].memo</p>
-        <a href="#">More About PCM</a>
-    </div>
-    .<div class="pcategory floatright">
-        <img src="~/Images/pmi/others.png" alt="VP" />
-         <h3>@Model[3].categoryName</h3>
-         <p>@Model[3].memo</p>
-        <a href="#">More About Others</a>
-    </div>
+    @foreach (var item in Model)
+    {
+        <!--if the item is the last one ,set class clear margin-->
+        string s = "";
+        if (item.categoryID==16)
+        {
+            s = "clearmargin";
+        }
+        <div class="pcategory floatleft @s">
+            <img src="~/Images/pmi/@item.photo" alt="@item.categoryName" />
+            <h3>@item.categoryName</h3>
+            <p>@item.memo</p>
+            <a href="~/Home/Product/@item.categoryID">More About it</a>
+        </div>
+    }
 </div>

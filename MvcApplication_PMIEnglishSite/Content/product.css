@@ -1,0 +1,50 @@
+﻿#productlist {
+    overflow: hidden;
+}
+
+    #productlist a {
+        display: block;
+        border: 2px solid #e4e4e4;
+        float: left;
+        margin: 5px;
+        padding: 5px;
+        width: 23%;
+        background:white;
+    }
+
+        #productlist a:hover {
+            border: 2px solid #999;
+        }
+
+        #productlist a img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        #productlist a p {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+.btnreturn {
+    display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 120%;
+    background-color: lightblue;
+    border: 1px solid #999;
+    border-radius:5px;
+    margin-top:15px;
+    padding:5px;
+    color:black;
+}
+
+    .btnreturn:hover {
+        background: #EF9632;
+        color: white;
+    }
