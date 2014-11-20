@@ -1,18 +1,23 @@
-﻿#mainbody h2{
-    color:blue;
+﻿#mainbody h2 {
+    color: blue;
 }
+
 #productlist ul li {
     background: #fff;
-    border: 2px solid #e4e4e4;
+    border: 3px solid #e4e4e4;
     border-radius: 5px;
     margin-bottom: 15px;
     padding: 5px;
     overflow: hidden;
     clear: both;
 }
+    /*be mouseoverd*/
+    #productlist ul li.plistitem {
+        border: 3px solid #999;
+    }
 
 #productlist h3 {
-    font-size:150%;
+    font-size: 150%;
     border-bottom: 1px solid #999;
     padding: 5px 0 5px 10px;
     background: #f0f0f0;
@@ -23,13 +28,13 @@
     display: block;
     float: left;
     margin: 10px 15px;
-    border:2px solid #999;
-    height:300px;
+    border: 1px solid #999;
+    height: 300px;
 }
 
 #productlist p {
     font-size: 120%;
     -ms-word-break: break-word;
     word-break: break-word;
-    line-height:1.8;
+    line-height: 1.8;
 }
