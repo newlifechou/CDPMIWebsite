@@ -261,6 +261,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WebEnglish.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\readme.txt" />
     <Content Include="Models\WebEnglish.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WebEnglish.edmx</DependentUpon>
