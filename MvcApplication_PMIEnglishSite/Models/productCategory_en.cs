@@ -22,6 +22,7 @@ namespace MvcApplication_PMIEnglishSite.Models
         public int categoryID { get; set; }
         public string categoryName { get; set; }
         public string memo { get; set; }
+        public string photo { get; set; }
     
         public virtual ICollection<product_en> product_en { get; set; }
     }

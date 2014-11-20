@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model IList<MvcApplication_PMIEnglishSite.Models.productCategory_en>
+@{
+    ViewBag.Title = ViewBag.WebsiteTitle;
 }
 @section AddToHead{
     <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
@@ -30,34 +31,35 @@
 <div class="textbox">
     <h1>About PMI</h1>
     <p>
-           @ViewBag.AboutPMI
+        <!--no encode and raw it-->
+        @Html.Raw(ViewBag.AboutPMI)
     </p>
 </div>
 <!--category section-->
 <div id="pcategorylist">
     <div class="pcategory floatleft">
         <img src="~/Images/pmi/VP.png" alt="VP" />
-        <h3>Photo-voltaics</h3>
-        <p>Photo-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaics</p>
+        <h3>@Model[0].categoryName</h3>
+        <p>@Model[0].memo</p>
         <a href="#">More About PV</a>
     </div>
     <div class="pcategory floatleft">
         <img src="~/Images/pmi/TE.png" alt="VP" />
-        <h3>Photo-voltaics</h3>
-        <p>Photo-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaics</p>
-        <a href="#">More About PV</a>
+        <h3>@Model[1].categoryName</h3>
+        <p>@Model[1].memo</p>
+        <a href="#">More About TE</a>
     </div>
 
     <div class="pcategory floatleft clearmargin">
         <img src="~/Images/pmi/PCM.png" alt="VP" />
-        <h3>Photo-voltaics</h3>
-        <p>Photo-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaics</p>
-        <a href="#">More About PV</a>
+        <h3>@Model[2].categoryName</h3>
+        <p>@Model[2].memo</p>
+        <a href="#">More About PCM</a>
     </div>
     .<div class="pcategory floatright">
         <img src="~/Images/pmi/others.png" alt="VP" />
-        <h3>Photo-voltaics</h3>
-        <p>Photo-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaicsPhoto-voltaics</p>
-        <a href="#">More About PV</a>
+         <h3>@Model[3].categoryName</h3>
+         <p>@Model[3].memo</p>
+        <a href="#">More About Others</a>
     </div>
 </div>

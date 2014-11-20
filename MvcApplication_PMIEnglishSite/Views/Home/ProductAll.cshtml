@@ -1,0 +1,21 @@
+﻿@model IList<MvcApplication_PMIEnglishSite.Models.productCategory_en>
+
+@{
+    ViewBag.Title = "All Products";
+}
+@section AddToHead{
+    <link href="~/Content/productall.css" rel="stylesheet" type="text/css" />
+}
+<h2>All Products</h2>
+<div id="productlist">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <h3>@item.categoryName</h3>
+                <img src="~/Images/pmi/@item.photo" alt="@item.categoryName" />
+                <p>@item.memo</p>
+            </li>
+        }
+    </ul>
+</div>

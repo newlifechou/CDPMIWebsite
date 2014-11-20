@@ -201,6 +201,7 @@
   <ItemGroup>
     <Content Include="Content\home.css" />
     <Content Include="Content\layout.css" />
+    <Content Include="Content\productall.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -261,6 +262,18 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WebEnglish.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\products\Bi2Te3.png" />
+    <Content Include="Images\products\BiSbTe.png" />
+    <Content Include="Images\products\BiTeSe.png" />
+    <Content Include="Images\products\CIGS-1.png" />
+    <Content Include="Images\products\Cu2S.png" />
+    <Content Include="Images\products\CuGaSe2.png" />
+    <Content Include="Images\products\GeSbTe.png" />
+    <Content Include="Images\products\In2S3.png" />
+    <Content Include="Images\products\In2Se3-1.png" />
+    <Content Include="Images\products\SAG.png" />
+    <Content Include="Images\products\SnS2.png" />
+    <Content Include="Images\products\ZnSe.png" />
     <Content Include="Models\readme.txt" />
     <Content Include="Models\WebEnglish.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -292,6 +305,7 @@
     <Content Include="Images\pmi\slider6.jpg" />
     <Content Include="Images\pmi\TE.png" />
     <Content Include="Images\pmi\VP.png" />
+    <Content Include="PMIEnglish.txt" />
     <Content Include="ReadMe.txt" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -321,6 +335,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ProductAll.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

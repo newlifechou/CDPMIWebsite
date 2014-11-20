@@ -9,22 +9,22 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     <!--add extra css and js here-->
-    @RenderSection("AddToHead",required:false)
+    @RenderSection("AddToHead", required: false)
 </head>
 <body>
     <!--header part-->
     <div id="header">
-        <a href="#" id="logo">
+        <a href="~/Home/Index" id="logo">
             <img src="~/Images/pmi/logo.png" alt="PMI" />
         </a>
         <div id="nav">
             <div id="leftmenu">
                 <ul>
-                    <li class="one"><a href="#">Home</a></li>
+                    <li class="one"><a href="~/Home/Index">Home</a></li>
                     <li class="two">
                         <a href="#">Products&ampServices</a>
                         <ul>
-                            <li><a href="#">Products</a></li>
+                            <li><a href="~/Home/Product/0">Products</a></li>
                             <li><a href="#">Services</a></li>
                         </ul>
                     </li>
@@ -48,16 +48,19 @@
     <!--maincontent-->
     <div id="maincontent">
         <!--this is kept for the slide-->
-        @RenderSection("Slide",required:false)
-        @RenderBody()
+        @RenderSection("Slide", required: false)
+        <div id="mainbody">
+            @RenderBody()
+        </div>
     </div>
     <!--footer-->
     <div id="footer">
         <div id="centerarea">
             <div id="leftfooter">
                 <ul>
+                    <li><a href="~/Home/Index">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="~/Home/Product/0">Products</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>

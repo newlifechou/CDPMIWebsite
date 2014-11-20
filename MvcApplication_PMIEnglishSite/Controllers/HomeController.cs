@@ -18,9 +18,31 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         public ActionResult Index()
         {
             //AboutPMI Data
-            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 1).Single().BriefIntrodction.ToString();
-            return View();
+            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 1).Single().BriefIntrodction;
+            ViewBag.WebsiteTitle = "Pioneer Materials Inc.";
+            List<productCategory_en> pclist = db.productCategory_en.ToList();
+            return View(pclist);
         }
 
+        /// <summary>
+        /// ProductListShow
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Product(int id = 0)
+        {
+            List<product_en> products;
+            //if id=0,return the major show view
+            if (id == 0)
+            {
+                //TODO:研究投射，改变这里的代码
+                var query = from p in db.productCategory_en
+                            select p;
+
+                return View("ProductAll",query.ToList());
+            }
+            products = db.product_en.Where(o => o.categoryID == id).ToList();
+            return View(products);
+        }
     }
 }

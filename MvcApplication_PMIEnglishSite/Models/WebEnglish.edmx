@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PMIEnglishEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="PMIEnglishEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="admin_en">
           <Key>
             <PropertyRef Name="adminID" />
@@ -91,6 +91,7 @@
           <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="categoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="memo" Type="nvarchar" MaxLength="300" />
+          <Property Name="photo" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="service_en">
           <Key>
@@ -181,8 +182,7 @@
             <End Role="product_en" EntitySet="product_en" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PMIEnglishEntity" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -274,6 +274,7 @@
           <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="memo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="product_en" Relationship="Self.FK__product_en__categor_en__0AD2A005" FromRole="productCategory_en" ToRole="product_en" />
+          <Property Name="photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="service_en">
           <Key>
@@ -460,6 +461,7 @@
           <EntitySetMapping Name="productCategory_en">
             <EntityTypeMapping TypeName="PMIEnglishEntity.productCategory_en">
               <MappingFragment StoreEntitySet="productCategory_en">
+                <ScalarProperty Name="photo" ColumnName="photo" />
                 <ScalarProperty Name="categoryID" ColumnName="categoryID" />
                 <ScalarProperty Name="categoryName" ColumnName="categoryName" />
                 <ScalarProperty Name="memo" ColumnName="memo" />

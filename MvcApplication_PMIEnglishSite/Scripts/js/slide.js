@@ -11,17 +11,23 @@
 
     $("#mainslide").hover(function () {
         clearInterval(adTimer);
-       }, function () {
+    }, function () {
         adTimer = setInterval(function () {
-                    showImg(index)
-                    index++;
-                    if (index == len) {
-                        index = 0;
-                    }
-            }, 3000);
+            showImg(index)
+            index++;
+            if (index == len) {
+                index = 0;
+            }
+        }, 3000);
 
-       }).trigger("mouseleave");
+    }).trigger("mouseleave");
 
+    //mouseover and change of the product background-color
+    $(".pcategory").mouseover(function () {
+        $(this).addClass("bgchange");
+    }).mouseout(function () {
+        $(this).removeClass("bgchange");
+    });
 
 });
 
