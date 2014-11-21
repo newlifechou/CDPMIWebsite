@@ -45,6 +45,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="picture" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="memo" Type="text" />
         </EntityType>
         <EntityType Name="friendLink_en">
           <Key>
@@ -226,6 +227,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="picture" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="friendLink_en">
           <Key>
@@ -411,6 +413,7 @@
           <EntitySetMapping Name="flash_en">
             <EntityTypeMapping TypeName="PMIEnglishEntity.flash_en">
               <MappingFragment StoreEntitySet="flash_en">
+                <ScalarProperty Name="memo" ColumnName="memo" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="picture" ColumnName="picture" />
               </MappingFragment>

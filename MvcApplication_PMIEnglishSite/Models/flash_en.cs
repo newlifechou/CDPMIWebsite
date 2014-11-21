@@ -16,5 +16,6 @@ namespace MvcApplication_PMIEnglishSite.Models
     {
         public int id { get; set; }
         public string picture { get; set; }
+        public string memo { get; set; }
     }
 }

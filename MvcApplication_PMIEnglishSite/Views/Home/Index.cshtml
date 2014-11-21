@@ -1,29 +1,33 @@
-﻿@model IList<MvcApplication_PMIEnglishSite.Models.productCategory_en>
+﻿@model MvcApplication_PMIEnglishSite.Models.HomeIndexData
 @{
     ViewBag.Title = ViewBag.WebsiteTitle;
 }
 @section AddToHead{
     <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/js/slide.js"></script>
+    <script src="~/Scripts/js/homeindex.js"></script>
 }
 @section Slide{
     <!--slide part-->
     <div id="mainslide">
         <ul id="slide">
-            <li><img src="~/Images/pmi/slider1.jpg" alt="slide1" /></li>
-            <li><img src="~/Images/pmi/slider2.jpg" alt="slide2" /></li>
-            <li><img src="~/Images/pmi/slider3.jpg" alt="slide3" /></li>
-            <li><img src="~/Images/pmi/slider4.jpg" alt="slide4" /></li>
-            <li><img src="~/Images/pmi/slider5.jpg" alt="slide5" /></li>
-            <li><img src="~/Images/pmi/slider6.jpg" alt="slide6" /></li>
+            @foreach (var item in Model.flashlist)
+            {
+                <li><img src="~/Images/pmi/@item.picture" alt="@item.picture" /><p>@item.memo</p></li>
+            }
         </ul>
         <ul id="slidenav">
-            <li class="selected">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+            @for (int i = 0; i < Model.flashlist.Count; i++)
+            {
+                if (i == 0)
+                {
+                    <li class="selected">1</li>
+                }
+                else
+                {
+                    <li>@(i + 1)</li>
+                }
+            }
         </ul>
     </div>
 }
@@ -37,11 +41,11 @@
 </div>
 <!--category section-->
 <div id="pcategorylist">
-    @foreach (var item in Model)
+    @foreach (var item in Model.pclist)
     {
         <!--if the item is the last one ,set class clear margin-->
         string s = "";
-        if (item.categoryID==16)
+        if (item.categoryID == 16)
         {
             s = "clearmargin";
         }

@@ -20,8 +20,12 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             //AboutPMI Data
             ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 7).Single().BriefIntrodction;
             ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
-            List<productCategory_en> pclist = db.productCategory_en.ToList();
-            return View(pclist);
+            //List<productCategory_en> pclist = db.productCategory_en.ToList();
+            //将首页所需的数据添加到一个视图对象当中，然后传递这个视图对象给视图。
+            HomeIndexData hid = new HomeIndexData();
+            hid.flashlist = db.flash_en.ToList();
+            hid.pclist = db.productCategory_en.ToList();
+            return View(hid);
         }
 
         /// <summary>
@@ -158,6 +162,14 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 db.SaveChanges();
                 return View("FeedbackSuccess");
             }
+            return View();
+        }
+        /// <summary>
+        /// goto Login View
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Login()
+        {
             return View();
         }
     }
