@@ -49,7 +49,7 @@
             @Html.LabelFor(model => model.contentText)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.contentText)
+            @Html.TextAreaFor(model => model.contentText)
             @Html.ValidationMessageFor(model => model.contentText)
         </div>
 
@@ -70,3 +70,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<!--load after DOM finished-->
+<script>
+    var ue = UE.getEditor('contentText');
+</script>

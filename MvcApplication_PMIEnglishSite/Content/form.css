@@ -1,34 +1,34 @@
 ﻿/* forms */
-fieldset {
+#mainbody fieldset {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-    fieldset legend {
+    #mainbody fieldset legend {
         display: none;
     }
 
-    fieldset ol {
+    #mainbody fieldset ol {
         padding: 0;
         list-style: none;
     }
 
-        fieldset ol li {
+        #mainbody fieldset ol li {
             padding-bottom: 5px;
         }
 
-label {
+#mainbody label {
     display: block;
     font-size: 1.2em;
     font-weight: 600;
 }
 
-    label.checkbox {
+    #mainbody label.checkbox {
         display: inline;
     }
 
-input, textarea {
+#mainbody input, textarea {
     border: 1px solid #e2e2e2;
     background: #fff;
     color: #333;
@@ -38,25 +38,25 @@ input, textarea {
     width: 300px;
 }
 
-textarea {
+#mainbody textarea {
     font-family: inherit;
     width: 600px;
     height: 250px;
 }
 
-    input:focus, textarea:focus {
+   #mainbody  input:focus, textarea:focus {
         border: 1px solid #7ac0da;
     }
 
-input[type="checkbox"] {
+#mainbody input[type="checkbox"] {
     background: transparent;
     border: inherit;
     width: auto;
 }
 
-input[type="submit"],
-input[type="button"],
-button {
+#mainbody input[type="submit"],
+#mainbody input[type="button"],
+#mainbody button {
     background-color: #d3dce0;
     border: 1px solid #787878;
     cursor: pointer;
@@ -67,22 +67,22 @@ button {
     width: auto;
 }
 
-td input[type="submit"],
-td input[type="button"],
-td button {
+#mainbody td input[type="submit"],
+#mainbody td input[type="button"],
+#mainbody td button {
     font-size: 1em;
     padding: 4px;
     margin-right: 4px;
 }
 
 /* info and errors */
-.message-info {
+#mainbody .message-info {
     border: 1px solid;
     clear: both;
     padding: 10px 20px;
 }
 
-.message-error {
+#mainbody .message-error {
     clear: both;
     color: #e80c4d;
     font-size: 1.1em;
@@ -90,54 +90,54 @@ td button {
     margin: 20px 0 10px 0;
 }
 
-.message-success {
+#mainbody .message-success {
     color: #7ac0da;
     font-size: 1.3em;
     font-weight: bold;
     margin: 20px 0 10px 0;
 }
 
-.error {
+#mainbody .error {
     color: #e80c4d;
 }
 
 /* styles for validation helpers */
-.field-validation-error {
+#mainbody .field-validation-error {
     color: #e80c4d;
     font-weight: bold;
 }
 
-.field-validation-valid {
+#mainbody .field-validation-valid {
     display: none;
 }
 
-input.input-validation-error {
+#mainbody input.input-validation-error {
     border: 1px solid #e80c4d;
 }
 
-input[type="checkbox"].input-validation-error {
+#mainbody input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
 
-.validation-summary-errors {
+#mainbody .validation-summary-errors {
     color: #e80c4d;
     font-weight: bold;
     font-size: 1.1em;
 }
 
-.validation-summary-valid {
+#mainbody .validation-summary-valid {
     display: none;
 }
 
 
-table.tblist {
+#mainbody table.tblist {
     border-collapse: collapse;
 }
 
-    table.tblist tr {
+    #mainbody table.tblist tr {
         border-bottom: 1px solid #999;
     }
 
-    table.tblist td {
+    #mainbody table.tblist td {
         padding: 5px 10px;
     }

@@ -4,7 +4,6 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
-
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
@@ -54,10 +53,8 @@
             @Html.LabelFor(model => model.contentText)
         </div>
         <div class="editor-field">
-            <script>
-                var ue = UE.getEditor('contentText');
-            </script>
-            @Html.EditorFor(model => model.contentText)
+            <!--下面替换为TextArea-->
+            @Html.TextAreaFor(model => model.contentText)
             @Html.ValidationMessageFor(model => model.contentText)
         </div>
 
@@ -78,3 +75,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<!--load after DOM finished-->
+<script>
+    var ue = UE.getEditor('contentText');
+</script>

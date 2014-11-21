@@ -49,6 +49,8 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Create(product_en product_en)
         {
             if (ModelState.IsValid)
@@ -81,6 +83,8 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult Edit(product_en product_en)
         {
             if (ModelState.IsValid)
@@ -111,6 +115,8 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        ///取消页面输入验证
+        [ValidateInput(false)]
         public ActionResult DeleteConfirmed(int id)
         {
             product_en product_en = db.product_en.Find(id);
