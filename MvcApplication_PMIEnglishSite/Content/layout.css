@@ -72,16 +72,23 @@ a#logo:hover img {
     margin-left: 310px;
     float: left;
     font-size: 130%;
-    height: 58px;
+    /*height: 58px;*/
 }
 
     #leftmenu ul {
-        position: relative;
+        /*position: relative;*/
     }
+        /*消除li浮动带给ul的高度问题*/
+        #leftmenu ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            height: 0;
+        }
 
         #leftmenu ul li {
+            position: relative;
             float: left;
-            height: 58px;
         }
             /*fixed the 1st Li width*/
             #leftmenu ul li.one {
@@ -114,12 +121,13 @@ a#logo:hover img {
             }
 
             #leftmenu ul li:hover ul {
-                visibility: visible;
+                display: block;
             }
 
             /*2rd grade menu*/
             #leftmenu ul li ul {
-                visibility: hidden;
+                position: absolute;
+                display:none;
             }
 
                 #leftmenu ul li ul li {
