@@ -1,0 +1,27 @@
+﻿#adminmenu {
+    margin-top: 10px;
+}
+
+    #adminmenu ul {
+        overflow: hidden;
+    }
+
+        #adminmenu ul li {
+            float: left;
+        }
+
+            #adminmenu ul li a {
+                display: block;
+                padding: 15px;
+                margin-right: 10px;
+                background-color: deepskyblue;
+            }
+
+                #adminmenu ul li a:hover {
+                    background-color: #999;
+                    color:white;
+                }
+h2{
+    margin-top:10px;
+    border-bottom:1px solid #999;
+}

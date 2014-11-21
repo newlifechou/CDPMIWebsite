@@ -85,15 +85,19 @@ a#logo:hover img {
         }
             /*fixed the 1st Li width*/
             #leftmenu ul li.one {
-                width: 100px;
+                width: 80px;
             }
 
             #leftmenu ul li.two {
-                width: 200px;
+                width: 180px;
             }
 
             #leftmenu ul li.three {
-                width: 150px;
+                width: 120px;
+            }
+
+            #leftmenu ul li.four {
+                width: 120px;
             }
 
             #leftmenu ul li a {
@@ -194,15 +198,16 @@ a#logo:hover img {
 #footer {
     height: 126px;
     background: #323232;
-    line-height:126px;
+    line-height: 126px;
 }
+
 #leftfooter {
     float: left;
 }
 
     #leftfooter ul {
         overflow: hidden;
-        margin-left:20px;
+        margin-left: 20px;
     }
 
         #leftfooter ul li {
@@ -223,7 +228,7 @@ a#logo:hover img {
 #rightfooter {
     float: right;
     color: white;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 /*详细内容页下部的按钮*/
