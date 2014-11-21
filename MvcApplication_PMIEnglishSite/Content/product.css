@@ -22,6 +22,7 @@
             padding: 0;
             width: 100%;
             background-color: lightblue;
+            border:none;
         }
 
         #productlist a p {
