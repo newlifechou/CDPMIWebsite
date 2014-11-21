@@ -69,20 +69,40 @@
 
 /*indicate where the editing operate will change*/
 #changewhere {
-    margin-top:10px;
-    border:1px solid #999;
-    min-height:200px;
-    padding:10px;
+    margin-top: 10px;
+    border: 1px solid #999;
+    min-height: 200px;
+    padding: 10px;
 }
-#changewhere h5{
-    font-size:1.2em;
-    padding:10px;
+
+    #changewhere h5 {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+        #changewhere h5 span {
+            color: orange;
+            padding-right: 10px;
+        }
+
+    #changewhere img {
+        display: block;
+        margin-bottom: 10px;
+    }
+/*每一页上新添加的按钮*/
+#mainbody p.btnAddNew {
+    margin-bottom: 15px;
 }
-#changewhere h5 span{
-    color:orange;
-    padding-right:10px;
-}
-#changewhere img{
-    display:block;
-    margin-bottom:10px;
-}
+
+    #mainbody p.btnAddNew a {
+        display: block;
+        padding: 10px;
+        border: 1px solid #999;
+        background-color: lightblue;
+        width: 120px;
+        text-align: center;
+    }
+
+        #mainbody p.btnAddNew a:hover {
+            background-color: orange;
+        }

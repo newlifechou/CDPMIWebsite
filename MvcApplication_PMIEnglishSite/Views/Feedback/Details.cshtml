@@ -1,0 +1,41 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.feedback_en
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>feedback_en</legend>
+    <table class="tblist2">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.title)</td>
+            <td>@Html.DisplayFor(model => model.title)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.createTime)</td>
+            <td>@Html.DisplayFor(model => model.createTime)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.mainContent)</td>
+            <td>@Html.DisplayFor(model => model.mainContent)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.phone)</td>
+            <td>@Html.DisplayFor(model => model.phone)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.email)</td>
+            <td>@Html.DisplayFor(model => model.email)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.cname)</td>
+            <td>@Html.DisplayFor(model => model.cname)</td>
+        </tr>
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
