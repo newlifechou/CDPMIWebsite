@@ -671,6 +671,7 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Home\AboutPMI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

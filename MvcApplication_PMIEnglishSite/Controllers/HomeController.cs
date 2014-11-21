@@ -18,8 +18,8 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         public ActionResult Index()
         {
             //AboutPMI Data
-            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 1).Single().BriefIntrodction;
-            ViewBag.WebsiteTitle = "Pioneer Materials Inc.";
+            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 7).Single().BriefIntrodction;
+            ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
             List<productCategory_en> pclist = db.productCategory_en.ToList();
             return View(pclist);
         }
@@ -38,7 +38,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 //TODO:研究投射，改变这里的代码
                 var query = from p in db.productCategory_en
                             select p;
-                return View("ProductAll",query.ToList());
+                return View("ProductAll", query.ToList());
             }
             //如果id不等于0，那么找出对应组号的所有记录
             products = db.product_en.Where(o => o.categoryID == id).ToList();
@@ -50,11 +50,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult ProductDetails(int id=0)
+        public ActionResult ProductDetails(int id = 0)
         {
             product_en p = db.product_en.Where(o => o.productID == id).Single();
             //if the p is null,that mean there is no product details in db, return not found.
-            if (p==null)
+            if (p == null)
             {
                 return HttpNotFound();
             }
@@ -68,6 +68,41 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         {
             List<service_en> services = db.service_en.ToList();
             return View(services);
+        }
+        /// <summary>
+        /// About PMI
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult About(int id = 0)
+        {
+            string viewName = "";
+            switch (id)
+            {
+                //About
+                case 7:
+                    ViewBag.Title = "About PMI";
+                    viewName = "AboutPMI";
+                    break;
+                //History
+                case 4:
+                    ViewBag.Title = "PMI History";
+                    viewName = "AboutHistory";
+                    break;
+                default:
+                    break;
+            }
+
+            ViewBag.Content = db.basicSetting_en.Where(o => o.id == id).Single().BriefIntrodction;
+            if (viewName != "")
+            {
+                return View(viewName);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
         }
     }
 }
