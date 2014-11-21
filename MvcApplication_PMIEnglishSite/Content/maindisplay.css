@@ -14,3 +14,6 @@
 #maindisplayarea .mainarea{
     margin-bottom:100px;
 }
+#maindisplayarea p.bigfont{
+    font-size:1.2em;
+}

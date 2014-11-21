@@ -1,27 +1,68 @@
 ﻿#adminmenu {
-    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-    #adminmenu ul {
-        overflow: hidden;
+    #adminmenu p.warnningmsg {
+        color: red;
+        margin-bottom: 5px;
     }
 
+    #adminmenu ul {
+        background: orange;
+        width: 100%;
+    }
+
+        #adminmenu ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            height: 0;
+        }
+
         #adminmenu ul li {
+            position: relative;
             float: left;
         }
 
-            #adminmenu ul li a {
+            #adminmenu ul li > a {
                 display: block;
-                padding: 15px;
-                margin-right: 10px;
-                background-color: deepskyblue;
+                padding: 10px;
+                width: 150px;
+                text-align: center;
+                color: black;
             }
 
-                #adminmenu ul li a:hover {
-                    background-color: #999;
-                    color:white;
+            #adminmenu ul li:hover {
+                background: #eee;
+            }
+
+                #adminmenu ul li:hover ul {
+                    display: block;
                 }
-h2{
-    margin-top:10px;
-    border-bottom:1px solid #999;
-}
+
+            #adminmenu ul li ul {
+                position: absolute;
+                display: none;
+                z-index: 120;
+            }
+
+                #adminmenu ul li ul li {
+                    float: none;
+                }
+
+                    #adminmenu ul li ul li a {
+                        display: block;
+                        background: #eee;
+                        width: 250px;
+                        text-align: left;
+                        border-left: 3px solid #eee;
+                    }
+
+                        #adminmenu ul li ul li a:hover {
+                            background: lightblue;
+                            border-left: 3px solid #999;
+                        }

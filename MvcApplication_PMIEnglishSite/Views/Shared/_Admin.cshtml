@@ -1,21 +1,49 @@
 ﻿@{
-    ViewBag.Title = "_Admin";
     //must have it
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" />
     <link href="~/Content/admin.css" rel="stylesheet" type="text/css" />
 }
 <div id="adminmenu">
+    <p class="warnningmsg">Be careful when you operate this, it may change the website content  forever.</p>
     <ul>
+        <li><a href="~/Admin/Index">ManagementStatus</a></li>
         <li>
-            <a href="#">CategoryEdit</a>
+            <a href="#">BasicInformation</a>
+            <ul>
+                <li><a href="#">AboutPMI</a></li>
+                <li><a href="#">Management&amp;Technical Consultants</a></li>
+                <li><a href="#">Board of Director</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Certificate</a></li>
+            </ul>
         </li>
-        <li><a href="#">ProductEdit</a></li>
-        <li><a href="#">AboutPMIEdit</a></li>
-        <li><a href="#">ContactEdit</a></li>
+        <li>
+            <a href="#">Products&amp;Services</a>
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Others</a>
+            <ul>
+                <li><a href="#">FeedBack</a></li>
+                <li><a href="#">Slide</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">LogOut</a>
+            <ul>
+                <li><a href="#">LogOutForSure</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
-<div id="maindisplay" class="css">
+<div id="maindisplayarea" class="css">
+
     @RenderBody()
 </div>
