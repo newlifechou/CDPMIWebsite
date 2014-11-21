@@ -66,3 +66,23 @@
                             background: lightblue;
                             border-left: 3px solid #999;
                         }
+
+/*indicate where the editing operate will change*/
+#changewhere {
+    margin-top:10px;
+    border:1px solid #999;
+    min-height:200px;
+    padding:10px;
+}
+#changewhere h5{
+    font-size:1.2em;
+    padding:10px;
+}
+#changewhere h5 span{
+    color:orange;
+    padding-right:10px;
+}
+#changewhere img{
+    display:block;
+    margin-bottom:10px;
+}

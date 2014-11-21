@@ -1,0 +1,53 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.productCategory_en
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>productCategory_en</legend>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.categoryID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categoryName)
+            @Html.ValidationMessageFor(model => model.categoryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.memo)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.memo)
+            @Html.ValidationMessageFor(model => model.memo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.photo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.photo)
+            @Html.ValidationMessageFor(model => model.photo)<span style="color:orange">better not change the picture</span>
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

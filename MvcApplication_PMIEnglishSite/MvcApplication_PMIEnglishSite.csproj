@@ -134,6 +134,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\productCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,6 +277,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WebEnglish.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\helper\categoryshow.jpg" />
+    <Content Include="Images\helper\categoryshow2.jpg" />
     <Content Include="Images\pmi\others.jpg" />
     <Content Include="Images\pmi\PCM.jpg" />
     <Content Include="Images\pmi\PV.jpg" />
@@ -683,6 +686,10 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\productCategory\Index.cshtml" />
+    <Content Include="Views\productCategory\Create.cshtml" />
+    <Content Include="Views\productCategory\Edit.cshtml" />
+    <Content Include="Views\productCategory\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

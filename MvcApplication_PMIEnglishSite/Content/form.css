@@ -40,7 +40,8 @@ input, textarea {
 
 textarea {
     font-family: inherit;
-    width: 500px;
+    width: 600px;
+    height: 250px;
 }
 
     input:focus, textarea:focus {
@@ -127,3 +128,17 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+
+table.tblist {
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+    table.tblist tr {
+        border-bottom: 1px solid #999;
+    }
+
+    table.tblist td {
+        padding: 5px 10px;
+    }
