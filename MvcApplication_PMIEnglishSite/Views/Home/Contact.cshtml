@@ -10,11 +10,12 @@
             font-size:150%;
         }
         #maindisplayarea p span{
-            color:orange;
+            color:blue;
         }
     </style>
 }
 <h2>@ViewBag.Title</h2>
+
 <div id="maindisplayarea">
     <p>@Html.DisplayNameFor(o => o.CompanyName):<span>@Html.DisplayFor(o => o.CompanyName)</span></p>
     <p>@Html.DisplayNameFor(o => o.Contact):<span>@Html.DisplayFor(o => o.Contact)</span></p>
@@ -24,4 +25,4 @@
     <p>@Html.DisplayNameFor(o => o.Address):<span>@Html.DisplayFor(o => o.Address)</span></p>
     @*<p>@Html.DisplayNameFor(o => o.PostCode):<span>@Html.DisplayFor(o => o.PostCode)</span></p>*@
 </div>
-<a href="#" class="btnreturn">FeedBack OnLine</a>
+<a href="~/Home/Feedback" class="btnreturn">Feedback Online</a>

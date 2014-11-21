@@ -207,6 +207,7 @@
     <Compile Include="ueditor\net\App_Code\UploadHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\form.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\layout.css" />
     <Content Include="Content\maindisplay.css" />
@@ -673,6 +674,8 @@
     <Content Include="Views\Home\Service.cshtml" />
     <Content Include="Views\Home\AboutPMI.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Feedback.cshtml" />
+    <Content Include="Views\Home\FeedbackSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

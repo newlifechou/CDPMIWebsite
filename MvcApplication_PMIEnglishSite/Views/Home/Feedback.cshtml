@@ -1,0 +1,24 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.feedback_en
+@{
+    //ViewBag.Title = "Feedback";
+}
+@section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/form.css" rel="stylesheet" type="text/css" />
+}
+<h2>@ViewBag.Title</h2>
+<div id="maindisplayarea">
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr><td>@Html.DisplayNameFor(o => o.title):</td><td>@Html.EditorFor(o => o.title) * @Html.ValidationMessageFor(o => o.title)</td></tr>
+            <tr><td>@Html.DisplayNameFor(o => o.cname):</td><td>@Html.EditorFor(o => o.cname) * @Html.ValidationMessageFor(o => o.cname)</td></tr>
+            <tr><td>@Html.DisplayNameFor(o => o.email):</td><td>@Html.EditorFor(o => o.email) * @Html.ValidationMessageFor(o => o.email)</td></tr>
+            <tr><td>@Html.DisplayNameFor(o => o.phone):</td><td>@Html.EditorFor(o => o.phone) * @Html.ValidationMessageFor(o => o.phone)</td></tr>
+            <tr><td>@Html.DisplayNameFor(o => o.mainContent):</td><td>@Html.TextAreaFor(o => o.mainContent) * @Html.ValidationMessageFor(o => o.mainContent)</td></tr>
+        </table>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    }
+</div>

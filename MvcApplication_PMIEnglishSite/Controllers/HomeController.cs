@@ -139,5 +139,26 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             basicSetting_en bs = db.basicSetting_en.First();
             return View(bs);
         }
+        /// <summary>
+        /// Feedback
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Feedback()
+        {
+            ViewBag.Title = "Feedback";
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Feedback(feedback_en fb)
+        {
+            if (ModelState.IsValid)
+            {
+                fb.createTime = DateTime.Now;
+                db.feedback_en.Add(fb);
+                db.SaveChanges();
+                return View("FeedbackSuccess");
+            }
+            return View();
+        }
     }
 }
