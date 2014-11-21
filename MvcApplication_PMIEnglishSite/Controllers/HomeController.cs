@@ -76,6 +76,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// <returns></returns>
         public ActionResult About(int id = 0)
         {
+            //the follwing code needs to be simplied 
             string viewName = "";
             switch (id)
             {
@@ -89,11 +90,35 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                     ViewBag.Title = "PMI History";
                     viewName = "AboutPMI";
                     break;
+                //Management and Technical Consultants
+                case 2:
+                    ViewBag.Title = "Management and Technical Consultants";
+                    viewName = "AboutPMI";
+                    break;
+                //Board of Director
+                case 6:
+                    ViewBag.Title = "Board of Director";
+                    viewName = "AboutPMI";
+                    break;
+                //certificate
+                case 3:
+                    ViewBag.Title = "Certificate";
+                    viewName = "AboutPMI";
+                    break;
                 default:
                     break;
             }
 
-            ViewBag.Content = db.basicSetting_en.Where(o => o.id == id).Single().BriefIntrodction;
+            //general processing part
+            try
+            {
+                ViewBag.Content = db.basicSetting_en.Where(o => o.id == id).Single().BriefIntrodction;
+            }
+            catch
+            {
+                return HttpNotFound();
+            }
+
             if (viewName != "")
             {
                 return View(viewName);
@@ -103,6 +128,16 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 return HttpNotFound();
             }
 
+        }
+        /// <summary>
+        /// Contact
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Contact()
+        {
+            ViewBag.Title = "Contact Us";
+            basicSetting_en bs = db.basicSetting_en.First();
+            return View(bs);
         }
     }
 }

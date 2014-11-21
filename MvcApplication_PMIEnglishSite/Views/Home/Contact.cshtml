@@ -1,0 +1,27 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.basicSetting_en
+
+@{
+    //ViewBag.Title = "Contact";
+}
+@section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" type="text/css" />
+    <style>
+        #maindisplayarea p{
+            font-size:150%;
+        }
+        #maindisplayarea p span{
+            color:orange;
+        }
+    </style>
+}
+<h2>@ViewBag.Title</h2>
+<div id="maindisplayarea">
+    <p>@Html.DisplayNameFor(o => o.CompanyName):<span>@Html.DisplayFor(o => o.CompanyName)</span></p>
+    <p>@Html.DisplayNameFor(o => o.Contact):<span>@Html.DisplayFor(o => o.Contact)</span></p>
+    <p>@Html.DisplayNameFor(o => o.Email):<span>@Html.DisplayFor(o => o.Email)</span></p>
+    <p>@Html.DisplayNameFor(o => o.Phone):<span>@Html.DisplayFor(o => o.Phone)</span></p>
+    <p>@Html.DisplayNameFor(o => o.Fax):<span>@Html.DisplayFor(o => o.Fax)</span></p>
+    <p>@Html.DisplayNameFor(o => o.Address):<span>@Html.DisplayFor(o => o.Address)</span></p>
+    @*<p>@Html.DisplayNameFor(o => o.PostCode):<span>@Html.DisplayFor(o => o.PostCode)</span></p>*@
+</div>
+<a href="#" class="btnreturn">FeedBack OnLine</a>
