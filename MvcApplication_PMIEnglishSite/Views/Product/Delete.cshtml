@@ -1,0 +1,44 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.product_en
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>product_en</legend>
+    <div class="display-field">
+        @Html.HiddenFor(model => model.productID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productCategory_en.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productCategory_en.categoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.publicTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publicTime)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

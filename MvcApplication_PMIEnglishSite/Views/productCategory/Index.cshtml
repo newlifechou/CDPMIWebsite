@@ -13,9 +13,6 @@
 <table class="tblist">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.categoryID)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.categoryName)
         </th>
         <th></th>
@@ -23,9 +20,7 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.categoryID)
-        </td>
+            @Html.HiddenFor(modelItem => item.categoryID)
         <td>
             @Html.DisplayFor(modelItem => item.categoryName)
         </td>

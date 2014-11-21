@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MvcApplication_PMIEnglishSite.Models.product_en>
+
+@{
+    ViewBag.Title = "ProductEditing ";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="tblist">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productCategory_en.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publicTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.readCount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @Html.HiddenFor(modelItem => item.productID)
+            <td>
+                @Html.DisplayFor(modelItem => item.productName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productCategory_en.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.publicTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.readCount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.productID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.productID })
+            </td>
+        </tr>
+    }
+
+</table>
