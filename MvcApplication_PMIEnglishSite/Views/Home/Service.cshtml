@@ -1,0 +1,21 @@
+﻿@model List<MvcApplication_PMIEnglishSite.Models.service_en>
+@{
+    ViewBag.Title = "Service";
+}
+@section AddToHead{
+    <link href="~/Content/productall.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/js/productall.js"></script>
+}
+<h2>@ViewBag.Title</h2>
+<div id="categorylist">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <h3>@item.serviceName</h3>
+                <img src="~/Images/services/@item.servicePicture" alt="@item.serviceName" />
+                <p>@Html.Raw(item.serviceContent)</p>
+            </li>
+        }
+    </ul>
+</div>

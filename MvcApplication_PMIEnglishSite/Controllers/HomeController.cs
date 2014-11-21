@@ -60,5 +60,14 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             }
             return View(p);
         }
+        /// <summary>
+        /// Serivce
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Service()
+        {
+            List<service_en> services = db.service_en.ToList();
+            return View(services);
+        }
     }
 }

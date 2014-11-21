@@ -182,30 +182,27 @@ a#logo:hover img {
     overflow: hidden;
     padding-bottom: 90px;
 }
-#mainbody{
-    padding:20px;
+
+#mainbody {
+    padding: 20px;
 }
+
+    #mainbody h2 {
+        color: blue;
+    }
 /*footer css setting*/
 #footer {
     height: 126px;
     background: #323232;
-    padding: 20px 0;
+    line-height:126px;
 }
-
-#centerarea {
-    height: 126px;
-    line-height: 126px;
-    background: #474747;
-    padding: 0 20px;
-    font-size: 120%;
-}
-
 #leftfooter {
     float: left;
 }
 
     #leftfooter ul {
         overflow: hidden;
+        margin-left:20px;
     }
 
         #leftfooter ul li {
@@ -226,6 +223,7 @@ a#logo:hover img {
 #rightfooter {
     float: right;
     color: white;
+    margin-right:20px;
 }
 
 /*详细内容页下部的按钮*/
@@ -237,10 +235,10 @@ a#logo:hover img {
     font-size: 120%;
     background-color: lightblue;
     border: 1px solid #999;
-    border-radius:5px;
-    margin-top:15px;
-    padding:5px;
-    color:black;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    color: black;
 }
 
     .btnreturn:hover {
