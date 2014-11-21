@@ -87,7 +87,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 //History
                 case 4:
                     ViewBag.Title = "PMI History";
-                    viewName = "AboutHistory";
+                    viewName = "AboutPMI";
                     break;
                 default:
                     break;
