@@ -8,7 +8,7 @@
 
 p.warnningmsg {
     color: red;
-    margin-bottom: 5px;
+    margin: 10px 0;
 }
 
     p.warnningmsg span {
@@ -110,3 +110,17 @@ p.warnningmsg {
         #mainbody p.btnAddNew a:hover {
             background-color: orange;
         }
+
+
+/*登录样式区域*/
+#loginarea {
+    border:1px solid #999;
+    border-radius:5px;
+}
+#loginarea p{
+    padding:10px;
+}
+#loginarea p span{
+    color:orange;
+    text-decoration:underline;
+}

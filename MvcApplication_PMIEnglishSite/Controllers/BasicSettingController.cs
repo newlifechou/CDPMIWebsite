@@ -90,7 +90,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                     ViewBag.Title = "Board of Director";
                     break;
                 case 2:
-                    ViewBag.Title = "Management&amp;Technical Consultants";
+                    ViewBag.Title = "Management and Technical Consultants";
                     break;
                 default:
                     break;
