@@ -28,7 +28,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                 UserRepository ur = new UserRepository();
                 if (ur.ValidateUser(admin.userName, admin.passWord))
                 {
-                    FormsAuthentication.SetAuthCookie(admin.userName, true);
+                    FormsAuthentication.SetAuthCookie(admin.userName, false);
                     return RedirectToAction("Index", "Admin");
                 }
                 else

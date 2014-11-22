@@ -284,12 +284,21 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WebEnglish.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\helper\abouthelper.jpg" />
     <Content Include="Images\helper\categoryshow.jpg" />
     <Content Include="Images\helper\categoryshow2.jpg" />
+    <Content Include="Images\helper\contacthelper.jpg" />
+    <Content Include="Images\helper\feedbackhelper.jpg" />
+    <Content Include="Images\helper\productdetailhelper.jpg" />
+    <Content Include="Images\helper\producthelper.jpg" />
+    <Content Include="Images\helper\servicehelper.jpg" />
+    <Content Include="Images\helper\slidehelper.jpg" />
+    <Content Include="Images\pmi\idea-32px.png" />
     <Content Include="Images\pmi\others.jpg" />
     <Content Include="Images\pmi\PCM.jpg" />
     <Content Include="Images\pmi\PV.jpg" />
     <Content Include="Images\pmi\TE.jpg" />
+    <Content Include="Images\pmi\warning.png" />
     <Content Include="Images\products\Bi2Te3.png" />
     <Content Include="Images\products\BiSbTe.png" />
     <Content Include="Images\products\BiTeSe.png" />
@@ -372,6 +381,7 @@
     <Content Include="Images\pmi\slider6.jpg" />
     <Content Include="PMIEnglish.txt" />
     <Content Include="ReadMe.txt" />
+    <Content Include="Scripts\js\admin.js" />
     <Content Include="Scripts\js\homeindex.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

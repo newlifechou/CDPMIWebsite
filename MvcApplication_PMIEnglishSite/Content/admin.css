@@ -9,6 +9,9 @@
 p.warnningmsg {
     color: red;
     margin: 10px 0;
+    padding:7px;
+    padding-left:32px;
+    background:url("../Images/pmi/warning.png") left center no-repeat;
 }
 
     p.warnningmsg span {
@@ -72,27 +75,35 @@ p.warnningmsg {
                     }
 
 /*indicate where the editing operate will change*/
-#changewhere {
+div.changewhere {
     margin-top: 10px;
-    border: 1px solid #999;
+    border: 3px solid #999;
     min-height: 200px;
     padding: 10px;
 }
 
-    #changewhere h5 {
-        font-size: 1.2em;
-        padding: 10px;
+div.changewheremo {
+    border:3px solid orange;
+    background:#f0f0f0;
+}
+
+div.changewhere h5 {
+    /*小灯泡背景图片*/
+    background:url("../Images/pmi/idea-32px.png") left center no-repeat;
+    font-size: 1.2em;
+    padding: 15px;
+    padding-left:40px;
+}
+
+   div.changewhere h5 span {
+        color: orange;
+        padding-right: 10px;
     }
 
-        #changewhere h5 span {
-            color: orange;
-            padding-right: 10px;
-        }
-
-    #changewhere img {
-        display: block;
-        margin-bottom: 10px;
-    }
+div.changewhere img {
+    display: block;
+    margin-bottom: 10px;
+}
 /*每一页上新添加的按钮*/
 #mainbody p.btnAddNew {
     margin-bottom: 15px;
@@ -114,15 +125,17 @@ p.warnningmsg {
 
 /*登录样式区域*/
 #loginarea {
-    border:1px solid #999;
-    border-radius:5px;
+    border: 1px solid #999;
+    border-radius: 5px;
 }
-#loginarea p{
-    padding:10px;
-    font-size:1.2em;
-}
-#loginarea p span{
-    color:orange;
-    text-decoration:underline;
-    padding-left:10px;
-}
+
+    #loginarea p {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+        #loginarea p span {
+            color: orange;
+            text-decoration: underline;
+            padding-left: 10px;
+        }
