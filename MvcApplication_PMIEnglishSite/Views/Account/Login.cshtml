@@ -1,0 +1,57 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.admin_en
+@{
+    ViewBag.Title = "Login";
+}
+@section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" />
+    <style>
+        #loginarea {
+            /*width: 300px;*/
+        }
+
+            #loginarea form {
+                width: 274px;
+                margin: 0 auto;
+                background-color: white;
+                border: 2px solid #e4e4e4;
+                border-radius: 5px;
+                padding: 35px 30px;
+                margin-top:100px;
+                margin-bottom:50px;
+            }
+
+            #loginarea input {
+                display: block;
+                border-radius: 3px;
+                margin-top: 15px;
+                font-size: 1.2em;
+            }
+
+                #loginarea input[type=text], #loginarea input[type=password] {
+                    width: 270px;
+                    height: 40px;
+                    border: 2px solid #e4e4e4;
+                    color: #999;
+                    background-color: white;
+                }
+
+                #loginarea input[type=submit] {
+                    width: 274px;
+                    height: 44px;
+                    border: 1px solid #4F5B62;
+                    background-color: #1F69B5;
+                    color: white;
+                }
+    </style>
+}
+@*<h2>@ViewBag.Title</h2>*@
+<div id="maindisplayarea">
+    <div id="loginarea">
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("userName", "", new { placeholder = "username" })
+            @Html.Password("passWord", "", new { placeholder = " password" })
+            <input type="submit" value="Log In" />
+        }
+    </div>
+</div>

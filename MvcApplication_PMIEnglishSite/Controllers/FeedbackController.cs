@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Feedback/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.feedback_en.ToList());
@@ -23,7 +23,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Feedback/Details/5
-
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             feedback_en feedback_en = db.feedback_en.Find(id);
@@ -92,7 +92,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Feedback/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             feedback_en feedback_en = db.feedback_en.Find(id);
@@ -109,6 +109,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             feedback_en feedback_en = db.feedback_en.Find(id);

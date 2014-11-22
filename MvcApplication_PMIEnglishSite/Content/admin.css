@@ -119,8 +119,10 @@ p.warnningmsg {
 }
 #loginarea p{
     padding:10px;
+    font-size:1.2em;
 }
 #loginarea p span{
     color:orange;
     text-decoration:underline;
+    padding-left:10px;
 }

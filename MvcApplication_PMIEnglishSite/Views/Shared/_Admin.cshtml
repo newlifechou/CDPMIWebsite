@@ -16,7 +16,8 @@
 }
 <div id="adminmenu">
     <div id="loginarea">
-        <p>Current Administrator:<span>XS.Zhou</span></p>
+        <!--return partial view here-->
+        @Html.Action("CurrentUser", "Account")
     </div>
     <p class="warnningmsg"><span>Be careful</span>: when you operate this, it may change the website content  forever.</p>
     <ul>
@@ -50,12 +51,11 @@
         <li>
             <a href="#">LogOut</a>
             <ul>
-                <li><a href="#">LogOutForSure</a></li>
+                <li><a href="~/Account/LogOut">I am sure to Log Out</a></li>
             </ul>
         </li>
     </ul>
 </div>
 <div id="maindisplayarea" class="css">
-
     @RenderBody()
 </div>

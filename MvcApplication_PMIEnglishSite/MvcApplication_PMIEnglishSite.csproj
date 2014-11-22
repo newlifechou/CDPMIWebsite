@@ -132,6 +132,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BasicSettingController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
@@ -177,6 +178,7 @@
     <Compile Include="Models\UserProfile.cs">
       <DependentUpon>WebEnglish.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserRepository.cs" />
     <Compile Include="Models\WebEnglish.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -688,7 +690,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Feedback.cshtml" />
     <Content Include="Views\Home\FeedbackSuccess.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\productCategory\Index.cshtml" />
@@ -720,6 +722,7 @@
     <Content Include="Views\Flash\Create.cshtml" />
     <Content Include="Views\Flash\Edit.cshtml" />
     <Content Include="Views\Flash\Delete.cshtml" />
+    <Content Include="Views\Account\CurrentUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

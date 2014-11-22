@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Flash/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.flash_en.ToList());
@@ -36,7 +36,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Flash/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +47,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(flash_en flash_en)
         {
             if (ModelState.IsValid)
@@ -61,7 +62,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Flash/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             flash_en flash_en = db.flash_en.Find(id);
@@ -77,6 +78,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit(flash_en flash_en)
         {
             if (ModelState.IsValid)
@@ -90,7 +92,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Flash/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             flash_en flash_en = db.flash_en.Find(id);
@@ -106,6 +108,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             flash_en flash_en = db.flash_en.Find(id);

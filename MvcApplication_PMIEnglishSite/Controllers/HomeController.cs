@@ -164,13 +164,5 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             }
             return View();
         }
-        /// <summary>
-        /// goto Login View
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Login()
-        {
-            return View();
-        }
     }
 }

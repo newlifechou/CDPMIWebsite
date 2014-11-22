@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /BasicSetting/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -61,7 +61,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /BasicSetting/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             //if the id is not in our setting range in database,return notfound
@@ -112,6 +112,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult Edit(basicSetting_en basicsetting_en)
         {
             if (ModelState.IsValid)

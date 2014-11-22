@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Service/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.service_en.ToList());
@@ -36,7 +36,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Service/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +47,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(service_en service_en)
         {
             if (ModelState.IsValid)
@@ -61,7 +62,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Service/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             service_en service_en = db.service_en.Find(id);
@@ -77,6 +78,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit(service_en service_en)
         {
             if (ModelState.IsValid)
@@ -90,7 +92,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Service/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             service_en service_en = db.service_en.Find(id);
@@ -106,6 +108,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             service_en service_en = db.service_en.Find(id);

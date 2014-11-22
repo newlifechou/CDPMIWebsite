@@ -10,7 +10,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
     {
         //Admin welcome Page
         // GET: /Admin/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();

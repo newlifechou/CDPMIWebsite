@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /productCategory/
-
+        [Authorize]
         public ActionResult Index()
         {         
             return View(db.productCategory_en.ToList());
@@ -23,7 +23,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /productCategory/Details/5
-
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             productCategory_en productcategory_en = db.productCategory_en.Find(id);
@@ -36,7 +36,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /productCategory/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +47,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         ///取消页面输入验证
         [ValidateInput(false)]
         public ActionResult Create(productCategory_en productcategory_en)
@@ -63,7 +64,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /productCategory/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             productCategory_en productcategory_en = db.productCategory_en.Find(id);
@@ -79,6 +80,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         ///取消页面输入验证
         [ValidateInput(false)]
         public ActionResult Edit(productCategory_en productcategory_en)
@@ -94,7 +96,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /productCategory/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             productCategory_en productcategory_en = db.productCategory_en.Find(id);
@@ -112,6 +114,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [ValidateAntiForgeryToken]
         ///取消页面输入验证
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             //disable the delete function

@@ -18,7 +18,7 @@
             if (index == len) {
                 index = 0;
             }
-        }, 3000);
+        }, 4000);
 
     }).trigger("mouseleave");
 

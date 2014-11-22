@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Product/
-
+        [Authorize]
         public ActionResult Index()
         {
             var product_en = db.product_en.Include(p => p.productCategory_en);
@@ -24,7 +24,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Product/Details/5
-
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             product_en product_en = db.product_en.Find(id);
@@ -37,7 +37,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Product/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.categoryID = new SelectList(db.productCategory_en, "categoryID", "categoryName");
@@ -49,6 +49,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         ///取消页面输入验证
         [ValidateInput(false)]
         public ActionResult Create(product_en product_en)
@@ -66,7 +67,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Product/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             product_en product_en = db.product_en.Find(id);
@@ -85,6 +86,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [ValidateAntiForgeryToken]
         ///取消页面输入验证
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult Edit(product_en product_en)
         {
             if (ModelState.IsValid)
@@ -99,7 +101,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         //
         // GET: /Product/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             product_en product_en = db.product_en.Find(id);
@@ -117,6 +119,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [ValidateAntiForgeryToken]
         ///取消页面输入验证
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             product_en product_en = db.product_en.Find(id);
