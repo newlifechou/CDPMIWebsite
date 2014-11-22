@@ -73,9 +73,10 @@ mark {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    width: 188px;
+    width: 178px;
     background-color: #e4e4e4;
     text-align: center;
+    margin-left:10px;
     margin-bottom: 20px;
     font-size: 16px;
 }
@@ -123,6 +124,7 @@ mark {
     /*width: 745px;*/
     /*实现右边自适应结果*/
     margin-left: 194px;
+    margin-right:10px;
     padding: 10px;
     background-color: #fff;
     /*如果有超出部分，隐藏起来，以免弄乱布局*/
@@ -231,6 +233,8 @@ h5, h6 {
     padding-top: 10px;
     /*设置主页文字部分宽度为固定*/
     width: 960px;
+    background:white;
+    padding-bottom:20px;
 }
 
 .featured + .main-content {
