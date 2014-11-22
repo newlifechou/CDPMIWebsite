@@ -1,0 +1,27 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.service_en
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>service_en</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.serviceName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.serviceName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

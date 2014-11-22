@@ -1,0 +1,34 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.flash_en
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>flash_en</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.picture)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.picture)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.memo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

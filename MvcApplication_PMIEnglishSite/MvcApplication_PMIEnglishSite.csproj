@@ -135,9 +135,11 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BasicSettingController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\FlashController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\productCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -708,6 +710,16 @@
     <Content Include="Views\BasicSetting\Edit.cshtml" />
     <Content Include="Views\BasicSetting\Delete.cshtml" />
     <Content Include="Views\BasicSetting\ContactEdit.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\Service\Details.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\Service\Edit.cshtml" />
+    <Content Include="Views\Service\Delete.cshtml" />
+    <Content Include="Views\Flash\Index.cshtml" />
+    <Content Include="Views\Flash\Details.cshtml" />
+    <Content Include="Views\Flash\Create.cshtml" />
+    <Content Include="Views\Flash\Edit.cshtml" />
+    <Content Include="Views\Flash\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

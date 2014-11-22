@@ -1,0 +1,52 @@
+﻿@model MvcApplication_PMIEnglishSite.Models.service_en
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>service_en</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.serviceName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.serviceName)
+            @Html.ValidationMessageFor(model => model.serviceName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.serviceContent)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.serviceContent)
+            @Html.ValidationMessageFor(model => model.serviceContent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.servicePicture)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.servicePicture)
+            @Html.ValidationMessageFor(model => model.servicePicture)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script>
+    var ue = UE.getEditor('serviceContent');
+</script>
