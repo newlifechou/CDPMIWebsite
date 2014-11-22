@@ -133,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BasicSettingController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\productCategoryController.cs" />
@@ -701,6 +702,12 @@
     <Content Include="Views\Feedback\Create.cshtml" />
     <Content Include="Views\Feedback\Edit.cshtml" />
     <Content Include="Views\Feedback\Delete.cshtml" />
+    <Content Include="Views\BasicSetting\Index.cshtml" />
+    <Content Include="Views\BasicSetting\Details.cshtml" />
+    <Content Include="Views\BasicSetting\Create.cshtml" />
+    <Content Include="Views\BasicSetting\Edit.cshtml" />
+    <Content Include="Views\BasicSetting\Delete.cshtml" />
+    <Content Include="Views\BasicSetting\ContactEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,3 +17,7 @@
 #maindisplayarea p.bigfont{
     font-size:1.2em;
 }
+/*恢复内部列表样式*/
+#maindisplayarea ul,#maindisplayarea li{
+    list-style:square;
+}
