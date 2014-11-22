@@ -734,6 +734,7 @@
     <Content Include="Views\Flash\Edit.cshtml" />
     <Content Include="Views\Flash\Delete.cshtml" />
     <Content Include="Views\Account\CurrentUser.cshtml" />
+    <Content Include="Web - remote.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
