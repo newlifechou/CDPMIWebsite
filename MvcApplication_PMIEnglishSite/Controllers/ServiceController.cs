@@ -47,6 +47,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         [Authorize]
         public ActionResult Create(service_en service_en)
         {
@@ -79,6 +80,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
+        [ValidateInput(false)]
         public ActionResult Edit(service_en service_en)
         {
             if (ModelState.IsValid)
@@ -109,6 +111,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize]
+        [ValidateInput(false)]
         public ActionResult DeleteConfirmed(int id)
         {
             service_en service_en = db.service_en.Find(id);

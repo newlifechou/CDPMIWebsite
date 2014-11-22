@@ -242,6 +242,9 @@ a#logo:hover img {
     color: white;
     margin-right: 20px;
 }
+#rightfooter a{
+    color:orange;
+}
 
 /*详细内容页下部的按钮*/
 .btnreturn {
