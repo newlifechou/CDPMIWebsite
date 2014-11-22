@@ -9,8 +9,15 @@
     <!--2014-10 For Pioneer Materials Inc-->
     <link href="~/Images/pmi/icon.ico" rel="shortcut icon" type="image/x-icon" />
     @Styles.Render("~/Content/css")
+    <!--去掉本地的modernizr-->
     @Scripts.Render("~/bundles/modernizr")
+    @*<script src="//upcdn.b0.upaiyun.com/libs/modernizr/modernizr-2.6.2.min.js"></script>*@
+    <!--去掉本地的jquery，改用百度cdn，百度太慢改回来-->
     @Scripts.Render("~/bundles/jquery")
+    @*<script src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>*@
+    @*<script src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.2.min.js"></script>*@
+
+
     <!--add extra css and js here-->
     @RenderSection("AddToHead", required: false)
 </head>

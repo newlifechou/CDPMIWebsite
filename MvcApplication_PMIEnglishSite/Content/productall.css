@@ -41,17 +41,17 @@
     clear:both;
     margin:10px 0;
 }
-#categorylist a span{
+/*#categorylist a span{
     color:black;
     font-weight:bold;
-}
+}*/
 #categorylist a:hover{
     background:#EF9632;
     color:#fff;
 }
-#categorylist a:hover span{
+/*#categorylist a:hover span{
     color:red;
-}
+}*/
 #categorylist p {
     font-size: 120%;
     -ms-word-break: break-word;
