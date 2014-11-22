@@ -6,22 +6,30 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace MvcApplication_PMIEnglishSite.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class product_en
     {
         public int productID { get; set; }
+        [Required(ErrorMessage = "It cannot be null")]
+        [Display(Name = "ProductName")]
         public string productName { get; set; }
+        [Display(Name = "Category")]
         public Nullable<int> categoryID { get; set; }
+        [Display(Name = "Publish Time")]
         public Nullable<System.DateTime> publicTime { get; set; }
+        [Display(Name = "Read Count")]
         public Nullable<int> readCount { get; set; }
+        [Display(Name = "ContentText")]
         public string contentText { get; set; }
+        [Display(Name = "Product Photo")]
+        [Required(ErrorMessage = "It cannot be null")]
         public string mainPhoto { get; set; }
-    
+
         public virtual productCategory_en productCategory_en { get; set; }
     }
 }

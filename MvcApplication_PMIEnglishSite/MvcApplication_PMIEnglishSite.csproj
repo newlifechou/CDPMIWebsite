@@ -379,6 +379,7 @@
     <Content Include="Images\pmi\slider4.jpg" />
     <Content Include="Images\pmi\slider5.jpg" />
     <Content Include="Images\pmi\slider6.jpg" />
+    <Content Include="Models\注意！！！.txt" />
     <Content Include="PMIEnglish.txt" />
     <Content Include="ReadMe.txt" />
     <Content Include="Scripts\js\admin.js" />
