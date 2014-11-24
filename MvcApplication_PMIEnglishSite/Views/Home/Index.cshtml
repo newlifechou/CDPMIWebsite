@@ -33,7 +33,7 @@
 }
 <!--about PMI section-->
 <div class="aboutPMI">
-    <h1>About PMI</h1>
+    <h1>Introduction to Pioneer Materials Inc.</h1>
     <p>
         <!--no encode and raw it-->
         @Html.Raw(ViewBag.AboutPMI)
@@ -52,8 +52,8 @@
         <div class="pcategory floatleft @s">
             <img src="~/Images/pmi/@item.photo" alt="@item.categoryName" />
             <h3>@item.categoryName</h3>
-            <p>@item.memo</p>
-            <a href="~/Home/Product/@item.categoryID">More About it</a>
+            <p>@Html.Raw(item.memo)</p>
+            <a href="~/Home/Product/@item.categoryID">Product Details</a>
         </div>
     }
 </div>

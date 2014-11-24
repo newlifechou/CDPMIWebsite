@@ -736,6 +736,7 @@
     <Content Include="Views\Account\CurrentUser.cshtml" />
     <Content Include="Web - remote.config" />
     <Content Include="Web - remote -002.config" />
+    <Content Include="Views\Shared\_Layout - floatlogo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
