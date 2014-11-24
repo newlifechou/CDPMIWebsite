@@ -39,7 +39,7 @@ a {
 /*header  css setting*/
 #header {
     position: relative;
-    padding-top: 16px;
+    padding-top: 3px;
     /*set the header always be on top*/
     z-index: 100;
 }
@@ -48,7 +48,7 @@ a {
         display: block;
         position: absolute;
         left: 14px;
-        top: 17px;
+        top: 4px;
         /*图片是透明的，背景用背景色代替*/
     }
 
