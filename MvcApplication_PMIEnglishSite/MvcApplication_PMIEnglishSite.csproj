@@ -220,6 +220,7 @@
     <Content Include="Content\admin.css" />
     <Content Include="Content\form.css" />
     <Content Include="Content\home.css" />
+    <Content Include="Content\layout - float logo.css" />
     <Content Include="Content\layout.css" />
     <Content Include="Content\maindisplay.css" />
     <Content Include="Content\product.css" />
