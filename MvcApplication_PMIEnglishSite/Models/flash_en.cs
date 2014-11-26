@@ -6,19 +6,16 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System.ComponentModel.DataAnnotations;
+
 namespace MvcApplication_PMIEnglishSite.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class flash_en
     {
         public int id { get; set; }
-        [Required(ErrorMessage = "It cannot be null")]
-        [Display(Name = "Picture")]
         public string picture { get; set; }
-        [Display(Name = "PictureNote")]
         public string memo { get; set; }
     }
 }

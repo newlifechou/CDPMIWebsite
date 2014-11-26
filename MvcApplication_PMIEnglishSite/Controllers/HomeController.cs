@@ -20,6 +20,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             //AboutPMI Data
             ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 8).Single().BriefIntrodction;
             ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
+            ViewBag.CompanyMission = db.basicSetting_en.Where(o => o.id == 10).Single().BriefIntrodction;
             //List<productCategory_en> pclist = db.productCategory_en.ToList();
             //将首页所需的数据添加到一个视图对象当中，然后传递这个视图对象给视图。
             HomeIndexData hid = new HomeIndexData();
@@ -84,6 +85,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             string viewName = "";
             switch (id)
             {
+                //Quality Assurance
+                case 9:
+                    ViewBag.Title = "Quality Assurance";
+                    viewName = "QualityAssurance";
+                    break;
                 //About
                 case 7:
                     ViewBag.Title = "About PMI";

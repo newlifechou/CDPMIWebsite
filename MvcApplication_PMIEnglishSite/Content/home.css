@@ -29,7 +29,8 @@ ul#slide {
             background-color: rgba(0,0,0,0.4);
             color: white;
             padding: 10px;
-            font-size: 1.2em;
+            font-size: 1.6em;
+            font-weight:bold;
         }
 
             ul#slide li p.mo {
@@ -135,7 +136,7 @@ ul#slidenav {
         line-height: 1.5;
     }
 
-    #pcategorylist .pcategory a {
+    #pcategorylist .pcategory a.btn {
         display: block;
         border: 1px solid #989898;
         border-radius: 4px;
@@ -150,7 +151,7 @@ ul#slidenav {
         bottom: 10px;
     }
 
-        #pcategorylist .pcategory a:hover {
+        #pcategorylist .pcategory a.btn:hover {
             color: #fff;
             background-color: #EF9632;
         }

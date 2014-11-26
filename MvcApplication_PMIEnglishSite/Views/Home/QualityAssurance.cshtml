@@ -1,0 +1,10 @@
+﻿@{
+    //ViewBag.Title = "AboutPMI";
+}
+@section AddToHead{
+    <link href="~/Content/maindisplay.css" rel="stylesheet" type="text/css" />
+}
+<h2>@ViewBag.Title</h2>
+<div id="maindisplayarea">
+    @Html.Raw(ViewBag.Content)
+</div>

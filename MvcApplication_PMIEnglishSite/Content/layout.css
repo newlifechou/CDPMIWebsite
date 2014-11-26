@@ -59,7 +59,7 @@ a#logo img {
     background: #fff;
     border: 1px solid #999;
     border-radius: 5px;
-    height:55px;
+    height: 55px;
 }
 
 a#logo:hover img {
@@ -145,7 +145,6 @@ a#logo:hover img {
                         display: block;
                         padding-left: 15px;
                         text-align: left;
-                        font-weight: normal;
                     }
 
                         #leftmenu ul li ul li a:hover {
@@ -182,7 +181,7 @@ a#logo:hover img {
 
     #rightmenu a {
         padding: 3px;
-        color: #000;
+        color: #fff;
     }
 
         #rightmenu a:hover {
@@ -206,6 +205,9 @@ a#logo:hover img {
 
     #mainbody h2 {
         color: blue;
+        font-size: 1.7em;
+        padding: 10px 0;
+        font-weight: bold;
     }
 /*footer css setting*/
 #footer {
@@ -231,7 +233,8 @@ a#logo:hover img {
                 display: block;
                 margin-right: 20px;
                 color: white;
-                font-size:1.2em;
+                font-size: 1.3em;
+                font-weight: bold;
             }
 
                 #leftfooter ul li a:hover {
@@ -244,9 +247,10 @@ a#logo:hover img {
     color: white;
     margin-right: 20px;
 }
-#rightfooter a{
-    color:orange;
-}
+
+    #rightfooter a {
+        color: orange;
+    }
 
 /*详细内容页下部的按钮*/
 .btnreturn {

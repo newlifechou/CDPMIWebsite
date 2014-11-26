@@ -65,7 +65,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         public ActionResult Edit(int id = 0)
         {
             //if the id is not in our setting range in database,return notfound
-            if (id <= 0 || id >= 9)
+            if (id <= 0 || id >= 11)
             {
                 return HttpNotFound();
             }
@@ -77,6 +77,12 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             }
             switch (id)
             {
+                case 10:
+                    ViewBag.Title = "Company Missson";
+                    break;
+                case 9:
+                    ViewBag.Title = "Quality Assurance";
+                    break;
                 case 7:
                     ViewBag.Title = "Introduction";
                     break;

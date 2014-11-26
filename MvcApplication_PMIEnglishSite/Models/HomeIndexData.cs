@@ -12,6 +12,6 @@ namespace MvcApplication_PMIEnglishSite.Models
         public List<flash_en> flashlist { get; set; }
         //产品种类列表
         public List<productCategory_en> pclist { get; set; }
-
+        public string CompanyMisson { get; set; }
     }
 }
