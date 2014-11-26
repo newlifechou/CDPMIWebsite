@@ -65,7 +65,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         public ActionResult Edit(int id = 0)
         {
             //if the id is not in our setting range in database,return notfound
-            if (id <= 0 || id >= 8)
+            if (id <= 0 || id >= 9)
             {
                 return HttpNotFound();
             }
@@ -79,6 +79,9 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             {
                 case 7:
                     ViewBag.Title = "Introduction";
+                    break;
+                case 8:
+                    ViewBag.Title = "HomePageIntroduction";
                     break;
                 case 3:
                     ViewBag.Title = "Certificate";

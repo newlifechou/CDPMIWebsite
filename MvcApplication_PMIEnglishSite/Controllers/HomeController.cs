@@ -18,7 +18,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         public ActionResult Index()
         {
             //AboutPMI Data
-            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 7).Single().BriefIntrodction;
+            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 8).Single().BriefIntrodction;
             ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
             //List<productCategory_en> pclist = db.productCategory_en.ToList();
             //将首页所需的数据添加到一个视图对象当中，然后传递这个视图对象给视图。
