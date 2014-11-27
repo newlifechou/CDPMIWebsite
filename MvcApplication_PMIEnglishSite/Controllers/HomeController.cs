@@ -119,7 +119,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                     break;
                 //certificate
                 case 3:
-                    ViewBag.Title = "Certificate";
+                    ViewBag.Title = "Certificates";
                     viewName = "AboutPMI";
                     break;
                 default:

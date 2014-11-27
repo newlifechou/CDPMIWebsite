@@ -6,6 +6,22 @@
     <link href="~/Content/maindisplay.css" rel="stylesheet" />
     <link href="~/Content/admin.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/form.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @* 这里添加的是后台界面要用到的ueditor编辑器的js引用 *@
+    @* 所有的后台页面都通用 *@
+    <script src="~/ueditor/ueditor.config.js"></script>
+    <script src="~/ueditor/ueditor.all.min.js"></script>
+    @*<script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>*@
+    <script src="~/ueditor/lang/en/en.js"></script>
+    <script src="~/ueditor/ueditor.parse.min.js"></script>
+}
+
+@section scripts{
+    <!--特效js-->
+    <script src="~/Scripts/js/admin.js"></script>
 }
 <div id="adminmenu">
     <div id="loginarea">
@@ -55,19 +71,3 @@
 <div id="maindisplayarea" class="css">
     @RenderBody()
 </div>
-
-@section scripts{
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <!--特效js-->
-    <script src="~/Scripts/js/admin.js"></script>
-
-
-    @* 这里添加的是后台界面要用到的ueditor编辑器的js引用 *@
-    @* 所有的后台页面都通用 *@
-    <script src="~/ueditor/ueditor.config.js"></script>
-    <script src="~/ueditor/ueditor.all.min.js"></script>
-    @*<script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>*@
-    <script src="~/ueditor/lang/en/en.js"></script>
-    <script src="~/ueditor/ueditor.parse.min.js"></script>
-}
