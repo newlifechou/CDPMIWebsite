@@ -14,9 +14,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         pmienglish db = new pmienglish();
         //
         // GET: /Home/
-
+        [OutputCache(Duration = 120, Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
+            Response.Cache.SetOmitVaryStar(true);
+
             //AboutPMI Data
             ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 8).Single().BriefIntrodction;
             ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
@@ -34,8 +36,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult Product(int id = 0)
         {
+            Response.Cache.SetOmitVaryStar(true);
+
             List<product_en> products;
             //if id=0,return the major show view
             if (id == 0)
@@ -79,8 +84,10 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult About(int id = 0)
         {
+            Response.Cache.SetOmitVaryStar(true);
             //the follwing code needs to be simplied 
             string viewName = "";
             switch (id)
