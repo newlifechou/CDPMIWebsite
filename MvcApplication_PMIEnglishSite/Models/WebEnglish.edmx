@@ -91,7 +91,7 @@
           </Key>
           <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="categoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="memo" Type="nvarchar" MaxLength="300" />
+          <Property Name="memo" Type="text" />
           <Property Name="photo" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="service_en">
@@ -274,7 +274,7 @@
           </Key>
           <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="product_en" Relationship="Self.FK__product_en__categor_en__0AD2A005" FromRole="productCategory_en" ToRole="product_en" />
           <Property Name="photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>

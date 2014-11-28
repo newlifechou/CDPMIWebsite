@@ -12,7 +12,7 @@ namespace MvcApplication_PMIEnglishSite.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class service_en
     {
         public int id { get; set; }

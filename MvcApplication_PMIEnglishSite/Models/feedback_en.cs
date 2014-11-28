@@ -6,13 +6,14 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
 using System.ComponentModel.DataAnnotations;
 
 namespace MvcApplication_PMIEnglishSite.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class feedback_en
     {
         public int id { get; set; }
@@ -39,3 +40,4 @@ namespace MvcApplication_PMIEnglishSite.Models
         public string cname { get; set; }
     }
 }
+
