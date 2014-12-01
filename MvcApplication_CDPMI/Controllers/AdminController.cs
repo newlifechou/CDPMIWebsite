@@ -103,5 +103,10 @@ namespace MvcApplication_CDPMI.Controllers
             }
             return View(bs);
         }
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }
