@@ -36,7 +36,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 600, VaryByParam = "id")]
+        [OutputCache(Duration = 120, VaryByParam = "id")]
         public ActionResult Product(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -84,7 +84,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 600, VaryByParam = "none")]
+        [OutputCache(Duration =120, VaryByParam = "none")]
         public ActionResult About(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
