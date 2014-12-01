@@ -295,6 +295,7 @@
     <Content Include="Images\helper\servicehelper.jpg" />
     <Content Include="Images\helper\slidehelper.jpg" />
     <Content Include="Images\pmi\idea-32px.png" />
+    <Content Include="Images\pmi\logo-old.png" />
     <Content Include="Images\pmi\others.jpg" />
     <Content Include="Images\pmi\PCM.jpg" />
     <Content Include="Images\pmi\PV.jpg" />

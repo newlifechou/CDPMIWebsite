@@ -1,7 +1,7 @@
 ﻿#maindisplayarea{
     border:2px solid #999;
     border-radius:5px;
-    background:white;
+    background:#F0F0F0;
     padding:30px 50px;
 }
 #maindisplayarea h2{
