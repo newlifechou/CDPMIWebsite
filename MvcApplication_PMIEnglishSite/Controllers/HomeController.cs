@@ -109,17 +109,17 @@ namespace MvcApplication_PMIEnglishSite.Controllers
                     break;
                 //Management and Technical Consultants
                 case 2:
-                    ViewBag.Title = "Management and Technical Consultants";
+                    ViewBag.Title = "Management";
                     viewName = "AboutPMI";
                     break;
                 //Board of Director
                 case 6:
-                    ViewBag.Title = "Board of Director";
+                    ViewBag.Title = "Board of Directors";
                     viewName = "AboutPMI";
                     break;
                 //certificate
                 case 3:
-                    ViewBag.Title = "Certificates";
+                    ViewBag.Title = "Quality Certificates";
                     viewName = "AboutPMI";
                     break;
                 default:
