@@ -4,6 +4,12 @@
 }
 @section AddToHead{
     <link href="~/Content/maindisplay.css" rel="stylesheet" type="text/css" />
+    <style>
+        /*修正IE显示边框的问题*/
+        #maindisplayarea table td{
+            border:1px solid #999;
+        }
+    </style>
 }
 <div id="maindisplayarea">
     <h2>@ViewBag.Title</h2>
