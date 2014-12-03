@@ -12,7 +12,7 @@ namespace MvcApplication_CDPMI.Controllers
     public class HomeController : Controller
     {
         WebEntities db = new WebEntities();
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult Index()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -32,7 +32,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// </summary>
         /// <param name="id">CategoryId</param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult Product(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -58,7 +58,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// </summary>
         /// <param name="id">productId</param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult ProductDetails(int? id)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -82,7 +82,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// 返回全部产品种类,部分视图
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult GetAllProductCategory()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -94,7 +94,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// 返回一个包含公司练习信息的部分视图
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult GetContactsView()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -126,7 +126,7 @@ namespace MvcApplication_CDPMI.Controllers
             ViewBag.Title = "在线留言";
             return View(fb);
         }
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult About(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -159,7 +159,7 @@ namespace MvcApplication_CDPMI.Controllers
             ViewBag.About = db.basicSetting.Find(id).BriefIntrodction;
             return View();
         }
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult Contact()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -169,7 +169,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// 服务项目显示
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult Service()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -181,7 +181,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// 行业动态信息显示
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult News()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -195,7 +195,7 @@ namespace MvcApplication_CDPMI.Controllers
         /// </summary>
         /// <param name="id">NewsId</param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult NewsDetails(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);

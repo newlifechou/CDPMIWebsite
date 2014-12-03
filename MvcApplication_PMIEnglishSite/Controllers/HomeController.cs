@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         pmienglish db = new pmienglish();
         //
         // GET: /Home/
-        [OutputCache(Duration = 300, Location = System.Web.UI.OutputCacheLocation.Client)]
+        [OutputCache(Duration = 600, Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -37,7 +37,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult Product(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -61,7 +61,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult ProductDetails(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -82,7 +82,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// Serivce
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult Service()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -94,7 +94,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "id")]
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult About(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -160,7 +160,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// Contact
         /// </summary>
         /// <returns></returns>
-        [OutputCache(Duration = 300, VaryByParam = "none")]
+        [OutputCache(Duration = 600, VaryByParam = "none")]
         public ActionResult Contact()
         {
             Response.Cache.SetOmitVaryStar(true);
