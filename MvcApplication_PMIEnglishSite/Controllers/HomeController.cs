@@ -15,7 +15,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         pmienglish db = new pmienglish();
         //
         // GET: /Home/
-        [OutputCache(Duration = 120, Location = System.Web.UI.OutputCacheLocation.Client)]
+        [OutputCache(Duration = 300, Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -37,7 +37,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration = 120, VaryByParam = "id")]
+        [OutputCache(Duration = 300, VaryByParam = "id")]
         public ActionResult Product(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -61,8 +61,10 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [OutputCache(Duration = 300, VaryByParam = "id")]
         public ActionResult ProductDetails(int id = 0)
         {
+            Response.Cache.SetOmitVaryStar(true);
             product_en p = db.product_en.Find(id);
             //if the p is null,that mean there is no product details in db, return not found.
             if (p == null)
@@ -80,8 +82,10 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// Serivce
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 300, VaryByParam = "id")]
         public ActionResult Service()
         {
+            Response.Cache.SetOmitVaryStar(true);
             List<service_en> services = db.service_en.ToList();
             return View(services);
         }
@@ -90,7 +94,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [OutputCache(Duration =120, VaryByParam = "none")]
+        [OutputCache(Duration = 300, VaryByParam = "id")]
         public ActionResult About(int id = 0)
         {
             Response.Cache.SetOmitVaryStar(true);
@@ -156,8 +160,10 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// Contact
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 300, VaryByParam = "none")]
         public ActionResult Contact()
         {
+            Response.Cache.SetOmitVaryStar(true);
             ViewBag.Title = "Contact Us";
             basicSetting_en bs = db.basicSetting_en.First();
             return View(bs);
