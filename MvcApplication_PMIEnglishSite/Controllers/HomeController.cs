@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 //添加Models命名空间
 using MvcApplication_PMIEnglishSite.Models;
+using System.Data;
 
 namespace MvcApplication_PMIEnglishSite.Controllers
 {
@@ -68,6 +69,11 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             {
                 return HttpNotFound();
             }
+            //read count
+            p.readCount++;
+            db.Entry(p).State = EntityState.Modified;
+            db.SaveChanges();
+
             return View(p);
         }
         /// <summary>
