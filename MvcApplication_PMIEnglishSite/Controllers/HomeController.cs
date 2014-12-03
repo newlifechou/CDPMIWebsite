@@ -20,9 +20,9 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             Response.Cache.SetOmitVaryStar(true);
 
             //AboutPMI Data
-            ViewBag.AboutPMI = db.basicSetting_en.Where(o => o.id == 8).Single().BriefIntrodction;
-            ViewBag.WebsiteTitle = db.basicSetting_en.Where(o => o.id == 1).Single().CompanyName;
-            ViewBag.CompanyMission = db.basicSetting_en.Where(o => o.id == 10).Single().BriefIntrodction;
+            ViewBag.AboutPMI = db.basicSetting_en.Find(8).BriefIntrodction;
+            ViewBag.WebsiteTitle = db.basicSetting_en.Find(1).CompanyName;
+            ViewBag.CompanyMission = db.basicSetting_en.Find(10).BriefIntrodction;
             //List<productCategory_en> pclist = db.productCategory_en.ToList();
             //将首页所需的数据添加到一个视图对象当中，然后传递这个视图对象给视图。
             HomeIndexData hid = new HomeIndexData();
@@ -52,7 +52,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             }
             //如果id不等于0，那么找出对应组号的所有记录
             products = db.product_en.Where(o => o.categoryID == id).ToList();
-            ViewBag.Title = db.productCategory_en.Where(o => o.categoryID == id).Single().categoryName;
+            ViewBag.Title = db.productCategory_en.Find(id).categoryName;
             return View(products);
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
         /// <returns></returns>
         public ActionResult ProductDetails(int id = 0)
         {
-            product_en p = db.product_en.Where(o => o.productID == id).Single();
+            product_en p = db.product_en.Find(id);
             //if the p is null,that mean there is no product details in db, return not found.
             if (p == null)
             {
@@ -129,7 +129,7 @@ namespace MvcApplication_PMIEnglishSite.Controllers
             //general processing part
             try
             {
-                ViewBag.Content = db.basicSetting_en.Where(o => o.id == id).Single().BriefIntrodction;
+                ViewBag.Content = db.basicSetting_en.Find(id).BriefIntrodction;
             }
             catch
             {
