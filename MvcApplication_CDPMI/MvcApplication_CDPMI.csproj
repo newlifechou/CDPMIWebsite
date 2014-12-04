@@ -195,6 +195,7 @@
     <Compile Include="Controllers\FeedBackController.cs" />
     <Compile Include="Controllers\FriendLinkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\mHomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
