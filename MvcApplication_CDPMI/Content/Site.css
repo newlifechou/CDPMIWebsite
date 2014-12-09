@@ -159,6 +159,9 @@ mark {
         .right-content .content p {
             line-height: 2;
         }
+        .right-content .content img{
+            width:730px;
+        }
 /*.right-content p {
         line-height: 1.5;
     }*/
