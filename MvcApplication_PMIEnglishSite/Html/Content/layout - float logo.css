@@ -1,0 +1,268 @@
+﻿/*global css setting*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+    margin: 0;
+    padding: 0;
+}
+/*clear the default border of img mark,some may show in IE early edition*/
+img {
+    border: none;
+}
+
+body {
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    /*scroll display always*/
+    overflow-y: scroll;
+    background-color: darkslategray;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*layout css setting*/
+#header, #maincontent, #footer {
+    width: 100%;
+    /*set the min-width and the max-width*/
+    min-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: url("../Images/pmi/BodyBackground.png");
+}
+
+/*header  css setting*/
+#header {
+    position: relative;
+    padding-top: 16px;
+    /*set the header always be on top*/
+    z-index: 100;
+}
+
+    #header a#logo {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: 7px;
+        /*图片是透明的，背景用背景色代替*/
+    }
+
+a#logo img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+a#logo:hover img {
+    background: #e4e4e4;
+}
+
+
+#nav {
+    height: 58px;
+    background: #065387;
+}
+/*1st grade menu*/
+#leftmenu {
+    position: relative;
+    margin-left: 310px;
+    float: left;
+    font-size: 130%;
+    /*height: 58px;*/
+}
+
+    #leftmenu ul {
+        /*position: relative;*/
+    }
+        /*消除li浮动带给ul的高度问题*/
+        #leftmenu ul:after {
+            content: ".";
+            display: block;
+            clear: both;
+            height: 0;
+        }
+
+        #leftmenu ul li {
+            position: relative;
+            float: left;
+        }
+            /*fixed the 1st Li width*/
+            #leftmenu ul li.one {
+                width: 80px;
+            }
+
+            #leftmenu ul li.two {
+                width: 180px;
+            }
+
+            #leftmenu ul li.three {
+                width: 120px;
+            }
+
+            #leftmenu ul li.four {
+                width: 120px;
+            }
+
+            #leftmenu ul li a {
+                display: block;
+                height: 58px;
+                line-height: 58px;
+                color: #fff;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            #leftmenu ul li:hover a {
+                background-color: #022E4C;
+            }
+
+            #leftmenu ul li:hover ul {
+                display: block;
+            }
+
+            /*2rd grade menu*/
+            #leftmenu ul li ul {
+                position: absolute;
+                display: none;
+            }
+
+                #leftmenu ul li ul li {
+                    float: none;
+                    /*set the 2rd ul width*/
+                    width: 300px;
+                }
+
+                    #leftmenu ul li ul li a {
+                        display: block;
+                        padding-left: 15px;
+                        text-align: left;
+                        font-weight: normal;
+                    }
+
+                        #leftmenu ul li ul li a:hover {
+                            background-color: #044C7D;
+                            color: white;
+                        }
+
+#rightmenu {
+    height: 58px;
+    line-height: 58px;
+    float: right;
+    /*width: 300px;*/
+    text-align: right;
+    padding-right: 10px;
+}
+
+    #rightmenu input[type=text] {
+        height: 25px;
+        border-radius: 3px;
+        margin-right: 10px;
+        border: 1px solid #e4e4e4;
+        width: 160px;
+        background: #ccc;
+    }
+
+    #rightmenu input[type=button] {
+        margin-right: 5px;
+        padding: 5px 10px;
+        background-color: #e4e4e4;
+        color: #666;
+        border: 1px solid #999;
+        border-radius: 3px;
+    }
+
+    #rightmenu a {
+        padding: 3px;
+        color: #000;
+    }
+
+        #rightmenu a:hover {
+            color: #fff;
+            background: #999;
+        }
+
+
+/*maincontent css setting*/
+#maincontent {
+    min-height: 700px;
+    /*background: orange;*/
+    margin-top: 1px;
+    overflow: hidden;
+    padding-bottom: 90px;
+}
+
+#mainbody {
+    padding: 20px;
+}
+
+    #mainbody h2 {
+        color: blue;
+    }
+/*footer css setting*/
+#footer {
+    height: 126px;
+    background: #323232;
+    line-height: 126px;
+}
+
+#leftfooter {
+    float: left;
+}
+
+    #leftfooter ul {
+        overflow: hidden;
+        margin-left: 20px;
+    }
+
+        #leftfooter ul li {
+            float: left;
+        }
+
+            #leftfooter ul li a {
+                display: block;
+                margin-right: 20px;
+                color: white;
+                font-size:1.2em;
+            }
+
+                #leftfooter ul li a:hover {
+                    color: black;
+                    text-decoration: underline;
+                }
+
+#rightfooter {
+    float: right;
+    color: white;
+    margin-right: 20px;
+}
+#rightfooter a{
+    color:orange;
+}
+
+/*详细内容页下部的按钮*/
+.btnreturn {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 120%;
+    background-color: lightblue;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    color: black;
+}
+
+    .btnreturn:hover {
+        background: #EF9632;
+        color: white;
+    }

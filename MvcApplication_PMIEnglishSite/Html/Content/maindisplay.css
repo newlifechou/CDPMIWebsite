@@ -1,0 +1,23 @@
+﻿#maindisplayarea{
+    border:2px solid #999;
+    border-radius:5px;
+    background:#F0F0F0;
+    padding:30px 50px;
+}
+#maindisplayarea h2{
+    color:blue;
+    padding:10px 0;
+}
+#maindisplayarea  .subtitle{
+    color:#999;
+}
+#maindisplayarea .mainarea{
+    margin-bottom:100px;
+}
+#maindisplayarea p.bigfont{
+    font-size:1.2em;
+}
+/*恢复内部列表样式*/
+#maindisplayarea ul,#maindisplayarea li{
+    list-style:square;
+}

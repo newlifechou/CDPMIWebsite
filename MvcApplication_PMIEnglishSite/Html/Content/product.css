@@ -1,0 +1,33 @@
+﻿#productlist {
+    overflow: hidden;
+}
+
+    #productlist a {
+        display: block;
+        border: 2px solid #e4e4e4;
+        float: left;
+        margin: 5px;
+        padding: 5px;
+        width: 23%;
+        background:white;
+    }
+
+        #productlist a:hover {
+            border: 2px solid #999;
+        }
+
+        #productlist a img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: lightblue;
+            border:none;
+        }
+
+        #productlist a p {
+            padding: 5px 0;
+            text-align: center;
+            font-size:1.5em;
+        }
+

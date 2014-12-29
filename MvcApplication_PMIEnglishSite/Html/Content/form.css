@@ -1,0 +1,156 @@
+﻿/* forms */
+#mainbody fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #mainbody fieldset legend {
+        display: none;
+    }
+
+    #mainbody fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        #mainbody fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+#mainbody label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+    #mainbody label.checkbox {
+        display: inline;
+    }
+
+#mainbody input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+#mainbody textarea {
+    font-family: inherit;
+    width: 600px;
+    height: 250px;
+}
+
+#mainbody input:focus, textarea:focus {
+    border: 1px solid #7ac0da;
+}
+
+#mainbody input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+#mainbody input[type="submit"],
+#mainbody input[type="button"],
+#mainbody button {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
+
+#mainbody td input[type="submit"],
+#mainbody td input[type="button"],
+#mainbody td button {
+    font-size: 1em;
+    padding: 4px;
+    margin-right: 4px;
+}
+
+/* info and errors */
+#mainbody .message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+#mainbody .message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+#mainbody .message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+#mainbody .error {
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+#mainbody .field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+#mainbody .field-validation-valid {
+    display: none;
+}
+
+#mainbody input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+#mainbody input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+#mainbody .validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#mainbody .validation-summary-valid {
+    display: none;
+}
+
+
+#mainbody table.tblist {
+    border-collapse: collapse;
+}
+
+    #mainbody table.tblist tr {
+        border-bottom: 1px solid #999;
+    }
+
+        #mainbody table.tblist tr.mo {
+            background-color: lightblue;
+        }
+
+    #mainbody table.tblist td {
+        padding: 5px 10px;
+    }
+
+#mainbody table.tblist2 {
+    border-collapse: collapse;
+}
+
+    #mainbody table.tblist2 td {
+        border: 1px solid #999;
+        padding: 5px 10px;
+    }

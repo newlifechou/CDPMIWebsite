@@ -1,0 +1,141 @@
+﻿#adminmenu {
+    background: white;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+p.warnningmsg {
+    color: red;
+    margin: 10px 0;
+    padding:7px;
+    padding-left:32px;
+    background:url("../Images/pmi/warning.png") left center no-repeat;
+}
+
+    p.warnningmsg span {
+        color: orange;
+    }
+
+#adminmenu ul {
+    background: orange;
+    width: 100%;
+}
+
+    #adminmenu ul:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+
+    #adminmenu ul li {
+        position: relative;
+        float: left;
+    }
+
+        #adminmenu ul li > a {
+            display: block;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            color: black;
+        }
+
+        #adminmenu ul li:hover {
+            background: #eee;
+        }
+
+            #adminmenu ul li:hover ul {
+                display: block;
+            }
+
+        #adminmenu ul li ul {
+            position: absolute;
+            display: none;
+            z-index: 120;
+        }
+
+            #adminmenu ul li ul li {
+                float: none;
+            }
+
+                #adminmenu ul li ul li a {
+                    display: block;
+                    background: #eee;
+                    width: 250px;
+                    text-align: left;
+                    border-left: 4px solid #eee;
+                }
+
+                    #adminmenu ul li ul li a:hover {
+                        background: lightblue;
+                        border-left: 4px solid #999;
+                    }
+
+/*indicate where the editing operate will change*/
+div.changewhere {
+    margin-top: 10px;
+    border: 3px solid #999;
+    min-height: 200px;
+    padding: 10px;
+}
+
+div.changewheremo {
+    border:3px solid orange;
+    background:#f0f0f0;
+}
+
+div.changewhere h5 {
+    /*小灯泡背景图片*/
+    background:url("../Images/pmi/idea-32px.png") left center no-repeat;
+    font-size: 1.2em;
+    padding: 15px;
+    padding-left:40px;
+}
+
+   div.changewhere h5 span {
+        color: orange;
+        padding-right: 10px;
+    }
+
+div.changewhere img {
+    display: block;
+    margin-bottom: 10px;
+}
+/*每一页上新添加的按钮*/
+#mainbody p.btnAddNew {
+    margin-bottom: 15px;
+}
+
+    #mainbody p.btnAddNew a {
+        display: block;
+        padding: 10px;
+        border: 1px solid #999;
+        background-color: lightblue;
+        width: 120px;
+        text-align: center;
+    }
+
+        #mainbody p.btnAddNew a:hover {
+            background-color: orange;
+        }
+
+
+/*登录样式区域*/
+#loginarea {
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+    #loginarea p {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+        #loginarea p span {
+            color: orange;
+            text-decoration: underline;
+            padding-left: 10px;
+        }

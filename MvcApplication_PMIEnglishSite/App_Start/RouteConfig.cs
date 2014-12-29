@@ -16,12 +16,12 @@ namespace MvcApplication_PMIEnglishSite
             routes.MapRoute(
                 name: "html1",
                 url: "{controller}/{action}.html",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index"}
             );
 
             routes.MapRoute(
                 name: "html2",
-                url: "{controller}/{action}-{id}.html",
+                url: "{controller}/{action}/{id}.html",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 

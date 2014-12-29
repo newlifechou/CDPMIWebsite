@@ -17,8 +17,8 @@ namespace MvcApplication_PMIEnglishSite
         public string Suffix { get; set; }
         public string CacheDirectory { get; set; }
         public string FileName { get; set; }
-        private string filename = "category-0.html";
-        private string directory = "HTML";
+        private string filename = "0.html";
+        private string directory = "HTML\\ProductDetails";
         #endregion
 
         #region 构造函数
