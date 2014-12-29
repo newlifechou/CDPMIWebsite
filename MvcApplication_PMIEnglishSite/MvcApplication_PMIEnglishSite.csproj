@@ -141,6 +141,7 @@
     <Compile Include="Controllers\productCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Filters\GenerateStaticFIleAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
